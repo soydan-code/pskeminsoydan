@@ -10,6 +10,18 @@ servis eder.
 - `assets/js/main.js` — mobil menü ve iletişim formu (mailto)
 - `ICERIK.md` — hâlâ eksik olan içerik ve varlıkların listesi
 
+## Renk paleti
+
+Renkler logodan türetildi ve `style.css` içindeki `:root` bloğunda tanımlı:
+lacivert `#21245f` (birincil), indigo `#382e87` (bağlantılar), mavi `#4577bf`,
+gök mavisi `#5ea4cb`, magenta `#dd376c` (çağrı butonları, `#c9295c` olarak
+koyulaştırılmış hâliyle), adaçayı `#a9d6a8` (yumuşak zeminler).
+
+Yeni renk eklerken WCAG AA kontrastı (normal metin 4.5:1, büyük metin 3:1) açık
+ve koyu temanın ikisinde de sağlanmalı. `.nav a` gibi genel seçicilerin `.btn`
+rengini ezmemesine dikkat edin — bu daha önce menüdeki butonu okunmaz hâle
+getirmişti.
+
 ## Metin yazarken üslup
 
 Site sahibi: 2019'da mezun, 7 yılı aşkın klinik deneyim ve 5.000+ seans saati olan

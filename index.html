@@ -10,7 +10,7 @@
 <meta property="og:title" content="Metapsikoloji &middot; Psikolog Emin Soydan">
 <meta property="og:description" content="Sözün, ilişkinin ve kendiliğin izinde. 14 yaş üzeri gençler ve yetişkinlerle psikanalitik yönelimli bireysel psikoterapi.">
 <meta property="og:locale" content="tr_TR">
-<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
@@ -21,12 +21,9 @@
 
 <header class="site-header" id="ust">
   <div class="wrap header-inner">
-    <a class="brand" href="#ust" aria-label="Ana sayfa">
-      <img src="assets/img/logo.svg" alt="" width="36" height="36">
-      <span class="brand-text">
-        <strong>metapsikoloji</strong>
-        <small>Psikolog Emin Soydan</small>
-      </span>
+    <a class="brand" href="#ust">
+      <img src="assets/img/logo.png" alt="metapsikoloji" width="600" height="163">
+      <span class="sr-only">metapsikoloji — Psikolog Emin Soydan, ana sayfa</span>
     </a>
 
     <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="anaMenu">
@@ -60,7 +57,7 @@
           doğru aldığı en cesur mesafedir.
         </p>
         <div class="hero-actions">
-          <a class="btn" href="#iletisim">Görüşme talebi</a>
+          <a class="btn btn-cta" href="#iletisim">Görüşme talebi</a>
           <a class="btn btn-ghost" href="#yaklasim">Yaklaşımım</a>
         </div>
         <ul class="hero-meta">
@@ -290,7 +287,7 @@
           <li>Sessiz, yalnız kalabileceğiniz bir ortam ve stabil bağlantı yeterlidir.</li>
           <li>Süre, sıklık ve gizlilik ilkeleri yüz yüze görüşmeyle aynıdır.</li>
         </ul>
-        <a class="btn" href="#iletisim">Çevrim içi görüşme talebi</a>
+        <a class="btn btn-cta" href="#iletisim">Çevrim içi görüşme talebi</a>
       </div>
       <div class="closing-card">
         <p>
@@ -392,10 +389,24 @@
           <label for="mesaj">Mesajınız</label>
           <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
         </div>
-        <button class="btn" type="submit">Mesajı gönder</button>
+        <button class="btn btn-cta" type="submit">Mesajı hazırla</button>
         <p class="form-note" id="formNot" role="status" aria-live="polite">
           Form, mesajı e-posta uygulamanızda açar; sunucuya veri kaydedilmez.
         </p>
+
+        <div class="form-sonuc" id="formSonuc" hidden>
+          <h3>Mesajınız hazır</h3>
+          <pre id="formOnizleme"></pre>
+          <div class="form-sonuc-aksiyon">
+            <a class="btn btn-sm" id="formMailto" href="#">E-posta uygulamasında aç</a>
+            <button class="btn btn-sm btn-ghost" type="button" id="formKopyala">Metni kopyala</button>
+          </div>
+          <p class="form-note">
+            E-posta uygulamanız açılmadıysa metni kopyalayıp
+            <a href="mailto:psikologeminsoydan@gmail.com">psikologeminsoydan@gmail.com</a>
+            adresine gönderebilirsiniz.
+          </p>
+        </div>
       </form>
     </div>
   </section>
@@ -405,7 +416,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div>
-      <p class="footer-brand">metapsikoloji</p>
+      <img class="footer-logo" src="assets/img/logo.png" alt="metapsikoloji" width="600" height="163">
       <p class="footer-note">Psikolog Emin Soydan &middot; Bireysel Dinamik Psikoterapi</p>
     </div>
     <nav aria-label="Alt menü">
