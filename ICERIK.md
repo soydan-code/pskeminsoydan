@@ -1,8 +1,6 @@
 # Doldurulacak içerikler
 
-Bu dosya, siteyi tamamlamak için sizden gelmesi gereken bilgileri listeler.
-Metinleri buraya yapıştırmanız ya da sohbette iletmeniz yeterli; ilgili yerlere
-ben yerleştiririm.
+Metinlerin büyük kısmı yerleştirildi. Aşağıdakiler hâlâ bekliyor.
 
 ## 1. Marka varlıkları
 
@@ -10,35 +8,41 @@ ben yerleştiririm.
 |---|---|---|
 | Logo (SVG veya yüksek çözünürlüklü PNG) | `assets/img/logo.svg` | Geçici logo kullanılıyor |
 | Portre fotoğrafı | `assets/img/portre.jpg` | Yer tutucu kutu duruyor |
-| Font adı | `assets/css/style.css` içindeki `--font-heading` ve `--font-body` | Şu an Lora + Manrope |
-| Marka renkleri | `style.css` içindeki `--accent` ve `--accent-soft` | Şu an koyu yeşil (#2f6b5f) |
+| Font adı | `style.css` → `--font-heading`, `--font-body` | Şu an Lora + Manrope |
+| Marka renkleri | `style.css` → `--accent`, `--accent-soft` | Şu an koyu yeşil (#2f6b5f) |
 
-Logoyu ve fotoğrafı bu depoya yükleyebilir ya da bana gönderebilirsiniz.
+Sitelerinizdeki logo ve fontu ağ kısıtı nedeniyle çekemedim; dosyayı yükleyin ya
+da font adını yazın, yerleştireyim.
 
-## 2. Metinler
+## 2. Bekleyen bilgiler
 
-Aşağıdaki bölümlerde şu an genel bir tanıtım metni var. Kendi sitelerinizdeki
-yazıları gönderirseniz bunların yerine geçer:
+Sayfada italik gri "eklenecek" ifadeleriyle görünen alanlar:
 
-- **Hakkımda** — biyografi, eğitim geçmişi, aldığınız terapi eğitimleri,
-  süpervizyon ve mesleki üyelikler. *(Bu bilgileri uydurmadım, boş bıraktım.)*
-- **Uzmanlık alanları** — çalıştığınız konuların kendi ifadelerinizle listesi.
-- **Terapi süreci** — sürecin sizde nasıl işlediği.
-- **Sık sorulan sorular** — özellikle seans ücreti ve iptal politikası.
-
-## 3. İletişim bilgileri
-
+- Seans süresi ve görüşme sıklığı
+- Seans ücreti ve iptal politikası
 - Telefon numarası
 - Ofis adresi (ve varsa harita bağlantısı)
 - Çalışma saatleri
-- Sosyal medya hesapları (Instagram, LinkedIn vb.)
-- İletişim formunun gideceği e-posta — şu an `psikologeminsoydan@gmail.com`
-  (`assets/js/main.js` içindeki `ALICI` değişkeni)
+- Sosyal medya hesapları
+
+Eğitim geçmişi, aldığınız formasyonların kurum adları ve mesleki üyelikler de
+eklenebilir — şu an metinde yalnızca "3,5 yılı aşan psikanalitik ve dinamik
+formasyonlar" ifadesi geçiyor, kurum adı yok.
+
+## 3. Karar bekleyen başlıklar
+
+- **Marka adı:** Üst menüde "metapsikoloji", altında "Psikolog Emin Soydan"
+  duruyor. Kişisel adınızı öne almak isterseniz tek satırlık değişiklik.
+- **Unvan:** Yüksek lisans tamamlanmadığı için "Uzman Psikolog" yerine
+  "Psikolog" kullanıldı. Tez savunmasından sonra güncellenebilir.
+- **Blog:** Yazılarınız varsa ayrı bir bölüm eklenebilir.
 
 ## 4. Teknik notlar
 
 - Site tamamen statiktir; Vercel'de derleme adımı gerektirmez.
 - İletişim formu sunucu kullanmaz, mesajı ziyaretçinin e-posta uygulamasında
   açar. Doğrudan gelen kutunuza düşmesini isterseniz Formspree benzeri bir
-  servise bağlayabilirim.
-- Açık ve koyu tema, ziyaretçinin sistem tercihine göre otomatik çalışır.
+  servise bağlanabilir.
+- Açık ve koyu tema ziyaretçinin sistem tercihine göre otomatik çalışır.
+- Sayfadaki sayılar (7+ yıl, 5.000+ seans) metne sabit yazıldı; zamanla
+  güncellenmesi gerekir.
