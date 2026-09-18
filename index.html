@@ -1,82 +1,347 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Sayfası</title>
-  <style>
-    :root {
-      --bg: #f5f5f4;
-      --surface: #ffffff;
-      --text: #1c1917;
-      --muted: #57534e;
-      --accent: #7c3aed;
-      --border: #e7e5e4;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1c1917;
-        --surface: #292524;
-        --text: #fafaf9;
-        --muted: #a8a29e;
-        --accent: #a78bfa;
-        --border: #44403c;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      padding: 48px 16px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      display: flex;
-      justify-content: center;
-    }
-    main {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
-      max-width: 560px;
-      width: 100%;
-    }
-    h1 { margin: 0 0 8px; font-size: 1.75rem; }
-    p.lead { margin: 0 0 24px; color: var(--muted); }
-    ul { margin: 0 0 24px; padding-left: 20px; }
-    button {
-      background: var(--accent);
-      color: #fff;
-      border: 0;
-      border-radius: 8px;
-      padding: 10px 18px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover { opacity: 0.9; }
-    #cikti { margin-top: 16px; font-weight: 600; min-height: 1.6em; }
-    footer { margin-top: 24px; font-size: 0.875rem; color: var(--muted); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metapsikoloji &middot; Psikolog Emin Soydan</title>
+<meta name="description" content="Metapsikoloji; bireysel terapi, çift ve aile danışmanlığı ile online terapi hizmetleri sunar. Yüz yüze ve çevrim içi randevu için iletişime geçebilirsiniz.">
+<meta name="author" content="Psikolog Emin Soydan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Metapsikoloji &middot; Psikolog Emin Soydan">
+<meta property="og:description" content="Bireysel terapi, çift ve aile danışmanlığı, online terapi.">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <main>
-    <h1>Test Sayfası</h1>
-    <p class="lead">Bu dosya, deponun çalıştığını doğrulamak için oluşturulmuş basit bir HTML test sayfasıdır.</p>
-    <ul>
-      <li>HTML5 yapısı</li>
-      <li>Açık ve koyu tema desteği</li>
-      <li>Küçük bir JavaScript denemesi</li>
-    </ul>
-    <button id="btn" type="button">Tıkla ve test et</button>
-    <div id="cikti" role="status" aria-live="polite"></div>
-    <footer>pskeminsoydan &middot; index.html</footer>
-  </main>
-  <script>
-    document.getElementById('btn').addEventListener('click', function () {
-      var simdi = new Date().toLocaleString('tr-TR');
-      document.getElementById('cikti').textContent = 'Çalışıyor! ' + simdi;
-    });
-  </script>
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+<header class="site-header" id="ust">
+  <div class="wrap header-inner">
+    <a class="brand" href="#ust" aria-label="Metapsikoloji ana sayfa">
+      <img src="assets/img/logo.svg" alt="Metapsikoloji logosu" width="36" height="36">
+      <span class="brand-text">
+        <strong>metapsikoloji</strong>
+        <small>Psikolog Emin Soydan</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="anaMenu">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="sr-only">Menüyü aç</span>
+    </button>
+
+    <nav class="nav" id="anaMenu" aria-label="Ana menü">
+      <ul>
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#alanlar">Uzmanlık Alanları</a></li>
+        <li><a href="#surec">Terapi Süreci</a></li>
+        <li><a href="#online">Online Terapi</a></li>
+        <li><a href="#sss">Sık Sorulanlar</a></li>
+        <li><a class="btn btn-sm" href="#iletisim">Randevu Al</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="icerik">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Metapsikoloji</p>
+        <h1>Kendinizi anlamak için güvenli bir alan</h1>
+        <p class="lead">
+          Terapi, hayatınızı tek seferde değiştiren bir müdahale değil; kendinizi
+          fark ettiğiniz, tekrar eden örüntüleri görünür kıldığınız ve yeni bir yol
+          denemeye alan açtığınız bir süreçtir. Bu süreçte size eşlik ediyorum.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#iletisim">Randevu oluştur</a>
+          <a class="btn btn-ghost" href="#alanlar">Çalışma alanlarım</a>
+        </div>
+        <ul class="hero-meta">
+          <li>Yüz yüze &amp; çevrim içi görüşme</li>
+          <li>Gizlilik esaslı çalışma</li>
+          <li>Yetişkin ve ergen danışan</li>
+        </ul>
+      </div>
+
+      <figure class="hero-media">
+        <!-- Portre fotoğrafınızı assets/img/portre.jpg olarak ekleyip src'yi güncelleyin. -->
+        <div class="portrait-placeholder" role="img" aria-label="Portre fotoğrafı için ayrılmış alan">
+          <span>Portre fotoğrafı</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="hakkimda">
+    <div class="wrap grid-2">
+      <div>
+        <p class="eyebrow">Hakkımda</p>
+        <h2>Merhaba, ben Emin Soydan</h2>
+        <p>
+          Danışanlarımla çalışırken çıkış noktam şu: Hiçbir davranış boşlukta ortaya
+          çıkmaz. Bugün sizi zorlayan tepkiler, bir zamanlar sizi koruyan çözümler
+          olabilir. Terapi odasında bu bağlantıyı birlikte kurar, size artık hizmet
+          etmeyen örüntülerin yerine neyi koyabileceğinizi araştırırız.
+        </p>
+        <p>
+          Görüşmelerde yönlendirici olmaktan çok işbirlikçi bir tutum benimsiyorum.
+          Hedefleri birlikte belirliyor, süreci düzenli aralıklarla birlikte gözden
+          geçiriyoruz. Amacım, sürecin sonunda kendi kendinizin gözlemcisi
+          olabileceğiniz bir beceri setiyle ayrılmanız.
+        </p>
+        <div class="callout">
+          <p><strong>Doldurulacak:</strong> Eğitim geçmişiniz, aldığınız süpervizyon ve
+          terapi eğitimleri, üyelikleriniz ve deneyim yılınız bu bölüme eklenecek.
+          Bu bilgileri uydurmadım; metni siz iletince yerleştireceğim.</p>
+        </div>
+      </div>
+      <aside class="card-stack">
+        <div class="card">
+          <h3>Çalışma biçimi</h3>
+          <p>Seanslar 50 dakika sürer ve genellikle haftada bir gerçekleştirilir. Sıklık, ihtiyaca göre birlikte belirlenir.</p>
+        </div>
+        <div class="card">
+          <h3>Gizlilik</h3>
+          <p>Görüşmelerde paylaşılanlar meslek etiği ve yasal sınırlar çerçevesinde gizli tutulur.</p>
+        </div>
+        <div class="card">
+          <h3>İlk görüşme</h3>
+          <p>İlk seans tanışma ve değerlendirme görüşmesidir. Beklentilerinizi konuşur, birlikte çalışıp çalışmayacağımıza karar veririz.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="alanlar">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Uzmanlık Alanları</p>
+        <h2>Birlikte çalışabileceğimiz konular</h2>
+        <p class="section-desc">
+          Aşağıdaki başlıklar sık çalışılan alanlardır. Zorlandığınız konu burada
+          yazmıyorsa yine de yazabilirsiniz; uygun olmadığı durumda sizi doğru bir
+          meslektaşıma yönlendiririm.
+        </p>
+      </header>
+
+      <div class="grid-cards">
+        <article class="service">
+          <h3>Bireysel terapi</h3>
+          <p>Kendini tanıma, karar süreçleri, özdeğer ve yaşam geçişlerinde bireysel çalışma.</p>
+        </article>
+        <article class="service">
+          <h3>Kaygı ve panik</h3>
+          <p>Yaygın kaygı, panik atak, sosyal kaygı ve sınav kaygısıyla baş etme becerileri.</p>
+        </article>
+        <article class="service">
+          <h3>Depresif duygudurum</h3>
+          <p>İsteksizlik, tükenmişlik, anlamsızlık hissi ve süregiden mutsuzluk üzerine çalışma.</p>
+        </article>
+        <article class="service">
+          <h3>İlişki ve çift danışmanlığı</h3>
+          <p>İletişim tıkanmaları, tekrar eden tartışmalar, güven ve bağlanma konuları.</p>
+        </article>
+        <article class="service">
+          <h3>Aile ilişkileri</h3>
+          <p>Ebeveyn–çocuk ilişkisi, sınır koyma ve kuşaklar arası aktarılan örüntüler.</p>
+        </article>
+        <article class="service">
+          <h3>Travma ve yas</h3>
+          <p>Zorlayıcı yaşam olayları, kayıp ve yas süreçlerinde destekleyici çalışma.</p>
+        </article>
+        <article class="service">
+          <h3>Ergenlik dönemi</h3>
+          <p>Kimlik arayışı, akran ilişkileri, okul uyumu ve duygu düzenleme.</p>
+        </article>
+        <article class="service">
+          <h3>Stres ve öfke</h3>
+          <p>İş ve özel yaşam dengesinde stres yönetimi, öfkenin tanınması ve ifadesi.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="surec">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Terapi Süreci</p>
+        <h2>Nasıl ilerliyoruz?</h2>
+      </header>
+      <ol class="steps">
+        <li>
+          <span class="step-no" aria-hidden="true">1</span>
+          <h3>İletişim</h3>
+          <p>Formu doldurarak ya da doğrudan yazarak başvurunuzu iletirsiniz. En kısa sürede dönüş yapılır.</p>
+        </li>
+        <li>
+          <span class="step-no" aria-hidden="true">2</span>
+          <h3>Tanışma görüşmesi</h3>
+          <p>İlk seansta başvuru nedeninizi, geçmişinizi ve beklentilerinizi konuşuruz.</p>
+        </li>
+        <li>
+          <span class="step-no" aria-hidden="true">3</span>
+          <h3>Planlama</h3>
+          <p>Hedefleri ve görüşme sıklığını birlikte belirleriz. Süreç baştan şeffaftır.</p>
+        </li>
+        <li>
+          <span class="step-no" aria-hidden="true">4</span>
+          <h3>Düzenli seanslar</h3>
+          <p>Belirli aralıklarla nerede olduğumuzu birlikte değerlendirir, gerekirse yön değiştiririz.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="online">
+    <div class="wrap grid-2 grid-2-tight">
+      <div>
+        <p class="eyebrow">Online Terapi</p>
+        <h2>Nerede olursanız olun devam edebilirsiniz</h2>
+        <p>
+          Şehir dışında yaşıyorsanız, yoğun bir tempoda çalışıyorsanız ya da yüz yüze
+          görüşmeye ulaşmanız zorsa çevrim içi görüşme iyi bir seçenektir. Araştırmalar,
+          çevrim içi psikoterapinin pek çok konuda yüz yüze görüşmeye yakın sonuçlar
+          verdiğini gösteriyor.
+        </p>
+        <ul class="check-list">
+          <li>Görüntülü görüşme bağlantısı seanstan önce paylaşılır.</li>
+          <li>Sessiz, yalnız kalabileceğiniz bir ortam ve stabil bağlantı yeterlidir.</li>
+          <li>Seans süresi ve gizlilik ilkeleri yüz yüze görüşmeyle aynıdır.</li>
+        </ul>
+        <a class="btn" href="#iletisim">Çevrim içi randevu</a>
+      </div>
+      <div class="quote-card">
+        <blockquote>
+          <p>“Değişim, kendinizi değiştirmeye çalışmayı bıraktığınızda başlar.”</p>
+          <footer>— Carl R. Rogers</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="sss">
+    <div class="wrap narrow">
+      <header class="section-head">
+        <p class="eyebrow">Sık Sorulan Sorular</p>
+        <h2>Merak edilenler</h2>
+      </header>
+
+      <details>
+        <summary>Terapiye ihtiyacım olup olmadığını nasıl anlarım?</summary>
+        <p>Kriz anında olmanız gerekmez. Günlük işleyişinizi zorlaştıran, tekrar eden ya da tek başınıza çözemediğinizi hissettiğiniz bir durum varsa başvurmak için yeterlidir.</p>
+      </details>
+      <details>
+        <summary>Bir seans ne kadar sürer?</summary>
+        <p>Seanslar 50 dakikadır. Görüşme sıklığı genellikle haftada bir olmakla birlikte ihtiyaca göre birlikte belirlenir.</p>
+      </details>
+      <details>
+        <summary>Süreç toplam ne kadar sürer?</summary>
+        <p>Başvuru nedenine ve hedeflere göre değişir. Bazı çalışmalar birkaç ay, bazıları daha uzun sürebilir. Süreci düzenli olarak birlikte gözden geçiririz.</p>
+      </details>
+      <details>
+        <summary>Görüştüklerimiz gizli kalıyor mu?</summary>
+        <p>Evet. Paylaştıklarınız meslek etiği ilkeleri çerçevesinde gizlidir. Gizliliğin sınırları (kendine ya da başkasına yönelik ciddi risk gibi durumlar) ilk görüşmede açıkça konuşulur.</p>
+      </details>
+      <details>
+        <summary>Psikolog ilaç yazabilir mi?</summary>
+        <p>Hayır. İlaç tedavisi psikiyatri hekiminin alanıdır. Gerekli gördüğüm durumlarda bir psikiyatriste yönlendirme yapar, uygun olduğunda süreci birlikte yürütürüz.</p>
+      </details>
+      <details>
+        <summary>Seans ücreti ne kadar?</summary>
+        <p><strong>Doldurulacak:</strong> Güncel ücret bilgisi ve varsa iptal politikanız bu alana eklenecek.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="iletisim">
+    <div class="wrap grid-2">
+      <div>
+        <p class="eyebrow">İletişim</p>
+        <h2>Randevu ve sorularınız için</h2>
+        <p>
+          Formu doldurduğunuzda e-posta uygulamanız hazır bir mesajla açılır.
+          Dilerseniz doğrudan e-posta ya da telefon yoluyla da ulaşabilirsiniz.
+        </p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">E-posta</span>
+            <a href="mailto:psikologeminsoydan@gmail.com">psikologeminsoydan@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">Telefon</span>
+            <span class="todo">Numaranız eklenecek</span>
+          </li>
+          <li>
+            <span class="contact-label">Adres</span>
+            <span class="todo">Ofis adresiniz eklenecek</span>
+          </li>
+          <li>
+            <span class="contact-label">Çalışma saatleri</span>
+            <span class="todo">Gün ve saat aralığı eklenecek</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="iletisimFormu" novalidate>
+        <div class="field">
+          <label for="ad">Ad Soyad</label>
+          <input type="text" id="ad" name="ad" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="eposta">E-posta</label>
+          <input type="email" id="eposta" name="eposta" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="tercih">Görüşme tercihi</label>
+          <select id="tercih" name="tercih">
+            <option>Yüz yüze</option>
+            <option>Çevrim içi</option>
+            <option>Fark etmez</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mesaj">Mesajınız</label>
+          <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+        </div>
+        <button class="btn" type="submit">Mesajı gönder</button>
+        <p class="form-note" id="formNot" role="status" aria-live="polite">
+          Form, mesajı e-posta uygulamanızda açar; sunucuya veri kaydedilmez.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-brand">metapsikoloji</p>
+      <p class="footer-note">Psikolog Emin Soydan</p>
+    </div>
+    <nav aria-label="Alt menü">
+      <ul>
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#alanlar">Uzmanlık Alanları</a></li>
+        <li><a href="#sss">Sık Sorulanlar</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+    <p class="footer-legal">
+      Bu sitedeki içerikler bilgilendirme amaçlıdır, tanı veya tedavi yerine geçmez.
+      Acil durumlarda 112'yi arayın.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
