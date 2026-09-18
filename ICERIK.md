@@ -9,17 +9,20 @@ Metinlerin büyük kısmı yerleştirildi. Aşağıdakiler hâlâ bekliyor.
 | Logo | `assets/img/logo.png` | ✅ Eklendi (beyaz zemin saydamlaştırıldı) |
 | Favicon | `assets/img/favicon.png` | ✅ Logodaki psi işaretinden üretildi |
 | Marka renkleri | `style.css` → `:root` | ✅ Logodan çekildi |
-| Portre fotoğrafı | `assets/img/portre.jpg` | Yer tutucu kutu duruyor |
+| Portre fotoğrafı | `assets/img/portre.jpg` | ✅ Eklendi (hero'da çerçeveli) |
+| Arka plan fotoğrafları | `assets/img/bg-*.jpg` | ✅ Üç bölümde kullanılıyor |
 | Font adı | `style.css` → `--font-heading`, `--font-body` | Şu an Lora + Manrope |
 
-Logodan alınan renkler: lacivert `#21245f`, indigo `#382e87`, mavi `#4577bf`,
-gök mavisi `#5ea4cb`, magenta `#dd376c`, adaçayı `#a9d6a8`.
+Palet artık sitenin kendi fotoğraflarından geliyor: derin deniz `#0d2a4d`,
+deniz `#165290`, orta mavi `#2e73b4`, gök `#6ca7cf`, kehribar `#c49a72`.
+Logonun gül tonu `#dd376c` üstteki gradyan şeritte korunuyor.
 
 Fontunuzu hâlâ çekemedim (siteleriniz ağ kısıtı nedeniyle açılmıyor). Font adını
 yazmanız yeterli; `--font-heading` ve `--font-body` satırlarında değişiyor.
 
-Portre fotoğrafını `assets/img/portre.jpg` olarak eklerseniz `index.html`
-içindeki yer tutucu kutunun yerine geçer (ilgili satır yorum olarak duruyor).
+Fotoğraflar 1500 piksel genişliğe küçültülüp sıkıştırıldı (her biri ~100-130 KB).
+Başka bir kare kullanmak isterseniz aynı ada kaydetmeniz yeterli; bölümün
+perdesini kontrast için yeniden ölçmek gerekebilir.
 
 ## 2. Bekleyen bilgiler
 

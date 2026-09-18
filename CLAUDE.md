@@ -12,15 +12,34 @@ servis eder.
 
 ## Renk paleti
 
-Renkler logodan türetildi ve `style.css` içindeki `:root` bloğunda tanımlı:
-lacivert `#21245f` (birincil), indigo `#382e87` (bağlantılar), mavi `#4577bf`,
-gök mavisi `#5ea4cb`, magenta `#dd376c` (çağrı butonları, `#c9295c` olarak
-koyulaştırılmış hâliyle), adaçayı `#a9d6a8` (yumuşak zeminler).
+Renkler sitenin kendi fotoğraflarından (Boğaz, gün batımı, Kız Kulesi)
+türetildi ve `style.css` içindeki `:root` bloğunda tanımlı: derin deniz
+`#0d2a4d`, deniz `#165290`, orta mavi `#2e73b4`, gök `#6ca7cf`, kehribar
+`#c49a72`, koyu kehribar `#9a5f2c` (çağrı butonları). Logonun gül tonu
+`#dd376c` yalnızca üstteki gradyan şeritte, markayla bağı korumak için durur.
 
-Yeni renk eklerken WCAG AA kontrastı (normal metin 4.5:1, büyük metin 3:1) açık
-ve koyu temanın ikisinde de sağlanmalı. `.nav a` gibi genel seçicilerin `.btn`
-rengini ezmemesine dikkat edin — bu daha önce menüdeki butonu okunmaz hâle
-getirmişti.
+Koyu tema gece Boğaz'ıdır: zemin `#0a1a2e`, vurgu gök mavisi `#8cc3ec`,
+çağrı kehribar `#e0a66a`.
+
+## Fotoğraflı bölümler
+
+`.photo-section` sınıfı fotoğrafın üzerine sabit koyu bir perde koyar ve
+bölüm içindeki renk değişkenlerini açık tonlarla ezer; böylece metin hem
+temadan hem de fotoğrafın hangi bölgesine denk geldiğinden bağımsız olarak
+okunur kalır. Şu an hero (gün batımı), `#koltuk` (Kız Kulesi) ve `#online`
+(sahil) bu sınıfı kullanır.
+
+Yeni bir fotoğraflı bölüm eklerken perdeyi ölçerek doğrulayın: bölümdeki
+metinleri gizleyip ekran görüntüsü alın ve **en parlak zemin pikselini**
+bulun; en soluk metin rengi (`#d8e4f0`) o piksele karşı en az 4.5:1 vermeli.
+Kız Kulesi karesinin göğü parlak olduğu için o bölüm ayrıca koyulaştırıldı.
+
+## Erişilebilirlik
+
+Yeni renk eklerken WCAG AA kontrastı (normal metin 4.5:1, büyük metin 3:1)
+açık ve koyu temanın ikisinde de sağlanmalı. `.nav a` gibi genel seçicilerin
+`.btn` rengini ezmemesine dikkat edin — bu daha önce menüdeki butonu okunmaz
+hâle getirmişti.
 
 ## Metin yazarken üslup
 
