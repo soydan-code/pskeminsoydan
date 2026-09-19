@@ -28,8 +28,7 @@ perdesini kontrast için yeniden ölçmek gerekebilir.
 
 Sayfada kesik çizgili rozetlerle görünen alanlar:
 
-- Seans süresi ve görüşme sıklığı
-- Seans ücreti ve iptal politikası
+- İptal politikası (seans süresi, sıklık ve ücret yaklaşımı eklendi)
 - Telefon numarası
 - Ofis adresi (ve varsa harita bağlantısı)
 - Çalışma saatleri
