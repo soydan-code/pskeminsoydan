@@ -665,9 +665,16 @@ details p { color: var(--muted); padding-bottom: 6px; margin: 0 0 14px; }
   hyphens: auto;
 }
 
+/* Tire üzerinden bölünmemesi gereken kısa öbekler */
+.nowrap { white-space: nowrap; }
+
+/* Tek tek paragrafları yaslamak için yardımcı sınıf */
+.yasli { text-align: justify; text-justify: inter-word; hyphens: auto; }
+
 /* Dar ekranda yaslama satır içi boşlukları bozduğu için kapatılır */
 @media (max-width: 560px) {
-  .approach-item p:not(.approach-tag) { text-align: left; hyphens: manual; }
+  .approach-item p:not(.approach-tag),
+  .yasli { text-align: left; hyphens: manual; }
 }
 
 /* ===== çalışma saatleri (küçük, sade) ===== */
