@@ -651,3 +651,53 @@ details p { color: var(--muted); padding-bottom: 6px; margin: 0 0 14px; }
   .brand img { height: 36px; }
   .contact-label { flex-basis: 100%; }
 }
+
+/* ==========================================================================
+   Yaklaşım bölümü hizalaması
+   Başlıklar ortalı, gövde metni iki yana yaslı. Türkçe hecelemenin devreye
+   girmesi için <html lang="tr"> gerekir; aksi hâlde yaslama kelime aralarını
+   fazla açar.
+   ========================================================================== */
+.approach-tag { text-align: center; }
+.approach-item p:not(.approach-tag) {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Dar ekranda yaslama satır içi boşlukları bozduğu için kapatılır */
+@media (max-width: 560px) {
+  .approach-item p:not(.approach-tag) { text-align: left; hyphens: manual; }
+}
+
+/* ===== çalışma saatleri (küçük, sade) ===== */
+.hours {
+  display: grid; gap: 3px;
+  font-size: .86rem; color: var(--muted);
+}
+.hours span { display: block; }
+.hours b { font-weight: 600; color: var(--text); }
+
+/* İletişim listesindeki adres iki satıra yayılabilsin */
+.contact-list .adres { max-width: 27ch; }
+
+/* ===== ikincil sayfa (iptal politikası) ===== */
+.page-head {
+  padding: clamp(40px, 6vw, 68px) 0 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+.page-head p.eyebrow { margin-bottom: .7em; }
+.page-intro { color: var(--muted); }
+
+.policy h2 {
+  font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+  margin-top: 2em;
+}
+.policy h2:first-of-type { margin-top: 0; }
+.policy p:last-child { margin-bottom: 0; }
+
+.page-back {
+  display: inline-block; margin-top: 40px;
+  font-size: .93rem; font-weight: 600;
+}

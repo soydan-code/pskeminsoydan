@@ -26,13 +26,19 @@ perdesini kontrast için yeniden ölçmek gerekebilir.
 
 ## 2. Bekleyen bilgiler
 
-Sayfada kesik çizgili rozetlerle görünen alanlar:
+İletişim bilgileri, çalışma saatleri ve iptal politikası eklendi. Geriye
+kalan:
 
-- İptal politikası (seans süresi, sıklık ve ücret yaklaşımı eklendi)
-- Telefon numarası
-- Ofis adresi (ve varsa harita bağlantısı)
-- Çalışma saatleri
-- Sosyal medya hesapları
+- Sosyal medya hesapları (Instagram, LinkedIn vb.)
+
+**Doğrulamanız gereken:** Adres bilgisini Yandex Haritalar ve Waze
+kayıtlarından aldım (Süleyman Seba Cad. No:79, Vişnezade, 34357
+Beşiktaş/İstanbul); Workinton'un kendi sitesi ağ kısıtı nedeniyle
+açılmadığı için oradan teyit edemedim. Kat/ofis numarası eklenecekse
+söylemeniz yeterli.
+
+`iptal-politikasi.html` bir taslaktır. Özellikle **24 saatlik bildirim
+süresi** benim önerim; değiştirmek isterseniz tek satır.
 
 Eğitim geçmişi, aldığınız formasyonların kurum adları ve mesleki üyelikler de
 eklenebilir — şu an metinde yalnızca "3,5 yılı aşan psikanalitik ve dinamik
