@@ -37,8 +37,13 @@ Beşiktaş/İstanbul); Workinton'un kendi sitesi ağ kısıtı nedeniyle
 açılmadığı için oradan teyit edemedim. Kat/ofis numarası eklenecekse
 söylemeniz yeterli.
 
-`iptal-politikasi.html` bir taslaktır. Özellikle **24 saatlik bildirim
-süresi** benim önerim; değiştirmek isterseniz tek satır.
+`iptal-politikasi.html` içeriği site sahibinin kendi kararlarıyla yazıldı:
+ödeme seansa gelirken ya da hemen ardından, iptal bildirimi en az bir hafta
+önce, haber verilmeyen görüşmeler için ücret alınmaz (sık tekrarlarda ödeme
+anlaşması yeniden gözden geçirilir).
+
+**Yazım kuralı:** Sitede uzun çizgi (—) parantez işareti olarak
+kullanılmayacak. Gerektiğinde virgül ya da normal parantez tercih edilir.
 
 Eğitim geçmişi, aldığınız formasyonların kurum adları ve mesleki üyelikler de
 eklenebilir — şu an metinde yalnızca "3,5 yılı aşan psikanalitik ve dinamik
