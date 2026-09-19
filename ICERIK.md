@@ -31,11 +31,9 @@ kalan:
 
 - Sosyal medya hesapları (Instagram, LinkedIn vb.)
 
-**Doğrulamanız gereken:** Adres bilgisini Yandex Haritalar ve Waze
-kayıtlarından aldım (Süleyman Seba Cad. No:79, Vişnezade, 34357
-Beşiktaş/İstanbul); Workinton'un kendi sitesi ağ kısıtı nedeniyle
-açılmadığı için oradan teyit edemedim. Kat/ofis numarası eklenecekse
-söylemeniz yeterli.
+Adres artık Google işletme kaydına yönleniyor
+(`https://maps.app.goo.gl/txqexG4cu7dfvaj76`). Bağlantıyı site sahibi
+verdi; ağ kısıtı nedeniyle buradan açıp doğrulayamadım.
 
 `iptal-politikasi.html` içeriği site sahibinin kendi kararlarıyla yazıldı:
 ödeme seansa gelirken ya da hemen ardından, iptal bildirimi en az bir hafta
