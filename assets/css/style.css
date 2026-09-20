@@ -325,7 +325,7 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: 40ch;
   margin-bottom: 1.5em;
 }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
 
 .hero-meta {
   display: flex; flex-wrap: wrap; gap: 10px 26px;
@@ -744,14 +744,21 @@ summary::-webkit-details-marker { display: none; }
 .btn-ikonlu { display: inline-flex; align-items: center; justify-content: center; gap: 9px; }
 
 /* İletişim bölümünün üstündeki hızlı erişim satırı */
-/* Buton yanında, ikincil bir hedef için sade metin bağlantısı */
+/* Butonların altında, kendi satırında ortalanan hafif çerçeveli bağlantı.
+   Dolu bir buton gibi durmaması için zemini saydam, çerçevesi incedir.
+   Çerçeve rengi --border değişkeninden gelir; fotoğraflı bölümlerde bu
+   değişken zaten açık tona ezildiği için ayrıca kural gerekmez. */
+.hero-ikincil { display: flex; justify-content: center; margin-bottom: 30px; }
+
 .metin-bag {
-  align-self: center;
+  padding: 10px 24px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
   font-weight: 600; font-size: .95rem; color: inherit;
-  text-decoration: underline; text-underline-offset: 5px;
-  text-decoration-thickness: 1px;
+  text-decoration: none; text-align: center;
+  transition: border-color .18s ease;
 }
-.metin-bag:hover { text-decoration-thickness: 2px; }
+.metin-bag:hover { border-color: currentColor; }
 
 .hizli-erisim {
   display: flex; flex-wrap: wrap; gap: 12px;

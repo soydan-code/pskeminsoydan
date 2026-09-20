@@ -97,5 +97,5 @@ listesinde metin olarak, ayrıca şemada `sameAs` alanında.
   açar. Doğrudan gelen kutunuza düşmesini isterseniz Formspree benzeri bir
   servise bağlanabilir.
 - Açık ve koyu tema ziyaretçinin sistem tercihine göre otomatik çalışır.
-- Sayfadaki sayılar (7+ yıl, 5.000+ seans) metne sabit yazıldı; zamanla
-  güncellenmesi gerekir.
+- Sayfadaki sayılar (7+ yıl, 5.000+ seans, 3,5 yıl formasyon, 500+ saat
+  süpervizyon) metne sabit yazıldı; zamanla güncellenmesi gerekir.
