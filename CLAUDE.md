@@ -67,6 +67,22 @@ Bağlantılar tek yerde değil, HTML'e gömülü. Numara ya da hesap değişirse
 `index.html` ve `iptal-politikasi.html` içinde ve JSON-LD'nin `sameAs`
 alanında güncellenmeli.
 
+## Önbellek ve statik dosyalar
+
+Dosya adlarında içerik özeti (hash) yok. Bu yüzden `vercel.json` içinde CSS ve
+JS `no-cache` ile servis edilir; her istekte doğrulanır, değişmemişse 304 döner.
+Görseller bir hafta önbelleklenir.
+
+Bu kural bir kere ihlal edildi ve site bozuldu: CSS bir gün önbelleğe alınmıştı,
+yeni HTML eski stille eşleşti ve `.ikon` kuralı bulunmayınca satır içi SVG'ler
+300×150 varsayılan boyutunda açıldı, butonlar dev dairelere dönüştü. İki önlem
+var, ikisini de bozmayın:
+
+1. Satır içi SVG'lerde **`width` ve `height` öznitelikleri bulunur**. CSS
+   gelmese bile ikon makul boyutta kalır. Yeni ikon eklerken bunları da yazın.
+2. CSS ya da JS'te davranış değiştiren bir düzenleme yaptığınızda `index.html`
+   ve `iptal-politikasi.html` içindeki `?v=` sürüm numarasını artırın.
+
 ## Metin yazarken üslup
 
 Site sahibi: 2019'da mezun, 7 yılı aşkın klinik deneyim ve 5.000+ seans saati olan
