@@ -31,19 +31,54 @@ gelen herkes yeni siteye düşer. Amaç zaten bu, ama başlamadan önce:
 
 Yeni site zaten Vercel'de olduğu için en temizi bu. Sunucu ayarı gerekmez.
 
-1. Vercel panelinde projeyi açın: **Settings → Domains**
-2. **Add Domain** deyip `metapsikoloji.com.tr` yazın
-3. Vercel ne yapmak istediğinizi sorar: **"Redirect to another domain"**
-   seçeneğini işaretleyin, hedef olarak `metapsikoloji.tr`, tür olarak
-   **308 (Permanent)** seçin
-4. Aynı işlemi `www.metapsikoloji.com.tr` için de tekrarlayın
-5. Vercel size bir DNS kaydı gösterir (genellikle kök alan adı için bir **A**
+**Doğru sayfada olduğunuzdan emin olun.** Vercel'de iki ayrı "Domains" ekranı
+var ve karıştırılması çok kolay:
+
+| Ekran | Nereden açılır | Ne yapar |
+|---|---|---|
+| **Hesap/takım Domains'i** | Üst menü → Domains | Alan adı **satın alma** ekranı |
+| **Proje Domains'i** | Projeye tıklayın → Settings → Domains | Elinizdeki alan adını **bağlama** ekranı |
+
+Add Domain dediğinizde karşınıza satın alınabilir alan adları çıkıyorsa
+büyük ihtimalle üstteki hesap ekranındasınız. Önce **projenin adına tıklayın**,
+sonra Settings → Domains yolunu izleyin.
+
+Bunu yaptığınız hâlde kutu hâlâ satın alma öneriyorsa:
+
+- Alan adını **uzantısıyla birlikte tam** yazın: `metapsikoloji.com.tr`
+  (yalnızca `metapsikoloji` yazarsanız Vercel bunu "satın alınacak isim" sanar
+  ve boştaki uzantıları sıralar).
+- Açılan listede fiyat etiketi olan satırları değil, **tam olarak yazdığınız
+  adı gösteren** satırı seçin. Düğmesinde `Add` / `Connect` / `Use existing`
+  benzeri bir ifade olur, fiyat yazmaz.
+- Pencerenin üstünde sekme varsa (`Buy` / `Transfer In` / `Add Existing`),
+  **Add Existing**'i seçin.
+- `.com.tr` uzantısı nic.tr yönetiminde olduğu için Vercel'den **satın
+  alınamaz**. Yani satın alma listesinde bu adı hiçbir zaman göremezsiniz;
+  doğru yol her hâlükârda "mevcut alan adını bağla" yoludur.
+
+Alan adı projeye eklendikten sonra yönlendirmeyi açın:
+
+1. Domains listesinde `metapsikoloji.com.tr` satırının sağındaki **Edit**
+   (ya da üç nokta) düğmesine basın
+2. **Redirect to** seçeneğini işaretleyip hedef olarak `metapsikoloji.tr`
+   seçin, tür olarak **308 (Permanent)**
+3. Aynı işlemi `www.metapsikoloji.com.tr` için de tekrarlayın
+4. Vercel size bir DNS kaydı gösterir (genellikle kök alan adı için bir **A**
    kaydı, www için **CNAME**). Bu kaydı alan adını aldığınız firmanın
    panelindeki DNS bölümüne girin
-6. DNS yayılması genelde birkaç saat, bazen 24 saat sürer
+5. DNS yayılması genelde birkaç saat, bazen 24 saat sürer
+
+> **Önemli:** "Redirect to" seçeneği yalnızca hedef alan adı (`metapsikoloji.tr`)
+> **aynı projeye** bağlıysa listede görünür. Görünmüyorsa önce onun bağlı
+> olduğunu doğrulayın.
 
 > 308, Google açısından 301 ile aynı anlama gelir: kalıcı taşınma. İkisi de
 > değeri aktarır.
+
+**Vercel yolu sıkıntı çıkarırsa sorun değil.** Aşağıdaki Yol C (alan adı
+firmasının kendi yönlendirme aracı) SEO açısından birebir aynı sonucu verir ve
+`.com.tr` alan adları için çoğu zaman daha kolaydır.
 
 ### Yol B: Eski site kendi sunucusunda kalacaksa
 
