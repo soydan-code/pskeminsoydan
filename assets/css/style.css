@@ -322,6 +322,9 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: clamp(1.18rem, 2.1vw, 1.42rem);
   line-height: 1.58;
   color: var(--text);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
   max-width: 40ch;
   margin-bottom: 1.5em;
 }
@@ -624,7 +627,7 @@ summary::-webkit-details-marker { display: none; }
 /* ===== mobil ===== */
 @media (max-width: 900px) {
   .hero-inner, .grid-2 { grid-template-columns: 1fr; }
-  .hero-media { order: -1; max-width: 320px; }
+  .hero-media { order: -1; max-width: 320px; margin-inline: auto; }
   /* Mobilde fotoğraflı bölümlerin perdesi dikey aksın */
   .photo-section::before {
     background: linear-gradient(180deg, rgba(8, 22, 40, .88) 0%, rgba(8, 22, 40, .82) 100%);
