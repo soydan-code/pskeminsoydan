@@ -47,7 +47,25 @@ Eğitim geçmişi, aldığınız formasyonların kurum adları ve mesleki üyeli
 eklenebilir — şu an metinde yalnızca "3,5 yılı aşan psikanalitik ve dinamik
 formasyonlar" ifadesi geçiyor, kurum adı yok.
 
-## 3. Karar bekleyen başlıklar
+## 3. SEO için yapılmayanlar
+
+Site sahibinin Google Ads anahtar kelime listesinde olup **siteye bilerek
+eklenmeyenler** ve sebepleri:
+
+- **EMDR terapisi** — EMDR eğitimi aldığına dair bir bilgi verilmedi. Sertifika
+  gerektiren bir protokol; doğrulanmadan yazılmaz.
+- **Bütüncül psikoterapi** — sitenin tamamı psikodinamik/TFP kimliği üzerine
+  kurulu. İkisini birden iddia etmek çelişki yaratır.
+- **Kadıköy psikolog** — ofis Beşiktaş/Maçka'da. Sırf arama için Kadıköy sayfası
+  açmak Google'ın "doorway page" tanımına girer ve yaptırım riski taşır.
+  Bunun yerine SSS'ye çevrim içi görüşme yanıtı eklendi.
+- **İlişki terapisi** — çift çalışması yapılmıyor. İlişkiler yalnızca bireysel
+  çalışma teması olarak geçiyor.
+- **"tedavi" ifadeleri** — psikolog unvanıyla "tedavi" iddiası hukuken riskli.
+  "Psikolojik destek / çalışma" tercih edildi.
+- **Yönetici** — hangi hizmete karşılık geldiği belirsiz, site sahibine soruldu.
+
+## 4. Karar bekleyen başlıklar
 
 - **Marka adı:** Üst menüde "metapsikoloji", altında "Psikolog Emin Soydan"
   duruyor. Kişisel adınızı öne almak isterseniz tek satırlık değişiklik.
@@ -55,7 +73,7 @@ formasyonlar" ifadesi geçiyor, kurum adı yok.
   "Psikolog" kullanıldı. Tez savunmasından sonra güncellenebilir.
 - **Blog:** Yazılarınız varsa ayrı bir bölüm eklenebilir.
 
-## 4. Teknik notlar
+## 5. Teknik notlar
 
 - Site tamamen statiktir; Vercel'de derleme adımı gerektirmez.
 - İletişim formu sunucu kullanmaz, mesajı ziyaretçinin e-posta uygulamasında

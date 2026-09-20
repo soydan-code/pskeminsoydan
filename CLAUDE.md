@@ -41,6 +41,18 @@ açık ve koyu temanın ikisinde de sağlanmalı. `.nav a` gibi genel seçiciler
 `.btn` rengini ezmemesine dikkat edin — bu daha önce menüdeki butonu okunmaz
 hâle getirmişti.
 
+## SEO
+
+Alan adı `metapsikoloji.tr`. Canonical, `sitemap.xml`, `robots.txt` ve Open
+Graph etiketleri bu adrese göre yazıldı; alan adı değişirse hepsi güncellenmeli.
+Vercel `cleanUrls` açık, bu yüzden iç bağlantılar `.html` uzantısız yazılır
+(`/iptal-politikasi`).
+
+`index.html` sonundaki JSON-LD bloğunda `FAQPage` şeması var ve **sayfadaki
+görünür SSS metniyle birebir aynı olmak zorunda**. Google, şemayla görünen
+içeriğin uyuşmamasını yaptırım sebebi sayar. Bir soruyu değiştirirseniz şemayı
+da güncelleyin.
+
 ## Metin yazarken üslup
 
 Site sahibi: 2019'da mezun, 7 yılı aşkın klinik deneyim ve 5.000+ seans saati olan
