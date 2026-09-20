@@ -66,9 +66,14 @@ vakalarla sınırlı olarak), **Kadıköy** (yüz yüze lokasyonlardan biri oldu
 teyit edildi), **metapsikoloji / Psikoterapist Emin Soydan** (marka ve unvan
 varyantları şemaya `alternateName` olarak girildi).
 
-**Tutarsızlık uyarısı:** SSS "Kadıköy ve Nişantaşı merkezli birkaç lokasyon"
-diyor ama iletişim bölümünde tek adres görünüyor. Kadıköy adresini de eklemek
-ya da etiketi değiştirmek isterseniz söylemeniz yeterli.
+İletişim bölümü ikiye ayrıldı: **Ofisler** (Maçka ve Kadıköy, harita
+bağlantılı) ve **Yasal adres** (Vişnezade, dokununca açılıyor). Kadıköy
+bağlantısı site sahibinden geldi; ağ kısıtı nedeniyle açıp doğrulayamadım.
+
+**Eksik:** Kadıköy ofisinin açık adresi yok, bu yüzden yapısal veride ayrı bir
+konum olarak tanımlanamadı (şu an yalnızca `hasMap` bağlantısı ve `areaServed`
+var). Açık adres gelirse ikinci bir `LocalBusiness` kaydı açılabilir; yerel
+aramada Kadıköy için bu daha güçlü olur. Metro/semt adı da teyit edilmeli.
 
 ## 4. Karar bekleyen başlıklar
 
