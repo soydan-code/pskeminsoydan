@@ -52,18 +52,23 @@ formasyonlar" ifadesi geçiyor, kurum adı yok.
 Site sahibinin Google Ads anahtar kelime listesinde olup **siteye bilerek
 eklenmeyenler** ve sebepleri:
 
-- **EMDR terapisi** — EMDR eğitimi aldığına dair bir bilgi verilmedi. Sertifika
-  gerektiren bir protokol; doğrulanmadan yazılmaz.
-- **Bütüncül psikoterapi** — sitenin tamamı psikodinamik/TFP kimliği üzerine
-  kurulu. İkisini birden iddia etmek çelişki yaratır.
-- **Kadıköy psikolog** — ofis Beşiktaş/Maçka'da. Sırf arama için Kadıköy sayfası
-  açmak Google'ın "doorway page" tanımına girer ve yaptırım riski taşır.
-  Bunun yerine SSS'ye çevrim içi görüşme yanıtı eklendi.
+- **Bütüncül psikoterapi** — site sahibinin kararıyla çıkarıldı; odak
+  "psikodinamik psikoterapi".
 - **İlişki terapisi** — çift çalışması yapılmıyor. İlişkiler yalnızca bireysel
   çalışma teması olarak geçiyor.
 - **"tedavi" ifadeleri** — psikolog unvanıyla "tedavi" iddiası hukuken riskli.
   "Psikolojik destek / çalışma" tercih edildi.
-- **Yönetici** — hangi hizmete karşılık geldiği belirsiz, site sahibine soruldu.
+- **Yönetici** — hangi hizmete karşılık geldiği belirsiz, site sahibine soruldu,
+  yanıt bekleniyor.
+
+Sonradan eklenenler: **EMDR** (eğitim teyit edildi, travma çalışması ve uygun
+vakalarla sınırlı olarak), **Kadıköy** (yüz yüze lokasyonlardan biri olduğu
+teyit edildi), **metapsikoloji / Psikoterapist Emin Soydan** (marka ve unvan
+varyantları şemaya `alternateName` olarak girildi).
+
+**Tutarsızlık uyarısı:** SSS "Kadıköy ve Nişantaşı merkezli birkaç lokasyon"
+diyor ama iletişim bölümünde tek adres görünüyor. Kadıköy adresini de eklemek
+ya da etiketi değiştirmek isterseniz söylemeniz yeterli.
 
 ## 4. Karar bekleyen başlıklar
 

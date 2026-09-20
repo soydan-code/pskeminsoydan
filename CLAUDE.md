@@ -50,8 +50,10 @@ Vercel `cleanUrls` açık, bu yüzden iç bağlantılar `.html` uzantısız yaz�
 
 `index.html` sonundaki JSON-LD bloğunda `FAQPage` şeması var ve **sayfadaki
 görünür SSS metniyle birebir aynı olmak zorunda**. Google, şemayla görünen
-içeriğin uyuşmamasını yaptırım sebebi sayar. Bir soruyu değiştirirseniz şemayı
-da güncelleyin.
+içeriğin uyuşmamasını yaptırım sebebi sayar. SSS'de bir soru ya da yanıt
+değiştirildiğinde şemayı elle düzenlemeyin, şunu çalıştırın:
+
+    python3 tools/sss-semasi-guncelle.py
 
 ## Metin yazarken üslup
 
@@ -60,6 +62,13 @@ psikoterapist. 3,5 yılı aşan psikanalitik/psikodinamik formasyon. Yapay zekâ
 girişimciler üzerindeki psikolojik etkileri üzerine tezli yüksek lisans sürüyor.
 14 yaş üzeri ergenler ve yetişkinlerle **bireysel** dinamik psikoterapi yürütüyor —
 çift ve aile çalışması yapmıyor, çocuk danışan kabul etmiyor.
+
+EMDR eğitimi var. Bu yöntem **ana çerçeve değil**: ağırlıklı olarak travma ve
+TSSB çalışmalarında, ayrıca vakanın uygun olduğu durumlarda danışan talebiyle
+kullanılıyor. Sürecin çerçevesi her hâlükârda psikodinamik psikoterapidir.
+
+Yüz yüze görüşmeler Kadıköy ve Nişantaşı merkezli birkaç lokasyonda yapılıyor;
+iletişim bölümündeki adres bunlardan biridir (Google işletme kaydı).
 
 Kuramsal zemin üç katmanlı:
 
