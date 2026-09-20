@@ -10,6 +10,15 @@
   ],
   "headers": [
     {
+      "source": "/(.*\\.txt|.*\\.xml)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, no-cache"
+        }
+      ]
+    },
+    {
       "source": "/assets/img/(.*)",
       "headers": [
         {

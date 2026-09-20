@@ -55,6 +55,14 @@ değiştirildiğinde şemayı elle düzenlemeyin, şunu çalıştırın:
 
     python3 tools/sss-semasi-guncelle.py
 
+Arama motorlarına kaydolma adımları (Search Console, Bing, Yandex, IndexNow,
+alan adı yönlendirmesi) `SEO-ADIMLAR.md` dosyasında. Kök dizindeki
+`e3017c05809369738e58a7ad7ff55537.txt` IndexNow anahtar dosyasıdır, silinmemeli.
+
+Marka adı "metapsikoloji" hem üst bilgide hem alt bilgide logo **görseli**
+olarak geçiyor. Alt bilgiye ayrıca görünür metin olarak eklendi; arama
+motorları için görsel alt metni tek başına zayıf bir sinyal.
+
 ## İletişim kısayolları
 
 WhatsApp, telefon ve sosyal medya bağlantıları üç yerde: hero butonları,
