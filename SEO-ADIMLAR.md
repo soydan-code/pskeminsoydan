@@ -12,11 +12,87 @@ site sahibinin hesaplarıyla bir kez yapılması gerekir. Sıra, etkiye göredir
 sıfırdan sıra beklerken, eski site aynı marka sorgusunu tutuyor ve ikisi
 birbirini zayıflatıyor.
 
-Kalıcı (301) yönlendirme kurulursa eski adresin biriktirdiği güven yeni adrese
-aktarılır. Alan adı sağlayıcısının panelinden ya da eski sitenin sunucusundan
-yapılır.
+Kalıcı yönlendirme kurulunca eski adresin yıllar içinde biriktirdiği güven yeni
+adrese aktarılır ve marka aramasında yeni site çıkmaya başlar.
 
-Aynı durum `metapsikolojii.com` (çift i) için de geçerliyse o da yönlendirilmeli.
+### Önce karar verin
+
+Yönlendirme kurulduğu anda **eski sitedeki içerik yayından kalkar**; o adrese
+gelen herkes yeni siteye düşer. Amaç zaten bu, ama başlamadan önce:
+
+- Eski sitede tutmak istediğiniz yazı, görsel ya da sayfa varsa kopyasını alın.
+- **Google Ads reklamlarınızın hangi adrese gittiğini kontrol edin.** Eski adrese
+  gidiyorlarsa yönlendirme çalışır ama her tıklama fazladan bir sıçrama yapar;
+  reklamların iniş adresini doğrudan `metapsikoloji.tr` yapmak daha iyidir.
+- Eski alan adını **iptal etmeyin, elinizde tutun**. Süresi dolarsa yönlendirme
+  de biter ve aktardığınız değer kaybolur. En az birkaç yıl yenilenmeli.
+
+### Yol A: Vercel üzerinden (önerilen)
+
+Yeni site zaten Vercel'de olduğu için en temizi bu. Sunucu ayarı gerekmez.
+
+1. Vercel panelinde projeyi açın: **Settings → Domains**
+2. **Add Domain** deyip `metapsikoloji.com.tr` yazın
+3. Vercel ne yapmak istediğinizi sorar: **"Redirect to another domain"**
+   seçeneğini işaretleyin, hedef olarak `metapsikoloji.tr`, tür olarak
+   **308 (Permanent)** seçin
+4. Aynı işlemi `www.metapsikoloji.com.tr` için de tekrarlayın
+5. Vercel size bir DNS kaydı gösterir (genellikle kök alan adı için bir **A**
+   kaydı, www için **CNAME**). Bu kaydı alan adını aldığınız firmanın
+   panelindeki DNS bölümüne girin
+6. DNS yayılması genelde birkaç saat, bazen 24 saat sürer
+
+> 308, Google açısından 301 ile aynı anlama gelir: kalıcı taşınma. İkisi de
+> değeri aktarır.
+
+### Yol B: Eski site kendi sunucusunda kalacaksa
+
+Eski site bir paylaşımlı hostingde (cPanel gibi) duruyorsa, kök dizindeki
+`.htaccess` dosyasına şunu ekleyin:
+
+```apache
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?metapsikoloji\.com\.tr$ [NC]
+RewriteRule ^ https://metapsikoloji.tr/ [R=301,L]
+```
+
+Bu kural **her sayfayı** yeni sitenin ana sayfasına gönderir. Yeni site tek
+sayfa olduğu için eski adreslerin birebir karşılığı yok; doğrusu budur. Eski
+sitede öne çıkan birkaç sayfa varsa onları ayrıca eşleyebiliriz, adreslerini
+bana iletmeniz yeterli.
+
+### Yol C: Alan adı firmasının yönlendirme özelliği
+
+Çoğu firmada "Yönlendirme / Forwarding" diye bir alan vardır. Kullanacaksanız
+**mutlaka "Kalıcı (301)"** seçin.
+
+**"Çerçeveli / maskeli yönlendirme" (masked / frame forwarding) seçeneğini
+seçmeyin.** O seçenek adres çubuğunda eski adresi bırakıp içeriği çerçeve
+içinde gösterir; arama motorları bunu taşınma saymaz, hiçbir değer aktarılmaz.
+
+### Yönlendirmeyi doğrulayın
+
+Kurduktan sonra <https://httpstatus.io> adresine `http://metapsikoloji.com.tr`
+yazın. Görmeniz gereken zincir:
+
+```
+301 (ya da 308)  ->  https://metapsikoloji.tr/   200
+```
+
+Tarayıcıda denerseniz adres çubuğunun `metapsikoloji.tr` olarak değişmesi
+gerekir. Eski adres kalıyorsa maskeli yönlendirme kurulmuştur, düzeltilmeli.
+
+### Yönlendirmeden sonra: Adres değişikliği bildirimi
+
+Her iki alan adı da Google Search Console'da doğrulanmışsa, eski mülkü seçip
+**Ayarlar → Adres değişikliği** aracıyla taşınmayı Google'a bildirin. Bu,
+aktarımı belirgin biçimde hızlandırır.
+
+### metapsikolojii.com (çift i)
+
+Aramada bu adres de sizin adınıza çıkıyor ("Düzce Psikolog"). Sizinse aynı
+yöntemlerden biriyle o da yönlendirilmeli. Değilse ya da artık kullanmıyorsanız
+bana söyleyin, bu maddeyi çıkarayım.
 
 ## 2. Google Search Console
 
