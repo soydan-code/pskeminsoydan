@@ -55,6 +55,18 @@ değiştirildiğinde şemayı elle düzenlemeyin, şunu çalıştırın:
 
     python3 tools/sss-semasi-guncelle.py
 
+## İletişim kısayolları
+
+WhatsApp, telefon ve sosyal medya bağlantıları üç yerde: hero butonları,
+iletişim bölümünün üstündeki hızlı erişim satırı ve alt bilgideki ikonlar.
+Ayrıca `#yuzenWa` yüzen düğmesi var; `main.js` bunu ilk ekranda ve iletişim
+bölümü görünürken gizler, arada gösterir. Düğme WhatsApp yeşili değil marka
+lacivertidir; paletle çakışmaması için böyle seçildi.
+
+Bağlantılar tek yerde değil, HTML'e gömülü. Numara ya da hesap değişirse
+`index.html` ve `iptal-politikasi.html` içinde ve JSON-LD'nin `sameAs`
+alanında güncellenmeli.
+
 ## Metin yazarken üslup
 
 Site sahibi: 2019'da mezun, 7 yılı aşkın klinik deneyim ve 5.000+ seans saati olan

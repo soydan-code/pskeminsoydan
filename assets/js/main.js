@@ -22,6 +22,33 @@
     });
   }
 
+  /* ---- Yüzen WhatsApp düğmesi ----
+     İlk ekranda gizli kalır ki hero'yu kapatmasın; iletişim bölümü ekrana
+     geldiğinde de gizlenir, çünkü orada zaten aynı düğme var. */
+  var yuzen = document.getElementById('yuzenWa');
+  if (yuzen) {
+    yuzen.hidden = false;
+    yuzen.classList.add('gizli');
+
+    var iletisim = document.getElementById('iletisim');
+    var iletisimGorunur = false;
+
+    var tazele = function () {
+      var yeterinceKaydi = window.scrollY > window.innerHeight * 0.6;
+      yuzen.classList.toggle('gizli', !yeterinceKaydi || iletisimGorunur);
+    };
+
+    if (iletisim && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (girisler) {
+        iletisimGorunur = girisler[0].isIntersecting;
+        tazele();
+      }, { rootMargin: '0px 0px -25% 0px' }).observe(iletisim);
+    }
+
+    window.addEventListener('scroll', tazele, { passive: true });
+    tazele();
+  }
+
   /* ---- İletişim formu ----
      Sunucu yok. mailto bağlantısı, e-posta uygulaması tanımlı olmayan
      cihazlarda sessizce başarısız olduğu için mesaj her durumda sayfada

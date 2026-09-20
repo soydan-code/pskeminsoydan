@@ -735,3 +735,63 @@ summary::-webkit-details-marker { display: none; }
   display: inline-block; margin-top: 40px;
   font-size: .93rem; font-weight: 600;
 }
+
+/* ==========================================================================
+   İletişim kısayolları: WhatsApp, telefon, sosyal medya
+   ========================================================================== */
+.ikon { width: 1.05em; height: 1.05em; flex: none; display: block; }
+
+.btn-ikonlu { display: inline-flex; align-items: center; justify-content: center; gap: 9px; }
+
+/* İletişim bölümünün üstündeki hızlı erişim satırı */
+/* Buton yanında, ikincil bir hedef için sade metin bağlantısı */
+.metin-bag {
+  align-self: center;
+  font-weight: 600; font-size: .95rem; color: inherit;
+  text-decoration: underline; text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+.metin-bag:hover { text-decoration-thickness: 2px; }
+
+.hizli-erisim {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin: 0 0 28px;
+}
+
+/* Alt bilgideki yuvarlak sosyal ikonlar */
+.sosyal {
+  display: flex; gap: 12px;
+  list-style: none; margin: 16px 0 0; padding: 0;
+}
+.sosyal a {
+  display: flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface); color: var(--accent);
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+.sosyal a:hover {
+  background: var(--accent); color: var(--surface); border-color: var(--accent);
+}
+.sosyal .ikon { width: 19px; height: 19px; }
+
+/* Sayfa boyunca erişilebilir kalan WhatsApp düğmesi.
+   Hero'yu kapatmaması için ilk ekranda gizli, iletişim bölümü göründüğünde
+   yeniden gizlenir; görünürlüğü main.js yönetir. */
+.yuzen-wa {
+  position: fixed; right: 20px; bottom: 20px; z-index: 55;
+  display: flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--btn-bg); color: var(--btn-fg);
+  box-shadow: 0 6px 20px rgba(13, 42, 77, .3);
+  transition: opacity .25s ease, transform .25s ease, background-color .18s ease;
+}
+.yuzen-wa[hidden] { display: none; }
+.yuzen-wa.gizli { opacity: 0; transform: translateY(12px); pointer-events: none; }
+.yuzen-wa:hover { background: var(--btn-bg-hover); }
+.yuzen-wa .ikon { width: 27px; height: 27px; }
+
+@media (max-width: 780px) {
+  .yuzen-wa { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+  .hizli-erisim .btn { flex: 1 1 100%; }
+}

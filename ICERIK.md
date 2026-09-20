@@ -29,7 +29,7 @@ perdesini kontrast için yeniden ölçmek gerekebilir.
 İletişim bilgileri, çalışma saatleri ve iptal politikası eklendi. Geriye
 kalan:
 
-- Sosyal medya hesapları (Instagram, LinkedIn vb.)
+- (Hepsi tamamlandı)
 
 Adres artık Google işletme kaydına yönleniyor
 (`https://maps.app.goo.gl/txqexG4cu7dfvaj76`). Bağlantıyı site sahibi
@@ -70,10 +70,17 @@ varyantları şemaya `alternateName` olarak girildi).
 bağlantılı) ve **Yasal adres** (Vişnezade, dokununca açılıyor). Kadıköy
 bağlantısı site sahibinden geldi; ağ kısıtı nedeniyle açıp doğrulayamadım.
 
-**Eksik:** Kadıköy ofisinin açık adresi yok, bu yüzden yapısal veride ayrı bir
+İkinci ofis **Suadiye** olarak adlandırıldı.
+
+**Eksik:** Suadiye ofisinin açık adresi yok, bu yüzden yapısal veride ayrı bir
 konum olarak tanımlanamadı (şu an yalnızca `hasMap` bağlantısı ve `areaServed`
 var). Açık adres gelirse ikinci bir `LocalBusiness` kaydı açılabilir; yerel
-aramada Kadıköy için bu daha güçlü olur. Metro/semt adı da teyit edilmeli.
+aramada Kadıköy/Suadiye için bu daha güçlü olur.
+
+**İletişim kısayolları:** WhatsApp bağlantısı hazır mesaj içeriyor
+(`wa.me/905436339213?text=...`). Numara `+` olmadan yazılır, wa.me böyle
+bekler. LinkedIn ve Instagram hem alt bilgide ikon olarak hem iletişim
+listesinde metin olarak, ayrıca şemada `sameAs` alanında.
 
 ## 4. Karar bekleyen başlıklar
 
