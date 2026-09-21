@@ -5,6 +5,55 @@ site sahibinin hesaplarıyla bir kez yapılması gerekir. Sıra, etkiye göredir
 
 ---
 
+## 0. ACİL: metapsikoloji.tr (www'suz hâli) hiç açılmıyor
+
+20.09.2026 tarihinde DNS kayıtları kontrol edildi. Durum:
+
+| Adres | Nereye gidiyor |
+|---|---|
+| `www.metapsikoloji.tr` | Vercel (çalışıyor) |
+| `metapsikoloji.tr` | **Hiçbir yere. A kaydı yok.** |
+| `metapsikoloji.com.tr` | `45.151.250.13` (eski hosting) |
+| `www.metapsikoloji.com.tr` | `45.151.250.13` (eski hosting) |
+
+Yani birisi tarayıcıya `metapsikoloji.tr` yazdığında **site açılmıyor**, hata
+alıyor. Sadece başına `www.` koyarsa açılıyor.
+
+Bu yalnızca bir konfor sorunu değil, **sitenin aramada çıkmamasının başlıca
+sebebi olabilir.** Çünkü sitedeki bütün adres bildirimleri www'suz hâli
+gösteriyor:
+
+- `<link rel="canonical" href="https://metapsikoloji.tr/">`
+- `sitemap.xml` içindeki adresler
+- Open Graph (`og:url`) etiketleri
+- JSON-LD yapısal verideki bütün adresler
+
+Google siteyi bulduğunda "asıl adres burası" denen adrese gidiyor ve **açılmayan
+bir adresle karşılaşıyor**. Bu durumda sayfayı dizine ekleyemez.
+
+### Çözüm
+
+1. Vercel → proje → **Settings → Domains** listesinde `metapsikoloji.tr`
+   (www'suz hâli) **ekli mi** bakın. Ekli değilse ekleyin.
+2. Vercel o satırın altında bir **A kaydı** gösterecek (bugünlerde
+   `216.198.79.1` gibi bir adres). Alan adının DNS panelinde şu kaydı açın:
+
+   | Tür | Ad / Host | Değer |
+   |---|---|---|
+   | A | `@` (bazı panellerde boş bırakılır) | *Vercel'in gösterdiği IP* |
+
+3. Kaydı girdikten sonra Vercel'deki satır **Valid Configuration** (yeşil)
+   olmalı. Olmuyorsa değer yanlış girilmiştir.
+
+`@` yerine `metapsikoloji.tr` yazmanız gereken paneller de var; panel
+hangisini istiyorsa o. Bazı sağlayıcılarda kök alan adına A yerine
+**ALIAS / ANAME** kaydı açılır; o da olur, Vercel'in CNAME değerini girin.
+
+Doğrulama: birkaç saat sonra tarayıcıya www olmadan `metapsikoloji.tr` yazın.
+Açılıyorsa tamam.
+
+---
+
 ## 1. metapsikoloji.com.tr adresini metapsikoloji.tr'ye yönlendirin
 
 **En yüksek etkili adım bu.** `metapsikoloji.com.tr` şu anda Google'da
@@ -64,14 +113,65 @@ Alan adı projeye eklendikten sonra yönlendirmeyi açın:
 2. **Redirect to** seçeneğini işaretleyip hedef olarak `metapsikoloji.tr`
    seçin, tür olarak **308 (Permanent)**
 3. Aynı işlemi `www.metapsikoloji.com.tr` için de tekrarlayın
-4. Vercel size bir DNS kaydı gösterir (genellikle kök alan adı için bir **A**
-   kaydı, www için **CNAME**). Bu kaydı alan adını aldığınız firmanın
-   panelindeki DNS bölümüne girin
+4. Vercel her iki satırın altında birer DNS kaydı gösterir. Bunları eski alan
+   adının DNS panelinde açmanız gerekir (aşağıda ayrıntılı)
 5. DNS yayılması genelde birkaç saat, bazen 24 saat sürer
 
 > **Önemli:** "Redirect to" seçeneği yalnızca hedef alan adı (`metapsikoloji.tr`)
 > **aynı projeye** bağlıysa listede görünür. Görünmüyorsa önce onun bağlı
 > olduğunu doğrulayın.
+
+### DNS kayıtlarını girmek (Yol A'nın 6. adımı)
+
+Vercel'de yönlendirmeyi tanımlamak tek başına hiçbir şey yapmaz. Vercel
+"bu alan adı bana gelirse şunu yaparım" der; **alan adını Vercel'e
+yönlendiren şey DNS kaydıdır.** O kayıt girilene kadar eski site yayında
+kalır.
+
+#### Önce DNS'i nerede yöneteceğinizi bulun
+
+Alan adını aldığınız firmanın panelinde **Ad Sunucuları / Nameservers**
+bölümüne bakın:
+
+- Ad sunucuları **alan adı firmasınınsa** (`ns1.firmaadi.com` gibi), DNS
+  kayıtlarını o firmanın panelinde düzenlersiniz.
+- Ad sunucuları **hosting firmasınınsa**, kayıtları hosting panelinde
+  (cPanel → Zone Editor gibi) düzenlersiniz.
+
+Yanlış panelde yaptığınız değişiklik hiçbir işe yaramaz; tek karışma noktası
+budur.
+
+#### Girilecek kayıtlar
+
+`metapsikoloji.com.tr` şu anda `45.151.250.13` adresine, yani eski hostinge
+bakıyor. Yapılacak iş **yeni kayıt eklemek değil, var olan kaydı
+değiştirmektir**:
+
+| Tür | Ad / Host | Eski değer | Yeni değer |
+|---|---|---|---|
+| A | `@` (ya da boş) | `45.151.250.13` | *Vercel'in gösterdiği IP* |
+| CNAME | `www` | eski hostingi gösteriyor | *Vercel'in gösterdiği CNAME* |
+
+**Eskisini silmeden yenisini eklemeyin.** Aynı isimde iki A kaydı olursa
+ziyaretçilerin bir kısmı eski siteye, bir kısmı yenisine düşer; arama
+motorları da kararsız kalır.
+
+`www` satırında hâlihazırda bir A kaydı varsa onu silip yerine CNAME açın;
+aynı isimde hem A hem CNAME bulunamaz.
+
+#### Dokunmayacağınız kayıtlar
+
+Bu alan adıyla e-posta kullanıyorsanız (`...@metapsikoloji.com.tr`),
+**MX kayıtlarına ve e-postayla ilgili TXT kayıtlarına (SPF, DKIM, DMARC)
+kesinlikle dokunmayın.** A kaydını değiştirmek e-postayı etkilemez, MX'i
+silmek ise gelen kutunuzu durdurur.
+
+#### Sonucu kontrol edin
+
+Vercel'in Domains listesinde her iki satır da **Valid Configuration**
+(yeşil) göstermelidir. Birkaç saat geçtiği hâlde göstermiyorsa değer
+yanlış girilmiştir; Vercel'deki değeri kopyala-yapıştır yapın, elle
+yazmayın.
 
 > 308, Google açısından 301 ile aynı anlama gelir: kalıcı taşınma. İkisi de
 > değeri aktarır.
