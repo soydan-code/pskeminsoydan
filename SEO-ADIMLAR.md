@@ -52,6 +52,18 @@ hangisini istiyorsa o. Bazı sağlayıcılarda kök alan adına A yerine
 Doğrulama: birkaç saat sonra tarayıcıya www olmadan `metapsikoloji.tr` yazın.
 Açılıyorsa tamam.
 
+### Bunu yönlendirmelerden ÖNCE yapın
+
+Sıra önemli. Yönlendirme, ziyaretçiyi `https://metapsikoloji.tr/` adresine
+gönderir. O adres şu an açılmadığı için, yönlendirmeyi önce açarsanız:
+
+- eski site de kapanır,
+- yeni site zaten www'suz hâliyle açılmıyordur,
+- ve **hiçbir adresiniz çalışmaz.**
+
+Önce bu bölümü bitirin, www'suz adresin açıldığını gözünüzle görün, ancak
+ondan sonra 1. bölümdeki yönlendirmeleri devreye alın.
+
 ---
 
 ## 1. metapsikoloji.com.tr adresini metapsikoloji.tr'ye yönlendirin
@@ -223,11 +235,43 @@ Her iki alan adı da Google Search Console'da doğrulanmışsa, eski mülkü se�
 **Ayarlar → Adres değişikliği** aracıyla taşınmayı Google'a bildirin. Bu,
 aktarımı belirgin biçimde hızlandırır.
 
-### metapsikolojii.com (çift i)
+### metapsikolojii.com (çift i) — bu da yönlendirilecek
 
-Aramada bu adres de sizin adınıza çıkıyor ("Düzce Psikolog"). Sizinse aynı
-yöntemlerden biriyle o da yönlendirilmeli. Değilse ya da artık kullanmıyorsanız
-bana söyleyin, bu maddeyi çıkarayım.
+Site sahibi bu alan adının da kendisine ait olduğunu doğruladı. 21.09.2026
+tarihli DNS kontrolü:
+
+| Adres | Nereye gidiyor |
+|---|---|
+| `metapsikolojii.com` | `89.252.134.195` |
+| `www.metapsikolojii.com` | `89.252.134.195` |
+
+Dikkat: bu IP, `metapsikoloji.com.tr`nin IP'sinden (`45.151.250.13`)
+**farklı**. Yani iki eski site ayrı ayrı yerlerde duruyor; muhtemelen ayrı
+paneller, belki ayrı firmalar. Her biri için DNS'i kendi panelinde
+düzenlemek gerekir.
+
+Yöntem birebir aynı: Yol A, Yol B ya da Yol C'den biri, hedef
+`https://metapsikoloji.tr/`, tür kalıcı (301/308).
+
+**`.com` uzantısına özel bir uyarı:** `.com.tr`nin aksine `.com` Vercel'den
+satın alınabilir. Bu yüzden Add Domain kutusuna `metapsikolojii.com`
+yazdığınızda karşınıza **satın alma teklifi** çıkabilir. Alan adı zaten
+sizin; hiçbir şey satın almayın, "mevcut alan adını bağla" yolunu seçin.
+Fiyat yazan hiçbir düğmeye basmayın.
+
+#### Hangisine öncelik verilmeli
+
+Üç alan adı var ve hepsi tek adreste toplanmalı:
+
+| Alan adı | Rolü |
+|---|---|
+| `metapsikoloji.tr` | **Asıl adres.** Site burada yayınlanır |
+| `metapsikoloji.com.tr` | Kalıcı yönlendirme → asıl adres |
+| `metapsikolojii.com` | Kalıcı yönlendirme → asıl adres |
+
+`metapsikoloji.com.tr` aramada zaten çıktığı için önceliği odur;
+`metapsikolojii.com` ikinci sıradadır ama aynı gün halledilebilir. İkisi de
+yıllarca elde tutulmalı, süresi dolmaya bırakılmamalı.
 
 ## 2. Google Search Console
 
