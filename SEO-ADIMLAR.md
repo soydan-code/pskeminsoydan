@@ -7,7 +7,7 @@ site sahibinin hesaplarıyla bir kez yapılması gerekir. Sıra, etkiye göredir
 
 ## 0. ACİL: metapsikoloji.tr (www'suz hâli) hiç açılmıyor
 
-20.09.2026 tarihinde DNS kayıtları kontrol edildi. Durum:
+21.09.2026 tarihinde DNS kayıtları kontrol edildi. Durum:
 
 | Adres | Nereye gidiyor |
 |---|---|
