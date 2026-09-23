@@ -814,3 +814,58 @@ summary::-webkit-details-marker { display: none; }
   .yuzen-wa { right: 16px; bottom: 16px; width: 52px; height: 52px; }
   .hizli-erisim .btn { flex: 1 1 100%; }
 }
+
+/* ==========================================================================
+   Çerez onay şeridi
+   Şerit main.js tarafından oluşturulur. Ziyaretçi seçim yapana kadar Google
+   etiketi hiç yüklenmez; bu yüzden JavaScript çalışmazsa da izleme olmaz,
+   yalnızca şerit görünmez. Güvenli taraf budur.
+   ========================================================================== */
+.cerez-serit {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 24px rgba(13, 42, 77, .14);
+}
+.cerez-serit[hidden] { display: none; }
+
+.cerez-ic {
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding: 18px var(--gutter);
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+
+.cerez-baslik {
+  font-family: var(--font-heading);
+  font-size: 1.05rem; font-weight: 600;
+  margin: 0 0 4px;
+}
+.cerez-metin {
+  margin: 0; max-width: 62ch;
+  font-size: .92rem; line-height: 1.6; color: var(--muted);
+}
+
+.cerez-dugmeler {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-left: auto;
+}
+
+/* Alt bilgideki "Çerez tercihleri" düğmesi; bağlantı gibi görünür ama
+   gerçek bir düğmedir, çünkü gittiği bir adres yok. */
+.link-btn {
+  background: none; border: 0; padding: 0;
+  font: inherit; color: inherit; cursor: pointer;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.link-btn:hover { color: var(--accent); }
+
+/* Şerit sayfanın altını kapladığı için yüzen düğme her genişlikte gizlenir;
+   aksi hâlde şeridin arkasında kalıp tıklanamaz oluyor. */
+body.cerez-acik .yuzen-wa { display: none; }
+
+@media (max-width: 720px) {
+  .cerez-ic { gap: 14px; padding: 16px var(--gutter); }
+  .cerez-dugmeler { margin-left: 0; width: 100%; }
+  .cerez-dugmeler .btn { flex: 1 1 140px; }
+}

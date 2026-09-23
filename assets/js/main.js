@@ -49,6 +49,140 @@
     tazele();
   }
 
+  /* ---- Çerez onayı ve Google etiketi ----
+     Etiket index.html'de yüklenmez; orada yalnızca izinler "reddedildi"
+     olarak tanımlanır. Ziyaretçi kabul edene kadar Google'a hiçbir istek
+     gitmez, hiçbir çerez yazılmaz. Kabul gelirse etiket buradan yüklenir. */
+  var OLCUM_KIMLIGI = 'G-00PCBRRYYT';
+  var ONAY_ANAHTARI = 'cerez-onayi-v1';
+
+  var onayOku = function () {
+    try { return localStorage.getItem(ONAY_ANAHTARI); } catch (e) { return null; }
+  };
+  var onayYaz = function (deger) {
+    try { localStorage.setItem(ONAY_ANAHTARI, deger); } catch (e) { /* gizli sekme */ }
+  };
+
+  var gtagCagir = function () {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(arguments);
+  };
+
+  var etiketYuklendi = false;
+  var etiketiYukle = function () {
+    if (etiketYuklendi) return;
+    etiketYuklendi = true;
+
+    gtagCagir('consent', 'update', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    });
+
+    var betik = document.createElement('script');
+    betik.async = true;
+    betik.src = 'https://www.googletagmanager.com/gtag/js?id=' + OLCUM_KIMLIGI;
+    document.head.appendChild(betik);
+
+    gtagCagir('js', new Date());
+    gtagCagir('config', OLCUM_KIMLIGI);
+  };
+
+  // Vazgeçildiğinde daha önce yazılmış Google çerezlerini temizler.
+  var cerezleriSil = function () {
+    var parcalar = document.cookie ? document.cookie.split(';') : [];
+    var alanlar = [location.hostname, '.' + location.hostname];
+    var kok = location.hostname.split('.').slice(-2).join('.');
+    if (kok !== location.hostname) alanlar.push('.' + kok);
+
+    parcalar.forEach(function (parca) {
+      var ad = parca.split('=')[0].trim();
+      if (!/^(_ga|_gid|_gat|_gcl)/.test(ad)) return;
+      alanlar.forEach(function (alan) {
+        document.cookie = ad + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + alan;
+      });
+      document.cookie = ad + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    });
+  };
+
+  var serit = null;
+
+  var seritKapat = function () {
+    if (serit) serit.hidden = true;
+    document.body.classList.remove('cerez-acik');
+  };
+
+  var seritKur = function () {
+    if (serit) { serit.hidden = false; document.body.classList.add('cerez-acik'); return; }
+
+    serit = document.createElement('div');
+    serit.className = 'cerez-serit';
+    serit.id = 'cerezSerit';
+    serit.setAttribute('role', 'region');
+    serit.setAttribute('aria-label', 'Çerez tercihi');
+    serit.innerHTML =
+      '<div class="cerez-ic">' +
+        '<div>' +
+          '<p class="cerez-baslik">Çerezler</p>' +
+          '<p class="cerez-metin">Sitenin nasıl kullanıldığını anlamak ve reklam ' +
+          'çalışmalarını ölçmek için Google Analytics çerezlerini kullanmak istiyorum. ' +
+          'Bunlar siz kabul etmeden çalışmaz; reddetmeniz sitenin hiçbir bölümünü ' +
+          'etkilemez. Ayrıntılar <a href="/gizlilik-politikasi">Gizlilik ve Çerez ' +
+          'Politikası</a> sayfasında.</p>' +
+        '</div>' +
+        '<div class="cerez-dugmeler">' +
+          '<button type="button" class="btn btn-sm" id="cerezKabul">Kabul ediyorum</button>' +
+          '<button type="button" class="btn btn-sm btn-ghost" id="cerezRed">Reddet</button>' +
+        '</div>' +
+      '</div>';
+
+    document.body.appendChild(serit);
+    document.body.classList.add('cerez-acik');
+
+    serit.querySelector('#cerezKabul').addEventListener('click', function () {
+      onayYaz('kabul');
+      etiketiYukle();
+      seritKapat();
+    });
+
+    serit.querySelector('#cerezRed').addEventListener('click', function () {
+      onayYaz('red');
+      cerezleriSil();
+      gtagCagir('consent', 'update', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      seritKapat();
+    });
+  };
+
+  if (onayOku() === 'kabul') {
+    etiketiYukle();
+  } else if (onayOku() !== 'red') {
+    seritKur();
+  }
+
+  /* Alt bilgiye "Çerez tercihleri" düğmesi eklenir. JavaScript çalışmazsa
+     düğme hiç görünmez; zaten o durumda verilecek bir karar da yoktur. */
+  var altMenu = document.querySelector('.site-footer nav ul');
+  if (altMenu) {
+    var madde = document.createElement('li');
+    var ayarDugmesi = document.createElement('button');
+    ayarDugmesi.type = 'button';
+    ayarDugmesi.className = 'link-btn';
+    ayarDugmesi.textContent = 'Çerez tercihleri';
+    ayarDugmesi.addEventListener('click', function () {
+      seritKur();
+      var kabul = document.getElementById('cerezKabul');
+      if (kabul) kabul.focus();
+    });
+    madde.appendChild(ayarDugmesi);
+    altMenu.appendChild(madde);
+  }
+
   /* ---- İletişim formu ----
      Sunucu yok. mailto bağlantısı, e-posta uygulaması tanımlı olmayan
      cihazlarda sessizce başarısız olduğu için mesaj her durumda sayfada

@@ -34,16 +34,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/img/portre.jpg" fetchpriority="high">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-00PCBRRYYT"></script>
+<!-- Google tag (gtag.js), onaya bağlı.
+     Etiketin kendisi burada YÜKLENMEZ; yalnızca izinler reddedilmiş olarak
+     tanımlanır. Ziyaretçi çerez şeridinde kabul ederse assets/js/main.js
+     etiketi yükler ve izni günceller. Sıralama önemlidir: izin varsayılanları
+     etiketten önce tanımlanmalıdır. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-00PCBRRYYT');
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
 </script>
 </head>
 <body>
@@ -532,6 +538,7 @@
         <li><a href="#sss">Sorular</a></li>
         <li><a href="#iletisim">İletişim</a></li>
         <li><a href="/iptal-politikasi">İptal ve Ödeme</a></li>
+        <li><a href="/gizlilik-politikasi">Gizlilik ve Çerezler</a></li>
       </ul>
     </nav>
     <p class="footer-legal">
@@ -892,6 +899,6 @@
   ]
 }
 </script>
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>

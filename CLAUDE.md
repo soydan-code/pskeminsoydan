@@ -63,6 +63,30 @@ Marka adı "metapsikoloji" hem üst bilgide hem alt bilgide logo **görseli**
 olarak geçiyor. Alt bilgiye ayrıca görünür metin olarak eklendi; arama
 motorları için görsel alt metni tek başına zayıf bir sinyal.
 
+## Çerez onayı ve ölçüm
+
+Google etiketi (GA4, `G-00PCBRRYYT`) **onaya bağlıdır ve bu bozulmamalıdır.**
+Üç HTML dosyasının `<head>` bölümünde yalnızca izin varsayılanları tanımlıdır
+(hepsi `denied`); `gtag.js` orada yüklenmez. Etiketi yükleyen tek yer
+`main.js` içindeki `etiketiYukle`, o da ziyaretçi şeritte kabul ettiğinde
+ya da daha önce kabul etmişse çalışır.
+
+Sonuç: JavaScript çalışmazsa şerit görünmez ve izleme de olmaz. Güvenli taraf
+budur, tersine çevirmeyin.
+
+Şerit `main.js` tarafından oluşturulur, HTML'de durmaz; böylece üç sayfada tek
+bir metin vardır. Alt bilgideki "Çerez tercihleri" düğmesi de aynı yerden
+eklenir, kararı değiştirmek için bu düğme kullanılır.
+
+Karar `localStorage` içinde `cerez-onayi-v1` anahtarıyla saklanır. Metin ya da
+kapsam değişirse anahtarın sonundaki sürümü artırın; eski onaylar geçersiz olur
+ve şerit herkese yeniden sorar.
+
+Ölçümle ilgili bir değişiklik yapıldığında `gizlilik-politikasi.html`
+içindeki çerez listesi ve açıklamalar da güncellenmeli. O sayfa sitenin
+gerçekte ne yaptığını anlatır; ikisinin ayrışması hem yanlış beyan olur hem de
+KVKK açısından sorun yaratır.
+
 ## İletişim kısayolları
 
 WhatsApp, telefon ve sosyal medya bağlantıları üç yerde: hero butonları,

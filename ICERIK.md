@@ -82,6 +82,22 @@ aramada Kadıköy/Suadiye için bu daha güçlü olur.
 bekler. LinkedIn ve Instagram hem alt bilgide ikon olarak hem iletişim
 listesinde metin olarak, ayrıca şemada `sameAs` alanında.
 
+## 3.5 Ölçüm ve gizlilik
+
+Google Analytics 4 etiketi (`G-00PCBRRYYT`) eklendi, çerez onayına bağlı
+çalışıyor. `gizlilik-politikasi.html` sayfası bunu ve sitenin geri kalanını
+anlatıyor.
+
+Sayfada uydurulan bilgi yok; yazılanların hepsi sitenin gerçekte yaptığı
+şeylerden çıkarıldı (Vercel barındırma, Google Fonts, mailto formu, dış
+bağlantılar). VERBİS kaydı, şirket unvanı ya da vergi bilgisi gibi
+doğrulanmamış hiçbir şey yazılmadı.
+
+**Eksik:** Google Ads tarafında dönüşüm tanımlı değil. GA4 ile Ads hesabı
+bağlanıp bir olay dönüşüm olarak içe aktarılmadığı sürece reklam tarafında
+ölçülecek bir şey olmaz. Sitede henüz tıklama olayı (WhatsApp, telefon, form)
+tanımlı değil; istenirse eklenebilir.
+
 ## 4. Karar bekleyen başlıklar
 
 - **Marka adı:** Üst menüde "metapsikoloji", altında "Psikolog Emin Soydan"
