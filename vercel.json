@@ -13,6 +13,50 @@
       ],
       "destination": "https://www.metapsikoloji.tr/:path*",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "metapsikoloji.com.tr"
+        }
+      ],
+      "destination": "https://www.metapsikoloji.tr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.metapsikoloji.com.tr"
+        }
+      ],
+      "destination": "https://www.metapsikoloji.tr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "metapsikolojii.com"
+        }
+      ],
+      "destination": "https://www.metapsikoloji.tr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.metapsikolojii.com"
+        }
+      ],
+      "destination": "https://www.metapsikoloji.tr/:path*",
+      "permanent": true
     }
   ],
   "rewrites": [

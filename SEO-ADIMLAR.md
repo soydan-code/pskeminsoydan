@@ -5,6 +5,31 @@ site sahibinin hesaplarıyla bir kez yapılması gerekir. Sıra, etkiye göredir
 
 ---
 
+## 0-A. Veridyen panelinde "@" tuzağı (23.09.2026'da yaşandı)
+
+Veridyen'in DNS formu **`@` işaretini kök alan adı diye yorumlamıyor**, onu
+harfi harfine bir alt alan adı sanıyor. İsim alanına `@` yazılınca kayıt
+`metapsikoloji.tr` için değil, `@.metapsikoloji.tr` diye gerçek bir isim
+için açılıyor. Panelde kayıt görünüyor, her şey doğru sanılıyor, ama kök
+alan adı hâlâ boş kalıyor.
+
+DNS'e sorulduğunda görülen tam olarak buydu:
+
+    @.metapsikoloji.tr   ->  216.198.79.1, 76.76.21.21
+    metapsikoloji.tr     ->  (adres yok, yalnızca SOA)
+
+**Doğrusu:** bu panelde İsim alanına tam ana makine adı yazılır. Nitekim
+mevcut CNAME satırı da `www.metapsikoloji.tr` olarak duruyor, `www` olarak
+değil. Kök için ya alanı **boş bırakın** ya da **`metapsikoloji.tr`** yazın.
+Panel ikisini de kabul etmiyorsa destek kaydı açıp "kök (apex) A kaydı
+eklenmesini" isteyin.
+
+**Aynı isimde iki A kaydı olmasın.** `76.76.21.21` Vercel'in eski adresi,
+`216.198.79.1` güncel olanıdır. İkisi birden durursa ziyaretçilerin yarısı
+eskisine düşer. Yalnızca `216.198.79.1` kalmalı.
+
+---
+
 ## 0. ACİL: metapsikoloji.tr (www'suz hâli) hiç açılmıyor
 
 21.09.2026 tarihinde DNS kayıtları kontrol edildi. Durum:
@@ -272,6 +297,42 @@ Fiyat yazan hiçbir düğmeye basmayın.
 `metapsikoloji.com.tr` aramada zaten çıktığı için önceliği odur;
 `metapsikolojii.com` ikinci sıradadır ama aynı gün halledilebilir. İkisi de
 yıllarca elde tutulmalı, süresi dolmaya bırakılmamalı.
+
+## 1-B. Alan adları kütüğü (23.09.2026 DNS taraması)
+
+| Alan adı | Ad sunucusu | Durum |
+|---|---|---|
+| `www.metapsikoloji.tr` | veridyen | Çalışıyor, **asıl adres** |
+| `metapsikoloji.tr` | veridyen | Kök A kaydı yok, `@` tuzağı (0-A) |
+| `metapsikoloji.com.tr` | çözülemiyor | **SERVFAIL, alan adı hiç yanıt vermiyor** |
+| `metapsikolojii.com` (çift i) | guzelhosting | Çalışıyor, `89.252.134.195` |
+| `metapsikoloji.com` (tek i) | domaincontrol (GoDaddy) | Çalışıyor, `160.153.137.218`, **sahibi teyit edilmedi** |
+
+`metapsikoloji.com.tr` daha önce `45.151.250.13` adresini gösteriyordu, artık
+hiç yanıt vermiyor. Süresi dolmuş, askıya alınmış ya da ad sunucuları
+kaldırılmış olabilir. **Yanıt vermeyen bir alan adı yönlendirilemez**; önce
+kayıt firmasından durumu öğrenilip alan adı ayağa kaldırılmalı.
+
+`metapsikoloji.com` ile `metapsikolojii.com` **iki ayrı alan adıdır**, ayrı
+firmalarda duruyorlar. Hangisinin site sahibine ait olduğu netleşmeden
+ikincisine dokunulmamalı.
+
+### Yönlendirmeler kodda hazır bekliyor
+
+`vercel.json` içindeki host koşullu `redirects` kuralları şu alan adlarını
+`https://www.metapsikoloji.tr/` adresine kalıcı (308) olarak gönderir:
+
+    metapsikoloji.tr
+    metapsikoloji.com.tr
+    www.metapsikoloji.com.tr
+    metapsikolojii.com
+    www.metapsikolojii.com
+
+Bu kurallar bugün hiçbir şey yapmıyor, çünkü o alan adları Vercel'e
+gelmiyor. Her biri için yapılacak iki şey var: alan adını Vercel projesine
+eklemek ve DNS'te Vercel'i göstermek. İkisi tamamlanan alan adının
+yönlendirmesi kendiliğinden çalışmaya başlar, panelde ayrıca yönlendirme
+tanımlamak gerekmez.
 
 ## 2. Google Search Console
 
