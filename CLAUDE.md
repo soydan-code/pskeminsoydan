@@ -43,8 +43,20 @@ hâle getirmişti.
 
 ## SEO
 
-Alan adı `metapsikoloji.tr`. Canonical, `sitemap.xml`, `robots.txt` ve Open
-Graph etiketleri bu adrese göre yazıldı; alan adı değişirse hepsi güncellenmeli.
+Sitenin asıl adresi **`https://www.metapsikoloji.tr/`**, www'lu hâlidir.
+Canonical, `sitemap.xml`, `robots.txt`, Open Graph ve JSON-LD'nin tamamı bu
+adrese göre yazıldı; adres değişirse hepsi birlikte güncellenmeli, yarısı
+www'lu yarısı www'suz kalmamalı.
+
+www'suz hâl (`metapsikoloji.tr`) yalnızca yönlendirme içindir. Yönlendirmeyi
+`vercel.json` içindeki host koşullu `redirects` kuralı yapar; bu kural,
+www'suz adresin DNS'te Vercel'i göstermeye başladığı anda kendiliğinden
+devreye girer, panelde ayrıca bir şey yapılmasını gerektirmez. Kuralı
+silmeyin.
+
+Bu seçim bir sebebe dayanıyor: reklamların iniş adresi www'lu hâl ve DNS'te
+çalışan da o. Bir gün www'suz hâl asıl adres yapılacaksa yön tersine
+çevrilmeli, ikisi aynı anda asıl adres olamaz.
 Vercel `cleanUrls` açık, bu yüzden iç bağlantılar `.html` uzantısız yazılır
 (`/iptal-politikasi`).
 

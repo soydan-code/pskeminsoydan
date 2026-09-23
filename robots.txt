@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://metapsikoloji.tr/sitemap.xml
+Sitemap: https://www.metapsikoloji.tr/sitemap.xml
