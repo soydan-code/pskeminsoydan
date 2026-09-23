@@ -77,6 +77,24 @@ hangisini istiyorsa o. Bazı sağlayıcılarda kök alan adına A yerine
 Doğrulama: birkaç saat sonra tarayıcıya www olmadan `metapsikoloji.tr` yazın.
 Açılıyorsa tamam.
 
+### Daha kolay yol: ad sunucularını Vercel'e taşımak
+
+`metapsikoloji.tr` bölgesinde **www CNAME'inden başka hiçbir kayıt yok**;
+23.09.2026'da kontrol edildi, MX de yok TXT de yok. Yani bu alan adıyla
+e-posta alınmıyor ve hiçbir doğrulama kaydı durmuyor.
+
+Bu, ad sunucularını Vercel'e taşımayı **risksiz** hâle getiriyor. Taşımanın
+normalde tek tehlikesi eski kayıtların kaybolmasıdır; kaybolacak kayıt yok.
+
+Taşınırsa kök A kaydını elle açma derdi tamamen biter, Vercel kökü de www'yu
+da kendisi ayarlar. Yapılışı: alan adı Vercel projesine eklenir, Vercel'in
+gösterdiği ad sunucuları (`ns1.vercel-dns.com` benzeri) İHS panelinde
+tanımlanır. Sonrasında DNS kayıtları Veridyen'de değil Vercel'de yönetilir.
+
+**Not:** ileride bu alan adıyla e-posta alınacaksa MX kayıtları Vercel
+tarafında tanımlanmalı. Bugün için böyle bir kayıt olmadığı için taşıma
+hiçbir şeyi bozmaz.
+
 ### Bunu yönlendirmelerden ÖNCE yapın
 
 Sıra önemli. Yönlendirme, ziyaretçiyi `https://metapsikoloji.tr/` adresine
