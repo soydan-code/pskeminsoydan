@@ -183,6 +183,31 @@
     altMenu.appendChild(madde);
   }
 
+  /* ---- Dönüşüm olayları ----
+     Google Ads'in "dönüşüm" diye sayabileceği tek şey buradan gider:
+     ziyaretçinin gerçekten iletişime geçme hareketi. Tek bir olay adı
+     (generate_lead) kullanılır, hangi yoldan gelindiği method parametresinde
+     durur; Ads tarafında tek bir dönüşüm eylemi tanımlamak bunun için yeter.
+
+     Onay yoksa hiçbir şey gönderilmez. Şart burada bir kere kontrol edilir. */
+  var olcumBildir = function (yontem) {
+    if (onayOku() !== 'kabul') return;
+    gtagCagir('event', 'generate_lead', { method: yontem });
+  };
+
+  document.addEventListener('click', function (e) {
+    var hedef = e.target;
+    if (!hedef || typeof hedef.closest !== 'function') return;
+
+    var bag = hedef.closest('a[href]');
+    if (!bag) return;
+
+    var adres = bag.getAttribute('href') || '';
+    if (adres.indexOf('https://wa.me/') === 0) olcumBildir('whatsapp');
+    else if (adres.indexOf('tel:') === 0) olcumBildir('telefon');
+    else if (adres.indexOf('mailto:') === 0) olcumBildir('eposta');
+  });
+
   /* ---- İletişim formu ----
      Sunucu yok. mailto bağlantısı, e-posta uygulaması tanımlı olmayan
      cihazlarda sessizce başarısız olduğu için mesaj her durumda sayfada
@@ -243,6 +268,7 @@
     sonuc.hidden = false;
     not.textContent = 'Mesajınız aşağıda hazır.';
     sonuc.scrollIntoView({ block: 'nearest' });
+    olcumBildir('form');
 
     window.location.href = baglanti;
   });

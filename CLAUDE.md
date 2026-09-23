@@ -82,6 +82,16 @@ Karar `localStorage` içinde `cerez-onayi-v1` anahtarıyla saklanır. Metin ya d
 kapsam değişirse anahtarın sonundaki sürümü artırın; eski onaylar geçersiz olur
 ve şerit herkese yeniden sorar.
 
+Dönüşüm olayı tek tanedir: `generate_lead`. WhatsApp, telefon, e-posta ve
+form, hepsi bu adla gider, aralarındaki fark `method` parametresindedir
+(`whatsapp`, `telefon`, `eposta`, `form`). Google Ads tarafında tek bir
+dönüşüm eylemi tanımlamak bu yüzden yetiyor. Yeni bir iletişim yolu
+eklenirse olayı da `main.js` içindeki tıklama dinleyicisine ekleyin,
+ayrı bir olay adı uydurmayın.
+
+Olaylar yalnızca onay verilmişse gönderilir; şart `olcumBildir` içinde tek
+yerde durur, kopyalamayın.
+
 Ölçümle ilgili bir değişiklik yapıldığında `gizlilik-politikasi.html`
 içindeki çerez listesi ve açıklamalar da güncellenmeli. O sayfa sitenin
 gerçekte ne yaptığını anlatır; ikisinin ayrışması hem yanlış beyan olur hem de

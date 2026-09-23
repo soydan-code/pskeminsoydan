@@ -93,10 +93,13 @@ Sayfada uydurulan bilgi yok; yazılanların hepsi sitenin gerçekte yaptığı
 bağlantılar). VERBİS kaydı, şirket unvanı ya da vergi bilgisi gibi
 doğrulanmamış hiçbir şey yazılmadı.
 
-**Eksik:** Google Ads tarafında dönüşüm tanımlı değil. GA4 ile Ads hesabı
-bağlanıp bir olay dönüşüm olarak içe aktarılmadığı sürece reklam tarafında
-ölçülecek bir şey olmaz. Sitede henüz tıklama olayı (WhatsApp, telefon, form)
-tanımlı değil; istenirse eklenebilir.
+Sitedeki dönüşüm olayları eklendi: WhatsApp, telefon, e-posta ve iletişim
+formu, hepsi `generate_lead` adıyla, `method` parametresiyle ayrışıyor.
+
+**Eksik (panel işi, kodla yapılamaz):** GA4 ile Google Ads hesabının
+birbirine bağlanması ve `generate_lead` olayının Ads tarafında dönüşüm
+olarak içe aktarılması. Bu iki adım tamamlanmadan reklam raporlarında
+dönüşüm görünmez.
 
 ## 4. Karar bekleyen başlıklar
 
