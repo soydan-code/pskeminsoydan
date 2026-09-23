@@ -312,6 +312,48 @@ Bilinmesi gerekenler:
 **yıllarca elde tutulmalı**; süresi dolarsa yönlendirme ölür ve aktarılan
 değer kaybolur.
 
+## 1-A. İHS yönlendirmesinin iki kusuru (24.09.2026 testi)
+
+Site sahibi tarayıcıda test etti, sonuçlar şöyle:
+
+- `http://metapsikoloji.com.tr` açıldı ve **adres çubuğu `metapsikoloji.tr`
+  oldu**. Yani maskeli (çerçeveli) yönlendirme değil, o tehlike yok.
+- `https://www.metapsikoloji.com.tr` ise
+  **`NET::ERR_CERT_COMMON_NAME_INVALID`** verdi.
+- httpstatus.io, `http://metapsikoloji.com.tr` için tek satır ve
+  **`200`** gösterdi, hiç yönlendirme basamağı yok.
+
+Bu ikisi birlikte tek bir şeye işaret ediyor: İHS'in yönlendirme sunucusu
+**gerçek bir 301 döndürmüyor**. `200` ile gerçek bir sayfa veriyor, sayfanın
+içinde meta refresh ya da JavaScript yönlendirmesi var; adres çubuğunu
+değiştiren o. httpstatus.io yalnızca HTTP düzeyindeki yönlendirmeleri
+izlediği için `200`de kalıyor.
+
+Neden sorun:
+
+1. **Sertifika yok.** Chrome artık önce HTTPS deniyor; Google'ın dizinindeki
+   eski adresler de büyük ihtimalle `https://`. Googlebot sertifika hatasına
+   çarpınca yönlendirmeyi hiç göremez, aktarım gerçekleşmez. Ayrıca marka
+   alan adında kırmızı "saldırganlar" uyarısı çıkması güven açısından kötü.
+2. **Meta refresh 301 değildir.** Google bunu zayıf ve güvenilmez bir sinyal
+   sayar; 301'in aktardığı değeri aktarmaz.
+
+### Çözüm: .com.tr'yi de Vercel'e almak
+
+`metapsikoloji.com.tr` bölgesinde de **MX ve TXT kaydı yok** (24.09.2026'da
+kontrol edildi), yani taşımada kaybolacak bir şey yok.
+
+1. Vercel projesine `metapsikoloji.com.tr` ve `www.metapsikoloji.com.tr`
+   eklenir
+2. İHS'te DNS, Vercel'i gösterecek şekilde ayarlanır (kök için A, www için
+   CNAME; değerleri Vercel gösterir)
+3. İHS'in kendi yönlendirme özelliği kapatılır
+
+Sonuç: Vercel ücretsiz SSL sertifikasını kendisi üretir, `vercel.json`
+içindeki kural da **gerçek 308** döndürür ve yolu korur
+(`/iptal-politikasi` gibi adresler karşılığına gider). İki kusur da tek
+hamlede kapanır.
+
 ## 1-B. Alan adları kütüğü (23.09.2026 DNS taraması)
 
 Son tarama 23.09.2026, 11:30.
