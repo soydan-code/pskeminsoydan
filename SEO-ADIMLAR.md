@@ -260,43 +260,39 @@ Her iki alan adı da Google Search Console'da doğrulanmışsa, eski mülkü se�
 **Ayarlar → Adres değişikliği** aracıyla taşınmayı Google'a bildirin. Bu,
 aktarımı belirgin biçimde hızlandırır.
 
-### metapsikolojii.com (çift i) — bu da yönlendirilecek
+### metapsikolojii.com (çift i) — iptal edildi
 
-Site sahibi bu alan adının da kendisine ait olduğunu doğruladı. 21.09.2026
-tarihli DNS kontrolü:
+Site sahibi 23.09.2026'da bu alan adının ve hostinginin **iptalini verdi**.
+Yönlendirme kurulmayacak; `vercel.json`'daki kuralları da bu yüzden
+kaldırıldı.
 
-| Adres | Nereye gidiyor |
-|---|---|
-| `metapsikolojii.com` | `89.252.134.195` |
-| `www.metapsikolojii.com` | `89.252.134.195` |
+Bilinmesi gerekenler:
 
-Dikkat: bu IP, `metapsikoloji.com.tr`nin IP'sinden (`45.151.250.13`)
-**farklı**. Yani iki eski site ayrı ayrı yerlerde duruyor; muhtemelen ayrı
-paneller, belki ayrı firmalar. Her biri için DNS'i kendi panelinde
-düzenlemek gerekir.
+- **İptal, adresin hemen kapanması demek değildir.** Alan adı ve hosting
+  genelde ödenmiş dönemin sonuna kadar açık kalır. Nitekim tarama anında
+  hâlâ `89.252.134.195` adresini gösteriyordu.
+- Süresi dolduğunda adres yayından kalkar. O ana kadar eski içerik
+  erişilebilir olmaya devam edebilir.
+- **Süresi dolduktan sonra alan adı serbest kalır** ve isteyen herkes
+  alabilir. Marka adına benzeyen bir alan adının başkasının eline geçmesi
+  ileride sorun çıkarabilir. Elde tutmak istemiyorsanız yapılacak bir şey
+  yok, ama bu ihtimali bilerek karar verilmiş olsun.
+- Google bu adresi zamanla dizinden düşürür. Trafik yönlendirilmediği için
+  oradaki birikim yeni siteye aktarılmayacak, kaybolacak. İptal kararı
+  verilirken bu bilinçli olarak göze alındı.
 
-Yöntem birebir aynı: Yol A, Yol B ya da Yol C'den biri, hedef
-`https://metapsikoloji.tr/`, tür kalıcı (301/308).
-
-**`.com` uzantısına özel bir uyarı:** `.com.tr`nin aksine `.com` Vercel'den
-satın alınabilir. Bu yüzden Add Domain kutusuna `metapsikolojii.com`
-yazdığınızda karşınıza **satın alma teklifi** çıkabilir. Alan adı zaten
-sizin; hiçbir şey satın almayın, "mevcut alan adını bağla" yolunu seçin.
-Fiyat yazan hiçbir düğmeye basmayın.
-
-#### Hangisine öncelik verilmeli
-
-Üç alan adı var ve hepsi tek adreste toplanmalı:
+#### Alan adlarının son hâli
 
 | Alan adı | Rolü |
 |---|---|
-| `metapsikoloji.tr` | **Asıl adres.** Site burada yayınlanır |
-| `metapsikoloji.com.tr` | Kalıcı yönlendirme → asıl adres |
-| `metapsikolojii.com` | Kalıcı yönlendirme → asıl adres |
+| `www.metapsikoloji.tr` | **Asıl adres.** Site burada yayınlanır |
+| `metapsikoloji.tr` | Yönlendirme → asıl adres (kök A kaydı bekliyor) |
+| `metapsikoloji.com.tr` | Kalıcı yönlendirme → asıl adres (İHS üzerinden kuruldu) |
+| `metapsikolojii.com` | İptal edildi, yönlendirilmeyecek |
 
-`metapsikoloji.com.tr` aramada zaten çıktığı için önceliği odur;
-`metapsikolojii.com` ikinci sıradadır ama aynı gün halledilebilir. İkisi de
-yıllarca elde tutulmalı, süresi dolmaya bırakılmamalı.
+`metapsikoloji.com.tr` aramada zaten çıkan alan adı olduğu için önemlidir,
+**yıllarca elde tutulmalı**; süresi dolarsa yönlendirme ölür ve aktarılan
+değer kaybolur.
 
 ## 1-B. Alan adları kütüğü (23.09.2026 DNS taraması)
 
@@ -308,7 +304,7 @@ Son tarama 23.09.2026, 11:30.
 | `metapsikoloji.tr` | veridyen | **Kök A kaydı hâlâ yok** |
 | `metapsikoloji.com.tr` | ihsdns | Ayağa kalktı, `94.138.196.4` (İHS yönlendirme sunucusu) |
 | `www.metapsikoloji.com.tr` | ihsdns | Aynı adres |
-| `metapsikolojii.com` (çift i) | guzelhosting | Çalışıyor, `89.252.134.195`, yönlendirme bekliyor |
+| `metapsikolojii.com` (çift i) | guzelhosting | **Site sahibi iptal etti.** Süresi dolana kadar yayında kalabilir |
 | `metapsikoloji.com` (tek i) | domaincontrol (GoDaddy) | Çalışıyor, `160.153.137.218`, **sahibi teyit edilmedi** |
 
 `@.metapsikoloji.tr` kayıtları silinmiş (artık NXDOMAIN), yani 0-A'daki tuzak
@@ -336,8 +332,6 @@ ikincisine dokunulmamalı.
     metapsikoloji.tr
     metapsikoloji.com.tr
     www.metapsikoloji.com.tr
-    metapsikolojii.com
-    www.metapsikolojii.com
 
 Bu kurallar bugün hiçbir şey yapmıyor, çünkü o alan adları Vercel'e
 gelmiyor. Her biri için yapılacak iki şey var: alan adını Vercel projesine

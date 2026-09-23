@@ -760,7 +760,9 @@ summary::-webkit-details-marker { display: none; }
    Dolu bir buton gibi durmaması için zemini saydam, çerçevesi incedir.
    Çerçeve rengi --border değişkeninden gelir; fotoğraflı bölümlerde bu
    değişken zaten açık tona ezildiği için ayrıca kural gerekmez. */
-.hero-ikincil { display: flex; justify-content: center; margin-bottom: 30px; }
+/* Üstteki .hero-actions sola yaslı; bu satır da onunla hizalanır, aksi
+   hâlde masaüstünde tek başına ortada kalıyor. */
+.hero-ikincil { display: flex; justify-content: flex-start; margin-bottom: 30px; }
 
 .metin-bag {
   padding: 10px 24px;
