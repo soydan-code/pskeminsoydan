@@ -300,18 +300,29 @@ yıllarca elde tutulmalı, süresi dolmaya bırakılmamalı.
 
 ## 1-B. Alan adları kütüğü (23.09.2026 DNS taraması)
 
+Son tarama 23.09.2026, 11:30.
+
 | Alan adı | Ad sunucusu | Durum |
 |---|---|---|
 | `www.metapsikoloji.tr` | veridyen | Çalışıyor, **asıl adres** |
-| `metapsikoloji.tr` | veridyen | Kök A kaydı yok, `@` tuzağı (0-A) |
-| `metapsikoloji.com.tr` | çözülemiyor | **SERVFAIL, alan adı hiç yanıt vermiyor** |
-| `metapsikolojii.com` (çift i) | guzelhosting | Çalışıyor, `89.252.134.195` |
+| `metapsikoloji.tr` | veridyen | **Kök A kaydı hâlâ yok** |
+| `metapsikoloji.com.tr` | ihsdns | Ayağa kalktı, `94.138.196.4` (İHS yönlendirme sunucusu) |
+| `www.metapsikoloji.com.tr` | ihsdns | Aynı adres |
+| `metapsikolojii.com` (çift i) | guzelhosting | Çalışıyor, `89.252.134.195`, yönlendirme bekliyor |
 | `metapsikoloji.com` (tek i) | domaincontrol (GoDaddy) | Çalışıyor, `160.153.137.218`, **sahibi teyit edilmedi** |
 
-`metapsikoloji.com.tr` daha önce `45.151.250.13` adresini gösteriyordu, artık
-hiç yanıt vermiyor. Süresi dolmuş, askıya alınmış ya da ad sunucuları
-kaldırılmış olabilir. **Yanıt vermeyen bir alan adı yönlendirilemez**; önce
-kayıt firmasından durumu öğrenilip alan adı ayağa kaldırılmalı.
+`@.metapsikoloji.tr` kayıtları silinmiş (artık NXDOMAIN), yani 0-A'daki tuzak
+fark edilip temizlenmiş. Ama kök için yeni kayıt henüz açılmamış: kök hâlâ
+yalnızca SOA döndürüyor. **Bu iş bitmedi.**
+
+`metapsikoloji.com.tr` yönlendirmesi İHS üzerinden kuruldu. DNS tarafı doğru
+görünüyor. Yönlendirmenin **türü** buradan doğrulanamıyor (ağ kısıtı); 301
+mi yoksa maskeli mi olduğu tarayıcıda adres çubuğuna bakılarak ya da
+httpstatus.io ile kontrol edilmeli. Maskeli yönlendirme hiçbir değer aktarmaz.
+
+İHS yönlendirmesi kullanıldığı için `vercel.json`'daki `metapsikoloji.com.tr`
+kuralları devreye girmez; trafik Vercel'e uğramıyor. Kurallar zararsız,
+ileride DNS Vercel'e taşınırsa yedek olarak durur.
 
 `metapsikoloji.com` ile `metapsikolojii.com` **iki ayrı alan adıdır**, ayrı
 firmalarda duruyorlar. Hangisinin site sahibine ait olduğu netleşmeden
