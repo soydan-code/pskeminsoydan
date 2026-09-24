@@ -5,6 +5,24 @@ site sahibinin hesaplarıyla bir kez yapılması gerekir. Sıra, etkiye göredir
 
 ---
 
+## Durum: yönlendirmeler tamam (24.09.2026)
+
+Site sahibi Vercel'de beş alan adının da **Valid Configuration** olduğunu
+gördü ve httpstatus.io ile doğruladı:
+
+    https://metapsikoloji.com.tr      308 -> 200
+    https://www.metapsikoloji.com.tr  308 -> 200
+    https://metapsikoloji.tr          308 -> 200
+    http://metapsikoloji.com.tr       308 -> 308 -> 200  (önce https, sonra www)
+
+Hepsi `https://www.metapsikoloji.tr/` adresinde bitiyor, sertifika hatası
+yok. Aşağıdaki 0 ve 1 numaralı bölümler artık tarihçe olarak duruyor.
+
+Kalan panel işi: Search Console'da eski `metapsikoloji.com.tr` mülkü için
+**Ayarlar -> Adres değişikliği**.
+
+---
+
 ## 0-A. Veridyen panelinde "@" tuzağı (23.09.2026'da yaşandı)
 
 Veridyen'in DNS formu **`@` işaretini kök alan adı diye yorumlamıyor**, onu
