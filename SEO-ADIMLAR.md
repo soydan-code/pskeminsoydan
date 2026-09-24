@@ -361,7 +361,7 @@ Son tarama 23.09.2026, 11:30.
 | Alan adı | Ad sunucusu | Durum |
 |---|---|---|
 | `www.metapsikoloji.tr` | veridyen | Çalışıyor, **asıl adres** |
-| `metapsikoloji.tr` | veridyen | **Kök A kaydı hâlâ yok** |
+| `metapsikoloji.tr` | veridyen | Kök A kaydı açıldı (`216.198.79.1`, 24.09.2026) |
 | `metapsikoloji.com.tr` | ihsdns | Ayağa kalktı, `94.138.196.4` (İHS yönlendirme sunucusu) |
 | `www.metapsikoloji.com.tr` | ihsdns | Aynı adres |
 | `metapsikolojii.com` (çift i) | guzelhosting | **Site sahibi iptal etti.** Süresi dolana kadar yayında kalabilir |
