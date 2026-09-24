@@ -362,8 +362,8 @@ Son tarama 23.09.2026, 11:30.
 |---|---|---|
 | `www.metapsikoloji.tr` | veridyen | Çalışıyor, **asıl adres** |
 | `metapsikoloji.tr` | veridyen | Kök A kaydı açıldı (`216.198.79.1`, 24.09.2026) |
-| `metapsikoloji.com.tr` | ihsdns | Ayağa kalktı, `94.138.196.4` (İHS yönlendirme sunucusu) |
-| `www.metapsikoloji.com.tr` | ihsdns | Aynı adres |
+| `metapsikoloji.com.tr` | ihsdns | Vercel'e taşındı: A `216.198.79.1`, 308 → www (24.09.2026) |
+| `www.metapsikoloji.com.tr` | ihsdns | CNAME → Vercel; ftp, mail ve MX kayıtları silindi |
 | `metapsikolojii.com` (çift i) | guzelhosting | **Site sahibi iptal etti.** Süresi dolana kadar yayında kalabilir |
 | `metapsikoloji.com` (tek i) | domaincontrol (GoDaddy) | Çalışıyor, `160.153.137.218`, **sahibi teyit edilmedi** |
 
