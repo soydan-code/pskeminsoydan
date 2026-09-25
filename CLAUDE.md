@@ -107,6 +107,12 @@ dönüşüm eylemi tanımlamak bu yüzden yetiyor. Yeni bir iletişim yolu
 eklenirse olayı da `main.js` içindeki tıklama dinleyicisine ekleyin,
 ayrı bir olay adı uydurmayın.
 
+Tek istisna telefon: site sahibi telefonla aramayı öncelikli dönüşüm saymak
+istediği için (25.09.2026) telefon tıklamasında `generate_lead`'e ek olarak
+`telefon_arama` olayı da gider. Google Ads'te `telefon_arama` **birincil**,
+`generate_lead` **ikincil** dönüşüm olmalı; ikisi birden birincil olursa
+telefon tıklaması iki kez sayılır.
+
 Olaylar yalnızca onay verilmişse gönderilir; şart `olcumBildir` içinde tek
 yerde durur, kopyalamayın.
 

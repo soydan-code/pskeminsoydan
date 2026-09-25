@@ -183,6 +183,9 @@
   var olcumBildir = function (yontem) {
     if (onayOku() !== 'kabul') return;
     gtagCagir('event', 'generate_lead', { method: yontem });
+    // Site sahibi telefonla aramayı öncelikli dönüşüm saymak istiyor; Ads'te
+    // ayrı bir birincil dönüşüm olarak içe aktarılabilsin diye ayrıca gider.
+    if (yontem === 'telefon') gtagCagir('event', 'telefon_arama');
   };
 
   document.addEventListener('click', function (e) {
