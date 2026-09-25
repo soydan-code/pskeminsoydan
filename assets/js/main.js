@@ -50,11 +50,10 @@
   }
 
   /* ---- Çerez onayı ve Google etiketi ----
-     Etiket index.html'de yüklenmez; orada yalnızca izinler "reddedildi"
-     olarak tanımlanır. Ziyaretçi kabul edene kadar Google'a hiçbir istek
-     gitmez, hiçbir çerez yazılmaz. Kabul gelirse etiket buradan yüklenir. */
-  var OLCUM_KIMLIGI = 'G-00PCBRRYYT';
-  var ONAY_ANAHTARI = 'cerez-onayi-v1';
+     Etiket HTML'in <head> bölümünde yüklenir (Consent Mode gelişmiş kurulum);
+     izinler orada "reddedildi" başlar. Burada yalnızca ziyaretçinin kararı
+     izne çevrilir. Onay yoksa çerez yazılmaz. */
+  var ONAY_ANAHTARI = 'cerez-onayi-v2';
 
   var onayOku = function () {
     try { return localStorage.getItem(ONAY_ANAHTARI); } catch (e) { return null; }
@@ -68,25 +67,16 @@
     window.dataLayer.push(arguments);
   };
 
-  var etiketYuklendi = false;
+  var izinVerildi = false;
   var etiketiYukle = function () {
-    if (etiketYuklendi) return;
-    etiketYuklendi = true;
-
+    if (izinVerildi) return;
+    izinVerildi = true;
     gtagCagir('consent', 'update', {
       ad_storage: 'granted',
       ad_user_data: 'granted',
       ad_personalization: 'granted',
       analytics_storage: 'granted'
     });
-
-    var betik = document.createElement('script');
-    betik.async = true;
-    betik.src = 'https://www.googletagmanager.com/gtag/js?id=' + OLCUM_KIMLIGI;
-    document.head.appendChild(betik);
-
-    gtagCagir('js', new Date());
-    gtagCagir('config', OLCUM_KIMLIGI);
   };
 
   // Vazgeçildiğinde daha önce yazılmış Google çerezlerini temizler.
@@ -127,7 +117,7 @@
           '<p class="cerez-baslik">Çerezler</p>' +
           '<p class="cerez-metin">Sitenin nasıl kullanıldığını anlamak ve reklam ' +
           'çalışmalarını ölçmek için Google Analytics çerezlerini kullanmak istiyorum. ' +
-          'Bunlar siz kabul etmeden çalışmaz; reddetmeniz sitenin hiçbir bölümünü ' +
+          'Bu çerezler siz kabul etmeden yazılmaz; reddetmeniz sitenin hiçbir bölümünü ' +
           'etkilemez. Ayrıntılar <a href="/gizlilik-politikasi">Gizlilik ve Çerez ' +
           'Politikası</a> sayfasında.</p>' +
         '</div>' +

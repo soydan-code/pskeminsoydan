@@ -34,13 +34,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/img/portre.jpg" fetchpriority="high">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=8">
+<link rel="stylesheet" href="assets/css/style.css?v=9">
 
-<!-- Google tag (gtag.js), onaya bağlı.
-     Etiketin kendisi burada YÜKLENMEZ; yalnızca izinler reddedilmiş olarak
-     tanımlanır. Ziyaretçi çerez şeridinde kabul ederse assets/js/main.js
-     etiketi yükler ve izni günceller. Sıralama önemlidir: izin varsayılanları
-     etiketten önce tanımlanmalıdır. -->
+<!-- Google tag (gtag.js), Consent Mode "gelişmiş" kurulum.
+     Etiket her ziyarette yüklenir, ama izinler önce "reddedildi" olarak
+     tanımlanır: onay gelene kadar çerez yazılmaz, Google'a yalnızca çerezsiz
+     ve kimliksiz sinyaller gider. Kabul gelince assets/js/main.js izni
+     günceller. Sıra önemlidir: consent default, config'ten önce gelmeli. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -50,7 +50,20 @@
     ad_personalization: 'denied',
     analytics_storage: 'denied'
   });
+  try {
+    if (localStorage.getItem('cerez-onayi-v2') === 'kabul') {
+      gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted'
+      });
+    }
+  } catch (e) {}
+  gtag('js', new Date());
+  gtag('config', 'G-00PCBRRYYT');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00PCBRRYYT"></script>
 </head>
 <body>
 <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -900,6 +913,6 @@
   ]
 }
 </script>
-<script src="assets/js/main.js?v=8"></script>
+<script src="assets/js/main.js?v=9"></script>
 </body>
 </html>

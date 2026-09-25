@@ -77,20 +77,26 @@ motorları için görsel alt metni tek başına zayıf bir sinyal.
 
 ## Çerez onayı ve ölçüm
 
-Google etiketi (GA4, `G-00PCBRRYYT`) **onaya bağlıdır ve bu bozulmamalıdır.**
-Üç HTML dosyasının `<head>` bölümünde yalnızca izin varsayılanları tanımlıdır
-(hepsi `denied`); `gtag.js` orada yüklenmez. Etiketi yükleyen tek yer
-`main.js` içindeki `etiketiYukle`, o da ziyaretçi şeritte kabul ettiğinde
-ya da daha önce kabul etmişse çalışır.
+Google etiketi (GA4, `G-00PCBRRYYT`) **Consent Mode "gelişmiş" kurulumla**
+çalışır (25.09.2026'da site sahibinin isteğiyle; Google Ads'in etiket testinin
+geçmesi için gerekiyordu). Üç HTML dosyasının `<head>` bölümünde sıra şudur ve
+bozulmamalıdır:
 
-Sonuç: JavaScript çalışmazsa şerit görünmez ve izleme de olmaz. Güvenli taraf
-budur, tersine çevirmeyin.
+1. `gtag('consent', 'default', {... hepsi 'denied'})`
+2. `localStorage` içinde kabul varsa `consent update → granted`
+3. `gtag('js', ...)` ve `gtag('config', 'G-00PCBRRYYT')`
+4. `gtag.js` betiği (`async`)
+
+Onay yoksa etiket yüklenir ama **çerez yazmaz**, yalnızca çerezsiz sinyal
+gönderir. Ziyaretçi şeritte kabul edince `main.js` içindeki `etiketiYukle`
+izni `granted` yapar; reddedince izin `denied` kalır ve Google çerezleri
+silinir. Dönüşüm olayları (`olcumBildir`) yalnızca onay varsa gider.
 
 Şerit `main.js` tarafından oluşturulur, HTML'de durmaz; böylece üç sayfada tek
 bir metin vardır. Alt bilgideki "Çerez tercihleri" düğmesi de aynı yerden
 eklenir, kararı değiştirmek için bu düğme kullanılır.
 
-Karar `localStorage` içinde `cerez-onayi-v1` anahtarıyla saklanır. Metin ya da
+Karar `localStorage` içinde `cerez-onayi-v2` anahtarıyla saklanır. Metin ya da
 kapsam değişirse anahtarın sonundaki sürümü artırın; eski onaylar geçersiz olur
 ve şerit herkese yeniden sorar.
 
