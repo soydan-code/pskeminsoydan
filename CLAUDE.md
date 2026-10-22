@@ -9,6 +9,10 @@ servis eder.
 - `assets/css/style.css` — tema değişkenleri en üstte (`--font-*`, renkler)
 - `assets/js/main.js` — mobil menü ve iletişim formu (mailto)
 - `ICERIK.md` — hâlâ eksik olan içerik ve varlıkların listesi
+- Hizmet sayfaları (22.10.2026): `seans-ucretleri.html`, `psikolog-macka-nisantasi-besiktas.html`,
+  `psikolog-kadikoy-suadiye.html`, `online-terapi.html`. Her birinde başlığın hemen altında ve
+  sayfa sonunda `.cta-satir` (Hemen Ara + WhatsApp) var; telefonda "Hemen Ara" ilk ekranda
+  kalmalı. Unvan yalnızca "Psikolog"; "Uzman/Klinik Psikolog" yazılmaz.
 
 ## Renk paleti
 
@@ -182,4 +186,6 @@ almaz.
 
 Eğitim kurumları, sertifika adları, üyelikler, seans ücreti, seans süresi,
 görüşme sıklığı, telefon ve adres — bunlar yalnızca site sahibinden geldiğinde
-yazılır. Gelene kadar `.todo` sınıfıyla işaretli yer tutucu olarak kalır.
+yazılır. Ücretler site sahibinden geldi (22.10.2026): yüz yüze 5.000-6.000 TL,
+online 4.000 TL; değişirse `seans-ucretleri.html` ve ana sayfadaki SSS birlikte
+güncellenmeli. Gelene kadar `.todo` sınıfıyla işaretli yer tutucu olarak kalır.

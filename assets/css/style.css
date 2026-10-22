@@ -871,3 +871,29 @@ body.cerez-acik .yuzen-wa { display: none; }
   .cerez-dugmeler { margin-left: 0; width: 100%; }
   .cerez-dugmeler .btn { flex: 1 1 140px; }
 }
+
+/* ==========================================================================
+   Hizmet sayfaları (ücretler, ofisler, online terapi)
+   "Hemen Ara" telefonda ilk ekranda kalsın diye başlığın hemen altındadır.
+   ========================================================================== */
+.cta-satir { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 6px; }
+.cta-satir .btn { flex: 0 1 auto; }
+.cta-kapanis {
+  margin-top: 44px; padding: 26px 24px;
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.cta-kapanis p { margin: 0; font-weight: 600; }
+.konu-liste {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px 20px;
+}
+.konu-liste li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.ucret-liste { list-style: none; padding: 0; margin: 0 0 1em; }
+.ucret-liste li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.ucret-liste strong { font-family: var(--font-heading); font-size: 1.2rem; white-space: nowrap; }
+@media (max-width: 560px) {
+  .cta-satir .btn { flex: 1 1 100%; }
+}
