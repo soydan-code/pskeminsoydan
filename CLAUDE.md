@@ -166,8 +166,13 @@ EMDR eğitimi var. Bu yöntem **ana çerçeve değil**: ağırlıklı olarak tra
 TSSB çalışmalarında, ayrıca vakanın uygun olduğu durumlarda danışan talebiyle
 kullanılıyor. Sürecin çerçevesi her hâlükârda psikodinamik psikoterapidir.
 
-Yüz yüze görüşmeler Kadıköy ve Nişantaşı merkezli birkaç lokasyonda yapılıyor;
-iletişim bölümündeki adres bunlardan biridir (Google işletme kaydı).
+Yüz yüze görüşme yerleri (29.10.2026, site sahibinden; tek doğru kaynak):
+Nişantaşı (Halaskargazi Cd., Ayla Algan Sk. No: 22 D: 2, Şişli; Osmanbey M2),
+Kadıköy / Suadiye (Suadiye Cd.) ve Ümraniye / Çarşı (Armağanevler Mah., Alemdağ
+Cd. No: 466; M5 Çarşı durağı karşısı). Görüşmeler Maçka'da yapılmıyor; "Maçka"
+yalnızca "Maçka'ya yakın" ifadesinde geçer. Vişnezade/Beşiktaş adresi yalnızca
+**yasal adres**tir, görüşme yeri gibi sunulmaz. Nişantaşı sayfasının adresi
+geçmişten kalma `/psikolog-macka-nisantasi-besiktas`'tır, değiştirilmez.
 
 Kuramsal zemin üç katmanlı:
 
