@@ -103,6 +103,10 @@ dönüşüm görünmez.
 
 ## 4. Karar bekleyen başlıklar
 
+- **Ana sayfa H1'inde konum yok (29.10.2026, site sahibi kararsız, tekrar
+  sorulacak).** H1 "Sözün, ilişkinin ve kendiliğin izinde" kalıyor. Öneri:
+  üstündeki küçük etiketi konumlarla desteklemek, metne dokunmadan.
+
 - **Marka adı:** Üst menüde "metapsikoloji", altında "Psikolog Emin Soydan"
   duruyor. Kişisel adınızı öne almak isterseniz tek satırlık değişiklik.
 - **Unvan:** Yüksek lisans tamamlanmadığı için "Uzman Psikolog" yerine

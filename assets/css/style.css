@@ -704,6 +704,8 @@ summary::-webkit-details-marker { display: none; }
   display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: baseline;
 }
 .ofisler a { font-weight: 600; }
+.ofis { display: inline-flex; align-items: baseline; gap: 8px; }
+.ofisler .ofis-detay { font-weight: 500; font-size: .85rem; }
 .ofisler small {
   flex-basis: 100%; color: var(--muted); font-size: .85rem; line-height: 1.5;
 }
