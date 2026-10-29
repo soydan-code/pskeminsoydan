@@ -14,6 +14,15 @@ servis eder.
   (23.10.2026; 29.10.2026'dan beri açık adresiyle). Her birinde başlığın hemen altında ve
   sayfa sonunda `.cta-satir` (Hemen Ara + WhatsApp) var; telefonda "Hemen Ara" ilk ekranda
   kalmalı. Unvan yalnızca "Psikolog"; "Uzman/Klinik Psikolog" yazılmaz.
+- Konu sayfaları (`/nisantasi-*`) ve `/calisma-alanlari` **elle düzenlenmez**:
+  içerik `tools/konular.py`'de durur, sayfalar `python3 tools/konu-sayfalari-uret.py`
+  ile üretilir (görünen SSS ile FAQPage şeması aynı veriden çıkar, sitemap de
+  güncellenir). Kurallar: başlık/H1'de aranan ad, metinde teşhis ya da "tedavi"
+  dili yok, istatistik yok, her sayfada köklü kaynaklar (WHO, NIMH, NICE, APA,
+  hakemli yayın) ve yazar/tarih satırı. İlgili konu bağlantıları yalnız yayımlanmış
+  sayfalara verilir. Sayfa adresleri Türkçe karaktersiz.
+- Hizmet ve konu sayfalarında `.cta-satir` H1'in hemen altında, girişten önce
+  durur: telefonda çerez şeridi açıkken bile "Hemen Ara" görünür kalmalı.
 
 ## Renk paleti
 

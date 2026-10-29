@@ -869,7 +869,12 @@ summary::-webkit-details-marker { display: none; }
 body.cerez-acik .yuzen-wa { display: none; }
 
 @media (max-width: 720px) {
-  .cerez-ic { gap: 14px; padding: 16px var(--gutter); }
+  .cerez-ic { gap: 10px; padding: 12px var(--gutter); }
+  /* Şerit ilk ziyarette sayfanın altını kaplıyor; telefonda "Hemen Ara"
+     düğmesini örtmesin diye kısaltılır. Başlık yalnızca görsel olarak gizlenir. */
+  .cerez-baslik { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .cerez-metin { font-size: .84rem; line-height: 1.5; }
+  .cerez-dugmeler .btn { padding-top: 10px; padding-bottom: 10px; }
   .cerez-dugmeler { margin-left: 0; width: 100%; }
   .cerez-dugmeler .btn { flex: 1 1 140px; }
 }
@@ -899,3 +904,25 @@ body.cerez-acik .yuzen-wa { display: none; }
 @media (max-width: 560px) {
   .cta-satir .btn { flex: 1 1 100%; }
 }
+
+/* ==========================================================================
+   Konu sayfaları (tools/konu-sayfalari-uret.py üretir)
+   ========================================================================== */
+.yazar { margin: 14px 0 0; font-size: .85rem; color: var(--muted); }
+.acil-not {
+  padding: 14px 18px; border-left: 4px solid var(--cta);
+  background: var(--tint-warm); border-radius: 0 10px 10px 0;
+}
+.page-head + .policy, .policy + #sss { margin-top: 8px; }
+.wrap.narrow > #sss { margin-top: 40px; }
+.ilgili { margin-top: 40px; }
+.ilgili ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ilgili a {
+  display: inline-block; padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 999px; text-decoration: none; font-weight: 600; font-size: .92rem;
+}
+.ilgili a:hover { border-color: currentColor; }
+.kaynakca { margin-top: 40px; font-size: .9rem; color: var(--muted); }
+.kaynakca h2 { font-size: 1.1rem; }
+.kaynakca ul { padding-left: 1.2em; }
+.kaynakca li { margin-bottom: 6px; overflow-wrap: anywhere; }
