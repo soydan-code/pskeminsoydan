@@ -11,7 +11,7 @@ servis eder.
 - `ICERIK.md` — hâlâ eksik olan içerik ve varlıkların listesi
 - Hizmet sayfaları (22.10.2026): `seans-ucretleri.html`, `psikolog-macka-nisantasi-besiktas.html`,
   `psikolog-kadikoy-suadiye.html`, `online-terapi.html`, `psikolog-umraniye-cekmekoy-sancaktepe.html`
-  (23.10.2026; tam adres yazılmaz, görüşme yeri randevuda paylaşılır). Her birinde başlığın hemen altında ve
+  (23.10.2026; 29.10.2026'dan beri açık adresiyle). Her birinde başlığın hemen altında ve
   sayfa sonunda `.cta-satir` (Hemen Ara + WhatsApp) var; telefonda "Hemen Ara" ilk ekranda
   kalmalı. Unvan yalnızca "Psikolog"; "Uzman/Klinik Psikolog" yazılmaz.
 
