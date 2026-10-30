@@ -9,6 +9,8 @@ servis eder.
 - `assets/css/style.css` — tema değişkenleri en üstte (`--font-*`, renkler)
 - `assets/js/main.js` — mobil menü ve iletişim formu (mailto)
 - `ICERIK.md` — hâlâ eksik olan içerik ve varlıkların listesi
+- `404.html` — Vercel'in hatalı adreslerde gösterdiği sayfa (`noindex`). Her adreste açılabildiği için görsel, CSS ve JS yolları `/assets/...` diye kökten yazılır; sitemap'e girmez.
+- `.vercelignore` — yayımlanmayacak dosyalar. Kök dizindeki diğer her dosya herkese açık yayımlanır; yeni not ya da araç dosyası eklerken buraya da yazın.
 - Hizmet sayfaları (22.10.2026): `seans-ucretleri.html`, `psikolog-macka-nisantasi-besiktas.html`,
   `psikolog-kadikoy-suadiye.html`, `online-terapi.html`, `psikolog-umraniye-cekmekoy-sancaktepe.html`
   (23.10.2026; 29.10.2026'dan beri açık adresiyle). Her birinde başlığın hemen altında ve

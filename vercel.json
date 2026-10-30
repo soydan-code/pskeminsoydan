@@ -37,12 +37,6 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/test.html",
-      "destination": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*\\.txt|.*\\.xml)",
