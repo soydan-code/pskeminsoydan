@@ -94,6 +94,18 @@ Marka adı "metapsikoloji" hem üst bilgide hem alt bilgide logo **görseli**
 olarak geçiyor. Alt bilgiye ayrıca görünür metin olarak eklendi; arama
 motorları için görsel alt metni tek başına zayıf bir sinyal.
 
+### Site sahibinin kararları (30.10.2026)
+
+- Ana sayfa H1'i ("Sözün, ilişkinin ve kendiliğin izinde") olduğu gibi kalır.
+- Ana sayfa title'ı değişmez. Nişantaşı sayfasıyla aynı aramayı hedeflemesi
+  Search Console'da izleniyor; sonuç gelmeden title'lara dokunulmaz.
+- Kapı numaraları Ayla Algan Sk. No: 22 ve Alemdağ Cd. No: 466; sitedeki
+  metinler doğrudur.
+- Site sahibi TPD üyesi değildir. TPD'den ya da mesleki üyelikten söz
+  edilmez, önerilmez.
+- İşletme şemasının adresi, görüşme yerleri ve harita bağlantıları, Google
+  İşletme Profili taşınana kadar değiştirilmez.
+
 ## Çerez onayı ve ölçüm
 
 Google etiketi (GA4, `G-00PCBRRYYT`) **Consent Mode "gelişmiş" kurulumla**
