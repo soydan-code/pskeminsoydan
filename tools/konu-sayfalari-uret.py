@@ -16,8 +16,17 @@ from konular import KONULAR, GRUPLAR, GUNCELLEME  # noqa: E402
 SITE = "https://www.metapsikoloji.tr"
 AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz",
          "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
-y, a, g = GUNCELLEME.split("-")
-TARIH_YAZI = f"{int(g)} {AYLAR[int(a) - 1]} {y}"
+
+
+def tarih_yazi(tarih):
+    y, a, g = tarih.split("-")
+    return f"{int(g)} {AYLAR[int(a) - 1]} {y}"
+
+
+def guncel(k):
+    """Sayfanın son güncelleme tarihi: ilk yayından önce olamaz."""
+    return max(k["yayin"], GUNCELLEME)
+
 
 sablon = (KOK / "psikolog-kadikoy-suadiye.html").read_text(encoding="utf-8")
 bas = sablon[:sablon.index('<main id="icerik">')]
@@ -95,7 +104,7 @@ for k in KONULAR:
       <h1>{k['h1']}</h1>
       {cta('Hızlı iletişim')}
       <p class="page-intro">{k['giris']}</p>
-      <p class="yazar">Yazan: <a href="/#hakkimda">Psikolog Emin Soydan</a> &middot; Son güncelleme: <time datetime="{GUNCELLEME}">{TARIH_YAZI}</time></p>
+      <p class="yazar">Yazan: <a href="/#hakkimda">Psikolog Emin Soydan</a> &middot; Son güncelleme: <time datetime="{guncel(k)}">{tarih_yazi(guncel(k))}</time></p>
     </header>
 
     <article class="policy">{bolumler}{LOKASYON}
@@ -123,7 +132,7 @@ for k in KONULAR:
     graf = [
         {"@type": "WebPage", "@id": url, "url": url, "name": k["title"], "headline": k["h1"],
          "description": k["desc"], "inLanguage": "tr-TR", "about": {"@type": "Thing", "name": k["ad"]},
-         "author": YAZAR, "dateModified": GUNCELLEME, "isPartOf": {"@id": f"{SITE}/#site"},
+         "author": YAZAR, "datePublished": k["yayin"], "dateModified": guncel(k), "isPartOf": {"@id": f"{SITE}/#site"},
          "citation": [u or ad for ad, u in k["kaynaklar"]]},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": f"{SITE}/"},
@@ -221,11 +230,11 @@ print("hizmet sayfası konu listeleri bağlandı")
 # Sitemap
 sm = KOK / "sitemap.xml"
 t = sm.read_text(encoding="utf-8")
-for slug, oncelik in [("calisma-alanlari", "0.7")] + [(k["slug"], "0.7") for k in KONULAR]:
+for slug, oncelik, tarih in [("calisma-alanlari", "0.7", GUNCELLEME)] + [(k["slug"], "0.7", guncel(k)) for k in KONULAR]:
     loc = f"<loc>{SITE}/{slug}</loc>"
     if loc in t:
-        t = re.sub(re.escape(loc) + r"\s*<lastmod>[^<]*", f"{loc}\n    <lastmod>{GUNCELLEME}", t)
+        t = re.sub(re.escape(loc) + r"\s*<lastmod>[^<]*", f"{loc}\n    <lastmod>{tarih}", t)
     else:
-        t = t.replace("</urlset>", f"  <url>\n    {loc}\n    <lastmod>{GUNCELLEME}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{oncelik}</priority>\n  </url>\n</urlset>")
+        t = t.replace("</urlset>", f"  <url>\n    {loc}\n    <lastmod>{tarih}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{oncelik}</priority>\n  </url>\n</urlset>")
 sm.write_text(t, encoding="utf-8")
 print("sitemap güncellendi")

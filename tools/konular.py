@@ -7,6 +7,8 @@ uydurma istatistik, vaat ya da garanti yok; uzun çizgi (—) kullanılmaz.
 Kaynaklar yalnız köklü kurumlar ve hakemli yayınlar.
 """
 
+# Ortak içerik tarihi. Her konunun yayin alanı ilk yayın günüdür (git geçmişinden);
+# sayfadaki "Son güncelleme" ve dateModified ikisinden geç olanıdır.
 GUNCELLEME = "2026-10-29"
 
 K_WHO_DEP = ("Dünya Sağlık Örgütü (WHO), Depressive disorder (depression) bilgi notu",
@@ -133,7 +135,7 @@ ACIL = ('<p class="acil-not"><strong>Kendinize zarar verme ya da yaşamınıza s
 
 KONULAR = [
  dict(
-  slug="nisantasi-depresyon", grup="duygudurum", ad="Depresyon", tema_karti="Depresif duygudurum",
+  slug="nisantasi-depresyon", yayin="2026-10-29", grup="duygudurum", ad="Depresyon", tema_karti="Depresif duygudurum",
   title="Depresyon Psikoloğu Nişantaşı | Psikolog Emin Soydan",
   desc="Nişantaşı'nda depresyon için yüz yüze ve online psikolojik destek. Belirtiler, depresyonun kaynakları ve psikodinamik terapi sürecine dair bir rehber.",
   h1="Nişantaşı'nda Depresyon İçin Psikolojik Destek",
@@ -216,7 +218,7 @@ KONULAR = [
   ilgili=["nisantasi-dogum-sonrasi-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu", "nisantasi-mevsimsel-depresyon"],
  ),
  dict(
-  slug="nisantasi-anksiyete", grup="kaygi", ad="Anksiyete ve kaygı", tema_karti="Kaygı ve panik",
+  slug="nisantasi-anksiyete", yayin="2026-10-29", grup="kaygi", ad="Anksiyete ve kaygı", tema_karti="Kaygı ve panik",
   title="Anksiyete ve Kaygı Psikoloğu Nişantaşı | Psikolog Emin Soydan",
   desc="Nişantaşı'nda anksiyete ve kaygı için yüz yüze ve online psikolojik destek. Kaygının bedende ve zihinde nasıl yaşandığı, ne zaman destek alınmalı ve süreç.",
   h1="Nişantaşı'nda Anksiyete ve Kaygı İçin Psikolojik Destek",
@@ -303,7 +305,7 @@ KONULAR = [
   ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-sosyal-fobi", "nisantasi-depresyon"],
  ),
  dict(
-  slug="nisantasi-yaygin-anksiyete", grup="kaygi", ad="Yaygın anksiyete",
+  slug="nisantasi-yaygin-anksiyete", yayin="2026-10-29", grup="kaygi", ad="Yaygın anksiyete",
   title="Yaygın Anksiyete Bozukluğu | Nişantaşı Psikolog Emin Soydan",
   desc="Yaygın anksiyete bozukluğu için Nişantaşı'nda yüz yüze ve online psikolojik destek. Sürekli endişenin işaretleri, ardındaki dinamikler ve terapi süreci.",
   h1="Yaygın Anksiyete Bozukluğu: Nişantaşı'nda Psikolojik Destek",
@@ -378,7 +380,7 @@ KONULAR = [
   ilgili=["nisantasi-obsesif-kompulsif-bozukluk", "nisantasi-panik-atak", "nisantasi-saglik-anksiyetesi", "nisantasi-gelecek-kaygisi"],
  ),
  dict(
-  slug="nisantasi-panik-atak", grup="kaygi", ad="Panik atak",
+  slug="nisantasi-panik-atak", yayin="2026-10-30", grup="kaygi", ad="Panik atak",
   title="Panik Atak ve Panik Bozukluk | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda panik atak ve panik bozukluk için yüz yüze ve online psikolojik destek. Atak anında neler olur, neden tekrarlar ve terapi süreci.",
   h1="Panik Atak ve Panik Bozukluk: Nişantaşı'nda Psikolojik Destek",
@@ -447,7 +449,7 @@ KONULAR = [
   ilgili=["nisantasi-agorafobi", "nisantasi-anksiyete", "nisantasi-saglik-anksiyetesi", "nisantasi-yaygin-anksiyete"],
  ),
  dict(
-  slug="nisantasi-sosyal-fobi", grup="kaygi", ad="Sosyal fobi",
+  slug="nisantasi-sosyal-fobi", yayin="2026-10-30", grup="kaygi", ad="Sosyal fobi",
   title="Sosyal Fobi ve Sosyal Kaygı | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda sosyal fobi (sosyal kaygı) için yüz yüze ve online psikolojik destek. Başkalarının bakışından duyulan korku, kaçınma ve terapi süreci.",
   h1="Sosyal Fobi (Sosyal Kaygı): Nişantaşı'nda Psikolojik Destek",
@@ -511,7 +513,7 @@ KONULAR = [
   ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-sosyal-medya-bagimliligi", "nisantasi-agorafobi", "nisantasi-kimlik-ve-kendilik"],
  ),
  dict(
-  slug="nisantasi-agorafobi", grup="kaygi", ad="Agorafobi",
+  slug="nisantasi-agorafobi", yayin="2026-10-30", grup="kaygi", ad="Agorafobi",
   title="Agorafobi | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda agorafobi için yüz yüze ve online psikolojik destek. Kaçışın zor göründüğü yerlerden duyulan korku, kaçınma ve terapi süreci.",
   h1="Agorafobi: Nişantaşı'nda Psikolojik Destek",
@@ -573,7 +575,7 @@ KONULAR = [
   ilgili=["nisantasi-panik-atak", "nisantasi-anksiyete", "nisantasi-ozgul-fobiler", "nisantasi-sosyal-fobi"],
  ),
  dict(
-  slug="nisantasi-ozgul-fobiler", grup="kaygi", ad="Özgül fobiler",
+  slug="nisantasi-ozgul-fobiler", yayin="2026-10-30", grup="kaygi", ad="Özgül fobiler",
   title="Özgül Fobiler | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda özgül fobiler için yüz yüze ve online psikolojik destek. Yükseklik, uçak, hayvan, iğne gibi belirli korkular ve terapi süreci.",
   h1="Özgül Fobiler: Nişantaşı'nda Psikolojik Destek",
@@ -633,7 +635,7 @@ KONULAR = [
   ilgili=["nisantasi-agorafobi", "nisantasi-panik-atak", "nisantasi-saglik-anksiyetesi", "nisantasi-anksiyete"],
  ),
  dict(
-  slug="nisantasi-saglik-anksiyetesi", grup="kaygi", ad="Sağlık anksiyetesi",
+  slug="nisantasi-saglik-anksiyetesi", yayin="2026-10-30", grup="kaygi", ad="Sağlık anksiyetesi",
   title="Sağlık Anksiyetesi (Hastalık Kaygısı) | Nişantaşı Psikolog",
   desc="Nişantaşı'nda sağlık anksiyetesi için yüz yüze ve online psikolojik destek. Ciddi bir hastalığa yakalanma korkusu, sürekli kontrol ve terapi süreci.",
   h1="Sağlık Anksiyetesi: Nişantaşı'nda Psikolojik Destek",
@@ -694,7 +696,7 @@ KONULAR = [
   ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-obsesif-kompulsif-bozukluk", "nisantasi-ozgul-fobiler"],
  ),
  dict(
-  slug="nisantasi-sinav-kaygisi", grup="kaygi", ad="Sınav kaygısı",
+  slug="nisantasi-sinav-kaygisi", yayin="2026-10-30", grup="kaygi", ad="Sınav kaygısı",
   title="Sınav Kaygısı | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda 14 yaş ve üzeri gençler ve yetişkinler için sınav kaygısında yüz yüze ve online psikolojik destek. Belirtiler, nedenler ve süreç.",
   h1="Sınav Kaygısı: Nişantaşı'nda Psikolojik Destek",
@@ -755,7 +757,7 @@ KONULAR = [
   ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-gelecek-kaygisi", "nisantasi-ergenlik-donemi", "nisantasi-anksiyete"],
  ),
  dict(
-  slug="nisantasi-performans-anksiyetesi", grup="kaygi", ad="Performans anksiyetesi",
+  slug="nisantasi-performans-anksiyetesi", yayin="2026-10-30", grup="kaygi", ad="Performans anksiyetesi",
   title="Performans Anksiyetesi | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda performans anksiyetesi için yüz yüze ve online psikolojik destek. Sahne, sunum, spor ve iş ortamında değerlendirilme kaygısı ve süreç.",
   h1="Performans Anksiyetesi: Nişantaşı'nda Psikolojik Destek",
@@ -821,7 +823,7 @@ KONULAR = [
   ilgili=["nisantasi-sosyal-fobi", "nisantasi-sinav-kaygisi", "nisantasi-anksiyete", "nisantasi-kimlik-ve-kendilik"],
  ),
  dict(
-  slug="nisantasi-gelecek-kaygisi", grup="kaygi", ad="Gelecek kaygısı",
+  slug="nisantasi-gelecek-kaygisi", yayin="2026-10-30", grup="kaygi", ad="Gelecek kaygısı",
   title="Gelecek Kaygısı | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda gelecek kaygısı için yüz yüze ve online psikolojik destek. Belirsizlik, karar verememe, ekonomik ve kariyer endişeleri ve terapi süreci.",
   h1="Gelecek Kaygısı: Nişantaşı'nda Psikolojik Destek",
@@ -886,7 +888,7 @@ KONULAR = [
   ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-kronik-stres", "nisantasi-sinav-kaygisi", "nisantasi-tukenmislik-sendromu"],
  ),
  dict(
-  slug="nisantasi-kronik-stres", grup="kaygi", ad="Kronik stres",
+  slug="nisantasi-kronik-stres", yayin="2026-10-30", grup="kaygi", ad="Kronik stres",
   title="Kronik Stres | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda kronik stres için yüz yüze ve online psikolojik destek. Uzun süren stresin bedende ve zihinde bıraktığı izler ve terapi süreci.",
   h1="Kronik Stres: Nişantaşı'nda Psikolojik Destek",
@@ -948,7 +950,7 @@ KONULAR = [
   ilgili=["nisantasi-tukenmislik-sendromu", "nisantasi-gelecek-kaygisi", "nisantasi-tikanircasina-yeme", "nisantasi-depresyon"],
  ),
  dict(
-  slug="nisantasi-mevsimsel-depresyon", grup="duygudurum", ad="Mevsimsel depresyon",
+  slug="nisantasi-mevsimsel-depresyon", yayin="2026-10-30", grup="duygudurum", ad="Mevsimsel depresyon",
   title="Mevsimsel Depresyon | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda mevsimsel depresyon (kış depresyonu) için yüz yüze ve online psikolojik destek. Belirtiler, mevsimlerle gelen çöküntü ve terapi süreci.",
   h1="Mevsimsel Depresyon: Nişantaşı'nda Psikolojik Destek",
@@ -1014,7 +1016,7 @@ KONULAR = [
   ilgili=["nisantasi-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu", "nisantasi-dogum-sonrasi-depresyon"],
  ),
  dict(
-  slug="nisantasi-dogum-sonrasi-depresyon", grup="duygudurum", ad="Doğum sonrası depresyon",
+  slug="nisantasi-dogum-sonrasi-depresyon", yayin="2026-10-30", grup="duygudurum", ad="Doğum sonrası depresyon",
   title="Doğum Sonrası Depresyon | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda doğum sonrası (postpartum) depresyon için yüz yüze ve online psikolojik destek. Lohusa hüznünden farkı, belirtiler ve destek süreci.",
   h1="Doğum Sonrası Depresyon: Nişantaşı'nda Psikolojik Destek",
@@ -1082,7 +1084,7 @@ KONULAR = [
   ilgili=["nisantasi-depresyon", "nisantasi-anksiyete", "nisantasi-kimlik-ve-kendilik", "nisantasi-iliski-problemleri"],
  ),
  dict(
-  slug="nisantasi-yas-ve-kayip", grup="duygudurum", ad="Yas ve kayıp", tema_karti="Yas ve kayıp",
+  slug="nisantasi-yas-ve-kayip", yayin="2026-10-30", grup="duygudurum", ad="Yas ve kayıp", tema_karti="Yas ve kayıp",
   title="Yas ve Kayıp Süreci | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda yas ve kayıp sürecinde yüz yüze ve online psikolojik destek. Ölüm, ayrılık ve diğer kayıplar, uzayan yas ve terapide yasın yeri.",
   h1="Yas ve Kayıp Süreci: Nişantaşı'nda Psikolojik Destek",
@@ -1153,7 +1155,7 @@ KONULAR = [
   ilgili=["nisantasi-depresyon", "nisantasi-travma-sonrasi-stres", "nisantasi-mevsimsel-depresyon", "nisantasi-iliski-problemleri"],
  ),
  dict(
-  slug="nisantasi-tukenmislik-sendromu", grup="duygudurum", ad="Tükenmişlik sendromu",
+  slug="nisantasi-tukenmislik-sendromu", yayin="2026-10-30", grup="duygudurum", ad="Tükenmişlik sendromu",
   title="Tükenmişlik Sendromu (Burnout) | Nişantaşı Psikolog",
   desc="Nişantaşı'nda tükenmişlik sendromu (burnout) için yüz yüze ve online psikolojik destek. İş kaynaklı tükenmenin işaretleri, nedenleri ve terapi süreci.",
   h1="Tükenmişlik Sendromu: Nişantaşı'nda Psikolojik Destek",
@@ -1222,7 +1224,7 @@ KONULAR = [
   ilgili=["nisantasi-kronik-stres", "nisantasi-depresyon", "nisantasi-gelecek-kaygisi", "nisantasi-performans-anksiyetesi"],
  ),
  dict(
-  slug="nisantasi-cocukluk-travmalari", grup="travma", ad="Çocukluk dönemi travmaları",
+  slug="nisantasi-cocukluk-travmalari", yayin="2026-10-30", grup="travma", ad="Çocukluk dönemi travmaları",
   title="Çocukluk Dönemi Travmaları | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda çocukluk dönemi travmalarının yetişkinlikteki izleriyle çalışan yüz yüze ve online psikolojik destek. Belirtiler, ilişkiler ve süreç.",
   h1="Çocukluk Dönemi Travmaları: Yetişkinlikte İzleriyle Çalışmak",
@@ -1289,7 +1291,7 @@ KONULAR = [
   ilgili=["nisantasi-travma-sonrasi-stres", "nisantasi-borderline-kisilik", "nisantasi-iliski-problemleri", "nisantasi-kimlik-ve-kendilik"],
  ),
  dict(
-  slug="nisantasi-travma-sonrasi-stres", grup="travma", ad="Travma sonrası stres (TSSB)", tema_karti="Travma ve TSSB",
+  slug="nisantasi-travma-sonrasi-stres", yayin="2026-10-30", grup="travma", ad="Travma sonrası stres (TSSB)", tema_karti="Travma ve TSSB",
   title="Travma Sonrası Stres Bozukluğu (TSSB) | Nişantaşı Psikolog",
   desc="Nişantaşı'nda travma sonrası stres bozukluğu (TSSB) için yüz yüze ve online psikolojik destek. Belirtiler, psikodinamik çerçeve ve EMDR'nin yeri.",
   h1="Travma Sonrası Stres Bozukluğu (TSSB): Nişantaşı'nda Psikolojik Destek",
@@ -1352,7 +1354,7 @@ KONULAR = [
   ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-panik-atak", "nisantasi-yas-ve-kayip", "nisantasi-depresyon"],
  ),
  dict(
-  slug="nisantasi-obsesif-kompulsif-bozukluk", grup="travma", ad="Obsesif kompulsif bozukluk (OKB)",
+  slug="nisantasi-obsesif-kompulsif-bozukluk", yayin="2026-10-30", grup="travma", ad="Obsesif kompulsif bozukluk (OKB)",
   title="Obsesif Kompulsif Bozukluk (OKB) | Nişantaşı Psikolog",
   desc="Nişantaşı'nda obsesif kompulsif bozukluk (OKB) için yüz yüze ve online psikolojik destek. Takıntılı düşünceler, zorlantılar ve terapi süreci.",
   h1="Obsesif Kompulsif Bozukluk (OKB): Nişantaşı'nda Psikolojik Destek",
@@ -1416,7 +1418,7 @@ KONULAR = [
   ilgili=["nisantasi-anksiyete", "nisantasi-saglik-anksiyetesi", "nisantasi-yaygin-anksiyete", "nisantasi-ofke-kontrolu"],
  ),
  dict(
-  slug="nisantasi-borderline-kisilik", grup="travma", ad="Borderline (sınırda) kişilik", tema_karti="Borderline kişilik",
+  slug="nisantasi-borderline-kisilik", yayin="2026-10-30", grup="travma", ad="Borderline (sınırda) kişilik", tema_karti="Borderline kişilik",
   title="Borderline (Sınırda) Kişilik Bozukluğu | Nişantaşı Psikolog",
   desc="Nişantaşı'nda borderline (sınırda) kişilik örüntüleri için yüz yüze ve online psikolojik destek. Duygusal dalgalanmalar, ilişkiler ve Aktarım Odaklı Terapi.",
   h1="Borderline (Sınırda) Kişilik Bozukluğu: Nişantaşı'nda Psikolojik Destek",
@@ -1482,7 +1484,7 @@ KONULAR = [
   ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-iliski-problemleri", "nisantasi-kimlik-ve-kendilik", "nisantasi-ofke-kontrolu"],
  ),
  dict(
-  slug="nisantasi-narsisistik-kisilik", grup="travma", ad="Narsisistik kişilik",
+  slug="nisantasi-narsisistik-kisilik", yayin="2026-10-30", grup="travma", ad="Narsisistik kişilik",
   title="Narsisistik Kişilik Bozukluğu | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda narsisistik kişilik örüntüleri ve narsisistik ilişkilerden etkilenenler için yüz yüze ve online psikolojik destek.",
   h1="Narsisistik Kişilik Bozukluğu: Nişantaşı'nda Psikolojik Destek",
@@ -1544,7 +1546,7 @@ KONULAR = [
   ilgili=["nisantasi-iliski-problemleri", "nisantasi-borderline-kisilik", "nisantasi-kimlik-ve-kendilik", "nisantasi-depresyon"],
  ),
  dict(
-  slug="nisantasi-ofke-kontrolu", grup="travma", ad="Öfke kontrolü", tema_karti="Öfke ve suçluluk",
+  slug="nisantasi-ofke-kontrolu", yayin="2026-10-30", grup="travma", ad="Öfke kontrolü", tema_karti="Öfke ve suçluluk",
   title="Öfke Kontrol Sorunları | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda öfke kontrol sorunları ve öfke patlamaları için yüz yüze ve online psikolojik destek. Öfkenin ardındaki duygular, suçluluk ve süreç.",
   h1="Öfke Kontrolü: Nişantaşı'nda Psikolojik Destek",
@@ -1607,7 +1609,7 @@ KONULAR = [
   ilgili=["nisantasi-borderline-kisilik", "nisantasi-iliski-problemleri", "nisantasi-kronik-stres", "nisantasi-depresyon"],
  ),
  dict(
-  slug="nisantasi-kimlik-ve-kendilik", grup="kimlik", ad="Kimlik ve kendilik", tema_karti="Kimlik ve kendilik",
+  slug="nisantasi-kimlik-ve-kendilik", yayin="2026-10-30", grup="kimlik", ad="Kimlik ve kendilik", tema_karti="Kimlik ve kendilik",
   title="Kimlik ve Kendilik | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda kimlik arayışı, değersizlik hissi ve kendilik sorunları için yüz yüze ve online psikolojik destek. Psikodinamik bakış ve süreç.",
   h1="Kimlik ve Kendilik: Nişantaşı'nda Psikolojik Destek",
@@ -1668,7 +1670,7 @@ KONULAR = [
   ilgili=["nisantasi-iliski-problemleri", "nisantasi-borderline-kisilik", "nisantasi-narsisistik-kisilik", "nisantasi-tikanircasina-yeme"],
  ),
  dict(
-  slug="nisantasi-ergenlik-donemi", grup="kimlik", ad="Ergenlik dönemi", tema_karti="Ergenlik dönemi",
+  slug="nisantasi-ergenlik-donemi", yayin="2026-10-30", grup="kimlik", ad="Ergenlik dönemi", tema_karti="Ergenlik dönemi",
   title="Ergenlik Dönemi | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda 14 yaş ve üzeri gençler için yüz yüze ve online bireysel psikolojik destek. Ergenlik döneminin zorlukları, gizlilik ve ailelerin yeri.",
   h1="Ergenlik Dönemi: Nişantaşı'nda Gençler İçin Psikolojik Destek",
@@ -1737,7 +1739,7 @@ KONULAR = [
   ilgili=["nisantasi-sinav-kaygisi", "nisantasi-kimlik-ve-kendilik", "nisantasi-sosyal-medya-bagimliligi", "nisantasi-cinsel-kimlik-ve-yonelim"],
  ),
  dict(
-  slug="nisantasi-cinsel-kimlik-ve-yonelim", grup="kimlik", ad="Cinsel kimlik ve yönelim", tema_karti="Cinsel kimlik ve yönelim",
+  slug="nisantasi-cinsel-kimlik-ve-yonelim", yayin="2026-10-30", grup="kimlik", ad="Cinsel kimlik ve yönelim", tema_karti="Cinsel kimlik ve yönelim",
   title="Cinsel Kimlik ve Yönelim | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda cinsel kimlik ve yönelimle ilgili sorular için yargısız, yüz yüze ve online psikolojik destek. Gizlilik, kabul ve süreç.",
   h1="Cinsel Kimlik ve Yönelim: Nişantaşı'nda Yargısız Psikolojik Destek",
@@ -1800,7 +1802,7 @@ KONULAR = [
   ilgili=["nisantasi-kimlik-ve-kendilik", "nisantasi-ergenlik-donemi", "nisantasi-iliski-problemleri", "nisantasi-cinsel-islev-problemleri"],
  ),
  dict(
-  slug="nisantasi-cinsel-islev-problemleri", grup="kimlik", ad="Cinsel işlev problemleri", tema_karti="Cinsel işlev problemleri",
+  slug="nisantasi-cinsel-islev-problemleri", yayin="2026-10-30", grup="kimlik", ad="Cinsel işlev problemleri", tema_karti="Cinsel işlev problemleri",
   title="Cinsel İşlev Problemleri | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda cinsel işlev problemlerinin psikolojik boyutu için yüz yüze ve online destek. İstek, performans kaygısı ve tıbbi değerlendirmenin yeri.",
   h1="Cinsel İşlev Problemleri: Nişantaşı'nda Psikolojik Destek",
@@ -1867,7 +1869,7 @@ KONULAR = [
   ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-iliski-problemleri", "nisantasi-cinsel-kimlik-ve-yonelim", "nisantasi-anksiyete"],
  ),
  dict(
-  slug="nisantasi-iliski-problemleri", grup="kimlik", ad="İlişki problemleri", tema_karti="İlişkiler ve bağlanma",
+  slug="nisantasi-iliski-problemleri", yayin="2026-10-30", grup="kimlik", ad="İlişki problemleri", tema_karti="İlişkiler ve bağlanma",
   title="İlişki Problemleri | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda ilişki problemleri, bağlanma ve tekrar eden ilişki örüntüleri için bireysel yüz yüze ve online psikolojik destek.",
   h1="İlişki Problemleri: Nişantaşı'nda Bireysel Psikolojik Destek",
@@ -1930,7 +1932,7 @@ KONULAR = [
   ilgili=["nisantasi-kimlik-ve-kendilik", "nisantasi-borderline-kisilik", "nisantasi-narsisistik-kisilik", "nisantasi-yas-ve-kayip"],
  ),
  dict(
-  slug="nisantasi-sosyal-medya-bagimliligi", grup="kimlik", ad="Sosyal medya bağımlılığı",
+  slug="nisantasi-sosyal-medya-bagimliligi", yayin="2026-10-30", grup="kimlik", ad="Sosyal medya bağımlılığı",
   title="Sosyal Medya Bağımlılığı | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda sosyal medya ve ekran kullanımının kontrolden çıktığı durumlar için yüz yüze ve online psikolojik destek. Belirtiler ve süreç.",
   h1="Sosyal Medya Bağımlılığı: Nişantaşı'nda Psikolojik Destek",
@@ -1994,7 +1996,7 @@ KONULAR = [
   ilgili=["nisantasi-ergenlik-donemi", "nisantasi-kimlik-ve-kendilik", "nisantasi-depresyon", "nisantasi-anksiyete"],
  ),
  dict(
-  slug="nisantasi-tikanircasina-yeme", grup="kimlik", ad="Tıkanırcasına yeme",
+  slug="nisantasi-tikanircasina-yeme", yayin="2026-10-30", grup="kimlik", ad="Tıkanırcasına yeme",
   title="Tıkanırcasına Yeme Bozukluğu | Nişantaşı Psikolog Emin Soydan",
   desc="Nişantaşı'nda tıkanırcasına yeme bozukluğu için yüz yüze ve online psikolojik destek. Yeme ataklarının ardındaki duygular, utanç ve terapi süreci.",
   h1="Tıkanırcasına Yeme Bozukluğu: Nişantaşı'nda Psikolojik Destek",
