@@ -86,7 +86,7 @@ for k in KONULAR:
             f'\n        <li><a href="/{s}">{mevcut[s]["ad"]}</a></li>' for s in ilgili) + \
             '\n        <li><a href="/calisma-alanlari">Tüm çalışma alanları</a></li>\n      </ul>\n    </nav>\n'
     kaynak = "".join(f'\n        <li><a href="{u}" target="_blank" rel="noopener">{html.escape(ad, False)}</a></li>'
-                     for ad, u in k["kaynaklar"])
+                     if u else f'\n        <li>{html.escape(ad, False)}</li>' for ad, u in k["kaynaklar"])
     main = f'''<main id="icerik">
   <div class="wrap narrow">
 
@@ -124,7 +124,7 @@ for k in KONULAR:
         {"@type": "WebPage", "@id": url, "url": url, "name": k["title"], "headline": k["h1"],
          "description": k["desc"], "inLanguage": "tr-TR", "about": {"@type": "Thing", "name": k["ad"]},
          "author": YAZAR, "dateModified": GUNCELLEME, "isPartOf": {"@id": f"{SITE}/#site"},
-         "citation": [u for _, u in k["kaynaklar"]]},
+         "citation": [u or ad for ad, u in k["kaynaklar"]]},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": f"{SITE}/"},
             {"@type": "ListItem", "position": 2, "name": "Çalışma alanları", "item": f"{SITE}/calisma-alanlari"},

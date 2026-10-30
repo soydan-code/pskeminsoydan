@@ -47,6 +47,24 @@ K_MILROD = ("Milrod, B. ve ark. (2007). A randomized controlled clinical trial o
 K_LEICH = ("Leichsenring, F. ve ark. (2013). Psychodynamic therapy and cognitive-behavioral therapy in social anxiety disorder. American Journal of Psychiatry, 170(7), 759-767",
            "https://doi.org/10.1176/appi.ajp.2013.12081125")
 
+K_NIMH_SAD = ("ABD Ulusal Ruh Sağlığı Enstitüsü (NIMH), Seasonal Affective Disorder",
+              "https://www.nimh.nih.gov/health/publications/seasonal-affective-disorder")
+K_NHS_SAD = ("NHS (İngiltere Ulusal Sağlık Servisi), Seasonal affective disorder (SAD)",
+             "https://www.nhs.uk/mental-health/conditions/seasonal-affective-disorder-sad/")
+K_NIMH_PERI = ("ABD Ulusal Ruh Sağlığı Enstitüsü (NIMH), Perinatal Depression",
+               "https://www.nimh.nih.gov/health/publications/perinatal-depression")
+K_NICE_PERI = ("NICE, Antenatal and postnatal mental health (CG192)",
+               "https://www.nice.org.uk/guidance/cg192")
+K_NHS_PND = ("NHS (İngiltere Ulusal Sağlık Servisi), Postnatal depression",
+             "https://www.nhs.uk/mental-health/conditions/post-natal-depression/overview/")
+K_NHS_YAS = ("NHS (İngiltere Ulusal Sağlık Servisi), Grief after bereavement or loss",
+             "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/")
+K_FREUD = ("Freud, S. (1917). Yas ve Melankoli", "")
+K_WHO_BURN = ("Dünya Sağlık Örgütü (WHO), Burn-out an occupational phenomenon: ICD-11",
+              "https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases")
+K_MASLACH = ("Maslach, C. ve Leiter, M. P. (2016). Understanding the burnout experience. World Psychiatry, 15(2), 103-111",
+             "https://doi.org/10.1002/wps.20311")
+
 GRUPLAR = [
     ("duygudurum", "Depresyon ve duygudurum"),
     ("kaygi", "Kaygı ve anksiyete"),
@@ -871,5 +889,279 @@ KONULAR = [
   ],
   kaynaklar=[K_WHO_STRES, K_NIMH_STRES, K_NIMH_ANX, K_SHEDLER],
   ilgili=["nisantasi-tukenmislik-sendromu", "nisantasi-gelecek-kaygisi", "nisantasi-anksiyete", "nisantasi-depresyon"],
+ ),
+ dict(
+  slug="nisantasi-mevsimsel-depresyon", grup="duygudurum", ad="Mevsimsel depresyon",
+  title="Mevsimsel Depresyon | Nişantaşı Psikolog Emin Soydan",
+  desc="Nişantaşı'nda mevsimsel depresyon (kış depresyonu) için yüz yüze ve online psikolojik destek. Belirtiler, mevsimlerle gelen çöküntü ve psikoterapi süreci.",
+  h1="Mevsimsel Depresyon: Nişantaşı'nda Psikolojik Destek",
+  giris="Günler kısalınca enerjiniz de kısalıyorsa, her kış aynı ağırlık geri geliyor ve bahar gelince sessizce çekiliyorsa, bu yalnızca havanın kasvetli olmasıyla açıklanamayabilir. Mevsimsel depresyon, takvimle birlikte dönen bir çöküntüdür.",
+  bolumler=[
+   ("Mevsimsel depresyon nedir?", """
+      <p>Mevsimsel depresyon, yılın belirli dönemlerinde, çoğunlukla sonbahar ve kış
+      aylarında başlayıp ilkbaharda hafifleyen depresif dönemlerdir. NIMH ve NHS
+      bu tabloyu "mevsimsel duygudurum bozukluğu" (SAD) olarak tanımlar; DSM-5-TR
+      ise depresyonun mevsimsel bir örüntü gösterdiği durumları ayrıca belirtir.
+      Daha seyrek olarak yaz aylarında başlayan biçimi de görülür.</p>
+      <p>Kış hüznünü pek çok insan yaşar. Mevsimsel depresyonda ise bu hâl yıldan
+      yıla tekrarlar, haftalarca sürer ve gündelik yaşamı belirgin biçimde
+      etkiler.</p>"""),
+   ("Nasıl hissettirir?", """
+      <ul>
+        <li>Sabahları kalkmakta zorlanmak, uzun uyumak ama dinlenememek</li>
+        <li>Ağırlık, isteksizlik, enerji düşüklüğü</li>
+        <li>Özellikle tatlı ve karbonhidrata yönelen iştah artışı</li>
+        <li>Sosyal hayattan çekilme, "kış uykusuna yatma" isteği</li>
+        <li>Dikkat toplamakta zorlanma</li>
+        <li>Umutsuzluk ve değersizlik duyguları</li>
+      </ul>
+      <p>Bu belirtilerin <a href="/nisantasi-depresyon">depresyonun</a> genel
+      belirtileriyle örtüştüğünü görebilirsiniz. Farkı, döngüsel olmasıdır: Kişi
+      çoğu zaman kışın yaklaştığını bedeninde hisseder.</p>"""),
+   ("Neden mevsimlerle birlikte gelir?", """
+      <p>Araştırmalar, gün ışığının azalmasının biyolojik saati ve uyku-uyanıklık
+      ritmini etkileyebileceğine işaret ediyor. Bu yüzden ışıkla ilgili yaklaşımlar
+      da bazı kişilerde destekleyici olabilir; bu konuda hekiminizin
+      değerlendirmesi önemlidir.</p>
+      <p>Psikodinamik bakış biyolojik tabloya bir katman ekler: Mevsimler aynı
+      zamanda anılar taşır. Bir kaybın yıl dönümü, yılın sonuna yaklaşırken
+      yapılan muhasebe, yalnızlığın daha çok hissedildiği bayram ve tatil
+      dönemleri... Kışın gelen ağırlık bazen ışığın azalmasıyla, bazen de o
+      dönemin kişi için taşıdığı anlamla ilgilidir. Seanslarda ikisine birden
+      kulak veririz.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>Her yıl aynı dönemde çöküntü yaşıyorsanız, iş ve ilişkileriniz bu
+      dönemlerde belirgin biçimde etkileniyorsa destek almak için iyi bir
+      zamandır. Kış başlamadan önce görüşmeye başlamak, o dönemi daha
+      hazırlıklı karşılamanıza yardım edebilir.</p>
+      """ + ACIL),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu dönemin ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Kış hüznü ile mevsimsel depresyon arasındaki fark nedir?",
+    "Kış aylarında biraz durgunluk hissetmek yaygındır. Mevsimsel depresyonda ise belirtiler her yıl tekrarlar, haftalarca sürer ve gündelik yaşamı belirgin biçimde etkiler."),
+   ("Işık uygulamaları işe yarar mı?",
+    "Işık uygulamaları bazı kişilerde destekleyici olabilir. Bu konuda karar, hekiminizin değerlendirmesiyle verilmelidir. Psikoterapi bu yaklaşımlarla birlikte sürdürülebilir."),
+   ("Sadece kışın mı görüşmeliyiz?",
+    "Bu, sizin ihtiyacınıza göre birlikte belirlenir. Bazı kişiler için yıl boyu süren bir çalışma, döngünün ardındaki dinamikleri anlamaya daha çok alan açar."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_NIMH_SAD, K_NHS_SAD, K_DSM, K_NICE_DEP],
+  ilgili=["nisantasi-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu", "nisantasi-kronik-stres"],
+ ),
+ dict(
+  slug="nisantasi-dogum-sonrasi-depresyon", grup="duygudurum", ad="Doğum sonrası depresyon",
+  title="Doğum Sonrası Depresyon | Nişantaşı Psikolog Emin Soydan",
+  desc="Nişantaşı'nda doğum sonrası (postpartum) depresyon için yüz yüze ve online psikolojik destek. Lohusa hüznünden farkı, belirtiler ve destek süreci.",
+  h1="Doğum Sonrası Depresyon: Nişantaşı'nda Psikolojik Destek",
+  giris="Herkes size bu dönemin hayatınızın en mutlu zamanı olması gerektiğini söylüyor; ama siz kendinizi tükenmiş, uzak ya da suçlu hissediyorsunuz. Doğum sonrası depresyon pek çok ebeveynin sessizce yaşadığı bir gerçek. Bunu dile getirmek, iyi bir ebeveyn olmadığınız anlamına gelmez.",
+  bolumler=[
+   ("Lohusa hüznü mü, doğum sonrası depresyon mu?", """
+      <p>Doğumu izleyen ilk günlerde ağlamaklılık, duygusal dalgalanma ve
+      tedirginlik çok yaygındır; buna "lohusa hüznü" denir ve genellikle iki hafta
+      içinde kendiliğinden geçer. NIMH ve NHS'in tanımladığı biçimiyle doğum sonrası
+      depresyon ise daha uzun sürer, daha yoğundur ve gündelik işleyişi, bebekle
+      kurulan bağı ve kişinin kendine bakımını etkiler. Gebelik sırasında da
+      başlayabilir; bu yüzden uzmanlar "perinatal depresyon" ifadesini de kullanır.</p>"""),
+   ("Nasıl hissettirir?", """
+      <ul>
+        <li>Sürekli çökkünlük, boşluk ya da hissizlik</li>
+        <li>Bebekle bağ kuramadığını hissetmek ve bundan dolayı yoğun suçluluk</li>
+        <li>Bebek uyurken bile uyuyamamak</li>
+        <li>Yetersizlik, "iyi bir anne ya da baba değilim" düşünceleri</li>
+        <li>Yoğun kaygı, bebeğe bir şey olacağına dair korkular</li>
+        <li>Tahammülsüzlük, öfke patlamaları</li>
+        <li>Kendinden, partnerinden ve çevresinden uzaklaşma</li>
+      </ul>
+      <p>Doğum sonrası depresyon yalnızca doğum yapan kişiyi değil, bazen diğer
+      ebeveyni de etkileyebilir.</p>"""),
+   ("Ne zaman hemen yardım istemeli?", """
+      <p class="acil-not"><strong>Kendinize ya da bebeğinize zarar verme
+      düşünceleriniz varsa; gerçekte olmayan şeyler görüyor ya da duyuyorsanız,
+      aşırı şüphe ya da karışıklık yaşıyorsanız beklemeyin:</strong> 112'yi arayın
+      ya da en yakın acil servise başvurun. Doğum sonrası psikoz seyrek görülen
+      ama acil müdahale gerektiren bir durumdur.</p>
+      <p>Bu düşünceleri dile getirmek çok zor olabilir. Ama söylemek, sizi ve
+      bebeğinizi korumanın en önemli adımıdır.</p>"""),
+   ("Psikodinamik bakış: Ebeveyn olmak ve kendi geçmişimiz", """
+      <p>Ebeveyn olmak yalnızca yeni bir sorumluluk değil, kimliğin derinden
+      sarsıldığı bir geçiştir. Bebeğe bakmak, kişinin kendisine nasıl bakıldığına
+      dair anıları ve duyguları uyandırır. Winnicott'un "yeterince iyi anne"
+      kavramı burada önemlidir: Kusursuz olmak gerekmez, yeterince iyi olmak
+      yeterlidir. Bu düşünce, pek çok ebeveynin üzerindeki imkânsız beklentiyi
+      hafifletir.</p>
+      <p>Seanslarda bu geçişin size neler hissettirdiğini, kendi bakım alma
+      deneyimlerinizi ve beklentilerinizi yargılanmadan konuşabileceğiniz bir alan
+      açarız.</p>"""),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu dönemin ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>NICE rehberleri doğum öncesi ve sonrası dönemde psikolojik desteği önemli
+      bir seçenek olarak sayar. Emzirme döneminde ilaç kararı, psikiyatri hekiminin
+      bu döneme özel değerlendirmesiyle verilmelidir.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Doğum sonrası depresyon ne zaman başlar?",
+    "Gebelik sırasında ya da doğumdan sonraki aylarda, çoğunlukla ilk yıl içinde başlayabilir. Lohusa hüznünden farklı olarak iki haftadan uzun sürer ve daha yoğundur."),
+   ("Bebeğimle görüşmeye gelebilir miyim?",
+    "Bu, birlikte konuşabileceğimiz bir konu. Dışarı çıkmanın zor olduğu dönemlerde online görüşme de bir seçenek olabilir."),
+   ("Babalar da doğum sonrası depresyon yaşar mı?",
+    "Evet. Doğum yapmayan ebeveyn de bu dönemde depresif belirtiler yaşayabilir. Bu deneyim de ciddiye alınmayı hak eder."),
+   ("Emzirirken psikoterapi alabilir miyim?",
+    "Evet, psikoterapi emzirme dönemiyle uyumludur. İlaç gerekip gerekmediği ise psikiyatri hekiminin bu döneme özel değerlendirmesiyle belirlenir."),
+  ],
+  kaynaklar=[K_NIMH_PERI, K_NICE_PERI, K_NHS_PND, K_DSM],
+  ilgili=["nisantasi-depresyon", "nisantasi-anksiyete", "nisantasi-kimlik-ve-kendilik", "nisantasi-iliski-problemleri"],
+ ),
+ dict(
+  slug="nisantasi-yas-ve-kayip", grup="duygudurum", ad="Yas ve kayıp", tema_karti="Yas ve kayıp",
+  title="Yas ve Kayıp Süreci | Nişantaşı Psikolog Emin Soydan",
+  desc="Nişantaşı'nda yas ve kayıp sürecinde yüz yüze ve online psikolojik destek. Ölüm, ayrılık ve diğer kayıplar, uzayan yas ve psikoterapide yasın yeri.",
+  h1="Yas ve Kayıp Süreci: Nişantaşı'nda Psikolojik Destek",
+  giris="Bir yakını kaybetmek, bir ilişkinin bitmesi, bir hayalin, bir yerin ya da bir dönemin geride kalması... Kayıp, hayatın kaçınılmaz bir parçası; ama yasın nasıl yaşanacağını kimse öğretmez. Yasınız için bir alan açmak, onu taşımanın ilk adımıdır.",
+  bolumler=[
+   ("Yas nedir?", """
+      <p>Yas, bir kayba verilen doğal bir tepkidir; bir hastalık değildir. Üzüntü,
+      özlem, öfke, suçluluk, inkâr, hatta zaman zaman rahatlama bir arada
+      yaşanabilir. NHS'in de vurguladığı gibi herkes yasını kendi biçiminde ve kendi
+      hızında yaşar; "doğru" bir yas yolu yoktur.</p>
+      <p>Kayıp yalnızca ölümle sınırlı değildir. Boşanma ya da ayrılık, göç,
+      işini kaybetmek, sağlığın değişmesi, gebelik kaybı ya da hiç olmamış bir
+      çocukluğun yası da derin izler bırakabilir.</p>"""),
+   ("Yasın biçimleri", """
+      <ul>
+        <li>Dalgalar hâlinde gelen yoğun özlem ve hüzün</li>
+        <li>Kaybedilen kişiyle ilgili düşüncelerin zihni meşgul etmesi</li>
+        <li>Uyku ve iştahta değişiklik, yorgunluk</li>
+        <li>"Keşke" ile başlayan suçluluk duyguları</li>
+        <li>Öfke: kaybedilene, kendine, hayata</li>
+        <li>Dünyanın anlamını yitirdiği hissi</li>
+        <li>Bazen hiçbir şey hissedememek, donup kalmak</li>
+      </ul>
+      <p>Bunlar çoğu zaman zamanla yumuşar; kayıp unutulmaz ama hayatın içinde
+      taşınabilir bir yer bulur.</p>"""),
+   ("Uzayan ya da tutulamayan yas", """
+      <p>Bazı durumlarda yas aylar, hatta yıllar geçmesine rağmen ilk günkü
+      yoğunluğunu korur ve kişinin hayatına devam etmesini zorlaştırır. DSM-5-TR bu
+      tabloyu "uzamış yas" başlığı altında tanımlar. Ani ya da travmatik kayıplar,
+      çocuk kaybı, intihar sonrası yas ya da toplumun "tutulmasına izin vermediği"
+      yaslar bu riski artırabilir.</p>
+      <p>Tersine, bazen yas hiç başlayamaz: Kişi işine, sorumluluklarına gömülür,
+      ağlamaz, konuşmaz. Yaşanamayan yas, yıllar sonra <a href="/nisantasi-depresyon">depresyon</a>,
+      bedensel şikâyetler ya da açıklanamayan bir boşluk olarak geri dönebilir.</p>"""),
+   ("Psikodinamik bakış: Yas ve melankoli", """
+      <p>Freud, "Yas ve Melankoli" yazısında yası, kaybedilen kişiye bağlanmış
+      duyguların yavaş yavaş ve acıyla geri çekildiği bir emek olarak tarif eder.
+      Bu emek, kaybedilene karşı duyulan karışık duygular, özellikle öfke ve suçluluk
+      konuşulamadığında tıkanabilir.</p>
+      <p>Seanslarda kaybettiğiniz kişiyi ya da şeyi, onunla ilişkinizin bütün
+      renkleriyle birlikte anabileceğiniz bir alan açarız. Söylenemeyenleri
+      söylemek, yasın yeniden akmasına yardım eder.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>Kaybın üzerinden uzun zaman geçmesine rağmen hayatınıza devam
+      edemiyorsanız, yas hiç başlayamamış gibi hissediyorsanız ya da kaybın
+      ardından yoğun suçluluk ve umutsuzluk sürüyorsa destek almak iyi gelebilir.
+      Yasın "normal" sürmesi için de yanınızda biri olması değerlidir.</p>
+      """ + ACIL),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu dönemin ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Yas ne kadar sürer?",
+    "Yasın belirli bir süresi yoktur ve herkes kendi hızında yaşar. Zamanla yoğunluğu çoğu zaman azalır. Uzun süre ilk günkü yoğunluğunu koruyup hayatı durdurduğunda destek almak iyi gelebilir."),
+   ("Kayıptan hemen sonra görüşmeye başlamalı mıyım?",
+    "Bunun tek bir doğru zamanı yok. Kimi insan ilk haftalarda konuşacak bir alana ihtiyaç duyar, kimisi bir süre sonra. Hazır hissettiğinizde başlayabiliriz."),
+   ("Bir ilişkinin bitmesi ya da göç de yas sayılır mı?",
+    "Evet. Ayrılık, göç, iş ya da sağlık kaybı gibi deneyimler de gerçek birer kayıptır ve yas sürecini başlatabilir."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_NHS_YAS, K_DSM, K_FREUD, K_SHEDLER],
+  ilgili=["nisantasi-depresyon", "nisantasi-travma-sonrasi-stres", "nisantasi-mevsimsel-depresyon", "nisantasi-iliski-problemleri"],
+ ),
+ dict(
+  slug="nisantasi-tukenmislik-sendromu", grup="duygudurum", ad="Tükenmişlik sendromu",
+  title="Tükenmişlik Sendromu (Burnout) | Nişantaşı Psikolog",
+  desc="Nişantaşı'nda tükenmişlik sendromu (burnout) için yüz yüze ve online psikolojik destek. İş kaynaklı tükenmenin işaretleri, nedenleri ve psikoterapi süreci.",
+  h1="Tükenmişlik Sendromu: Nişantaşı'nda Psikolojik Destek",
+  giris="Bir zamanlar tutkuyla yaptığınız işe artık zorla gidiyorsanız, hafta sonları bile dinlenemiyor ve her şeye karşı bir uzaklık hissediyorsanız, yalnızca yorgun olmayabilirsiniz. Tükenmişlik, uzun süre fazlasını vermenin sessiz faturasıdır.",
+  bolumler=[
+   ("Tükenmişlik nedir?", """
+      <p>Dünya Sağlık Örgütü, tükenmişliği (burnout) uluslararası hastalık
+      sınıflamasında (ICD-11) bir hastalık olarak değil, başarıyla yönetilemeyen
+      kronik iş stresinden kaynaklanan "mesleki bir olgu" olarak tanımlar. Üç temel
+      boyutu vardır:</p>
+      <ul>
+        <li><strong>Enerji tükenmesi:</strong> bitmek bilmeyen yorgunluk</li>
+        <li><strong>İşe karşı uzaklık:</strong> artan mesafe, olumsuzluk ya da
+        umursamazlık</li>
+        <li><strong>Verimin düşmesi:</strong> yetersizlik ve işe yaramama hissi</li>
+      </ul>
+      <p>Maslach ve Leiter'in tükenmişlik üzerine çalışmaları da bu üç boyutu öne
+      çıkarır. Tükenmişlik yalnızca ücretli işte değil, bakım verme, ebeveynlik ya
+      da yoğun eğitim süreçlerinde de yaşanabilir.</p>"""),
+   ("Nasıl hissettirir?", """
+      <ul>
+        <li>Pazartesi sabahını pazardan dert etmek</li>
+        <li>İşle ilgili her şeye karşı bıkkınlık ya da alaycılık</li>
+        <li>Unutkanlık, dikkat dağınıklığı, karar verememe</li>
+        <li>Baş ağrıları, uyku sorunları, sık hastalanma</li>
+        <li>Eskiden keyif veren şeylerden uzaklaşma</li>
+        <li>Ne kadar çalışılırsa çalışılsın yetmiyormuş hissi</li>
+      </ul>
+      <p>Tükenmişlik <a href="/nisantasi-depresyon">depresyonla</a> karışabilir ve
+      zamanla ona dönüşebilir. Aradaki farkı birlikte değerlendirmek önemlidir.</p>"""),
+   ("Yalnızca iş yükü mü?", """
+      <p>Tükenmişliğin kaynağında çoğu zaman gerçek bir aşırı yük vardır: uzun
+      çalışma saatleri, belirsiz beklentiler, takdir görmemek, kontrolün
+      elinizde olmaması. Bunları görmek ve adlandırmak önemlidir; sorun her zaman
+      kişide değildir.</p>
+      <p>Psikodinamik bakış ise şu soruyu da sorar: Durmak neden bu kadar zor?
+      "Hayır" diyememek, yardım isteyememek, değerini yalnızca başarıyla ölçmek ya
+      da başkalarının ihtiyaçlarını hep kendininkinin önüne koymak çoğu zaman eski
+      ve derin örüntülerdir. Winnicott'un deyişiyle, başkalarının beklentilerine
+      uyum sağlamak üzerine kurulmuş bir "sahte kendilik" uzun vadede ağır bir
+      yorgunluk yaratır.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>Tatil ya da hafta sonu dinlenmenizi sağlamıyorsa, işinize ve hayatınıza
+      karşı derin bir uzaklık hissediyorsanız, bedeniniz sinyal veriyorsa ya da
+      işi bırakmayı düşünüp bunun bile mümkün olmadığını hissediyorsanız destek
+      almak için iyi bir zamandır.</p>"""),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu dönemin ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Tükenmişlik bir hastalık mı?",
+    "Dünya Sağlık Örgütü tükenmişliği bir hastalık olarak değil, yönetilemeyen kronik iş stresinden kaynaklanan mesleki bir olgu olarak tanımlar. Yine de ciddiye alınması gereken, sağlığı ve hayatı etkileyen bir durumdur."),
+   ("Tükenmişlik ile depresyon arasındaki fark nedir?",
+    "Tükenmişlik özellikle işle ve sorumluluklarla ilişkilidir. Depresyonda ise çökkünlük ve ilgi kaybı hayatın pek çok alanına yayılır. İkisi iç içe geçebilir; ilk görüşmelerde birlikte değerlendiririz."),
+   ("İşimi bırakmam mı gerekiyor?",
+    "Bu kararı sizin yerinize vermem. Psikoterapide işinizle ilişkinizi, sınırlarınızı ve sizi bu noktaya getiren dinamikleri birlikte anlamaya çalışırız; böylece vereceğiniz karar sizin kararınız olur."),
+   ("Yoğun çalışıyorum, online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır ve yoğun tempoda sürekliliği korumaya yardım eder."),
+  ],
+  kaynaklar=[K_WHO_BURN, K_MASLACH, K_NIMH_STRES, K_SHEDLER],
+  ilgili=["nisantasi-kronik-stres", "nisantasi-depresyon", "nisantasi-gelecek-kaygisi", "nisantasi-performans-anksiyetesi"],
  ),
 ]
