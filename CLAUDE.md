@@ -104,7 +104,10 @@ motorları için görsel alt metni tek başına zayıf bir sinyal.
 - Site sahibi TPD üyesi değildir. TPD'den ya da mesleki üyelikten söz
   edilmez, önerilmez.
 - İşletme şemasının adresi, görüşme yerleri ve harita bağlantıları, Google
-  İşletme Profili taşınana kadar değiştirilmez.
+  İşletme Profili taşınana kadar değiştirilmez. Tek istisna 30.10.2026'daki
+  Suadiye ve Nişantaşı adres düzeltmeleridir.
+- Sitede kat, apartman adı, daire, zil ve oda ayrıntısı yazılmaz; bu bilgiler
+  ön görüşmeden sonra iletilir. Yerlere göre çalışma günü yazılmaz.
 
 ## Çerez onayı ve ölçüm
 
