@@ -303,6 +303,14 @@ img { max-width: 100%; height: auto; display: block; }
 .photo-section h1, .photo-section h2, .photo-section h3 { color: #fff; }
 
 .hero { background-image: url("../img/bg-gunbatimi.jpg"); }
+/* Telefonda hero için 800 px WebP; desteklemeyen tarayıcı ilk satırdaki JPEG'de kalır.
+   index.html'deki medya sorgulu preload ile aynı kırılma noktası. */
+@media (max-width: 560px) {
+  .hero {
+    background-image: url("../img/bg-gunbatimi.jpg");
+    background-image: image-set(url("../img/bg-gunbatimi-800.webp") type("image/webp"), url("../img/bg-gunbatimi.jpg") type("image/jpeg"));
+  }
+}
 #koltuk { background-image: url("../img/bg-kizkulesi.jpg"); }
 #online { background-image: url("../img/bg-sahil.jpg"); }
 
