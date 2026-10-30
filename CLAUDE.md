@@ -194,7 +194,7 @@ kullanılıyor. Sürecin çerçevesi her hâlükârda psikodinamik psikoterapidi
 
 Yüz yüze görüşme yerleri (29.10.2026, site sahibinden; tek doğru kaynak):
 Nişantaşı (Halaskargazi Cd., Ayla Algan Sk. No: 22 D: 2, Şişli; Osmanbey M2),
-Kadıköy / Suadiye (Suadiye Cd.) ve Ümraniye / Çarşı (Armağanevler Mah., Alemdağ
+Kadıköy / Suadiye (Suadiye Mah., Şemsettin Günaltay Cd. No: 93, 34740) ve Ümraniye / Çarşı (Armağanevler Mah., Alemdağ
 Cd. No: 466; M5 Çarşı durağı karşısı). Görüşmeler Maçka'da yapılmıyor; "Maçka"
 yalnızca "Maçka'ya yakın" ifadesinde geçer. Vişnezade/Beşiktaş adresi yalnızca
 **yasal adres**tir, görüşme yeri gibi sunulmaz. Nişantaşı sayfasının adresi
