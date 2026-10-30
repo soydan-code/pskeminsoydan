@@ -70,6 +70,10 @@ LOKASYON = """
 for k in KONULAR:
     url = f"{SITE}/{k['slug']}"
     bolumler = "".join(f"\n      <h2>{b}</h2>{icerik}\n" for b, icerik in k["bolumler"])
+    # Henüz yayımlanmamış konu sayfasına giden metin içi bağlantı düz yazıya döner;
+    # o sayfa üretildiğinde bağlantı kendiliğinden açılır.
+    bolumler = re.sub(r'<a href="/(nisantasi-[a-z0-9-]+)">(.*?)</a>',
+                      lambda m: m.group(0) if m.group(1) in mevcut else m.group(2), bolumler)
     sss = "".join(f"""
       <details>
         <summary>{q}</summary>
@@ -170,6 +174,30 @@ graf = [{"@type": "BreadcrumbList", "itemListElement": [
     {"@type": "ListItem", "position": 2, "name": "Çalışma alanları", "item": url}]}]
 (KOK / "calisma-alanlari.html").write_text(bas_hazirla(title, desc, url, "website") + main + son_hazirla(graf), encoding="utf-8")
 print("yazıldı: calisma-alanlari")
+
+# Ana sayfadaki tema kartları: yayımlanmış sayfası olan kart tıklanabilir olur
+ana = KOK / "index.html"
+s = ana.read_text(encoding="utf-8")
+bas_i = s.index('<div class="grid-cards">', s.index('id="temalar"'))
+son_i = s.index("</section>", bas_i)
+bolum = s[bas_i:son_i]
+eslesme = {k["tema_karti"]: k["slug"] for k in KONULAR if k.get("tema_karti")}
+
+
+def kart(m):
+    ic = m.group(2)
+    baslik = duz(re.search(r"<h3>(.*?)</h3>", ic, re.S).group(1))
+    aciklama = re.search(r"<p>(.*?)</p>", ic, re.S).group(1)
+    slug = eslesme.get(baslik)
+    if not slug:
+        return f'<article class="service">\n          <h3>{baslik}</h3>\n          <p>{aciklama}</p>\n        </article>'
+    return (f'<article class="service bagli">\n          <h3><a class="kart-bag" href="/{slug}">{baslik}</a></h3>\n'
+            f'          <p>{aciklama}</p>\n          <span class="kart-ok" aria-hidden="true">Devamını oku &rarr;</span>\n        </article>')
+
+
+bolum = re.sub(r'<article class="service( bagli)?">(.*?)</article>', kart, bolum, flags=re.S)
+ana.write_text(s[:bas_i] + bolum + s[son_i:], encoding="utf-8")
+print("ana sayfa kartları:", ", ".join(f"{k} -> /{v}" for k, v in eslesme.items()))
 
 # Sitemap
 sm = KOK / "sitemap.xml"

@@ -20,7 +20,10 @@ servis eder.
   güncellenir). Kurallar: başlık/H1'de aranan ad, metinde teşhis ya da "tedavi"
   dili yok, istatistik yok, her sayfada köklü kaynaklar (WHO, NIMH, NICE, APA,
   hakemli yayın) ve yazar/tarih satırı. İlgili konu bağlantıları yalnız yayımlanmış
-  sayfalara verilir. Sayfa adresleri Türkçe karaktersiz.
+  sayfalara verilir; metin içinde yayımlanmamış bir konuya verilen bağlantı
+  üretimde düz yazıya döner. Sayfa adresleri Türkçe karaktersiz.
+  Bir konunun `tema_karti` alanı ana sayfadaki tema kartının başlığıyla eşleşirse
+  üretici o kartı konu sayfasına bağlar ("Devamını oku"); kart metni değişmez.
 - Hizmet ve konu sayfalarında `.cta-satir` H1'in hemen altında, girişten önce
   durur: telefonda çerez şeridi açıkken bile "Hemen Ara" görünür kalmalı.
 

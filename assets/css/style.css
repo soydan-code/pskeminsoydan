@@ -926,3 +926,12 @@ body.cerez-acik .yuzen-wa { display: none; }
 .kaynakca h2 { font-size: 1.1rem; }
 .kaynakca ul { padding-left: 1.2em; }
 .kaynakca li { margin-bottom: 6px; overflow-wrap: anywhere; }
+
+/* Ana sayfa tema kartları: konu sayfası yayımlanmışsa kartın tamamı tıklanır */
+.service.bagli { position: relative; display: flex; flex-direction: column; }
+.service .kart-bag { color: inherit; text-decoration: none; }
+.service .kart-bag::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.service .kart-bag:focus-visible { outline: none; }
+.service.bagli:focus-within { outline: 3px solid var(--accent); outline-offset: 3px; }
+.kart-ok { margin-top: auto; padding-top: 14px; font-size: .88rem; font-weight: 600; color: var(--accent); }
+.service.bagli:hover .kart-ok { text-decoration: underline; text-underline-offset: 3px; }
