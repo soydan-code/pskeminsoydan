@@ -468,7 +468,11 @@ img { max-width: 100%; height: auto; display: block; }
 .photo-section .btn-ghost:hover { background: rgba(255, 255, 255, .16); color: #fff; }
 .photo-section h1, .photo-section h2, .photo-section h3 { color: #fff; }
 
-.hero { background-image: url("../img/bg-gunbatimi.jpg"); }
+/* Hero WebP olarak gelir; desteklemeyen tarayıcı ilk satırdaki JPEG'de kalır. */
+.hero {
+  background-image: url("../img/bg-gunbatimi.jpg");
+  background-image: image-set(url("../img/bg-gunbatimi.webp") type("image/webp"), url("../img/bg-gunbatimi.jpg") type("image/jpeg"));
+}
 /* Telefonda hero için 800 px WebP; desteklemeyen tarayıcı ilk satırdaki JPEG'de kalır.
    index.html'deki medya sorgulu preload ile aynı kırılma noktası. */
 @media (max-width: 560px) {
