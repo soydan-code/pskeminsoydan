@@ -103,6 +103,10 @@ dönüşüm görünmez.
 
 ## 4. Karar bekleyen başlıklar
 
+- **"Yaşam geçişleri" tema kartı (30.10.2026):** 29 konu sayfasından sonra ana
+  sayfada konu sayfası olmayan tek kart bu. İstenirse `tools/konular.py`'ye bir
+  konu eklenip `tema_karti="Yaşam geçişleri"` verilince kendiliğinden bağlanır.
+
 - **Ana sayfa H1'inde konum yok (29.10.2026, site sahibi kararsız, tekrar
   sorulacak).** H1 "Sözün, ilişkinin ve kendiliğin izinde" kalıyor. Öneri:
   üstündeki küçük etiketi konumlarla desteklemek, metne dokunmadan.
