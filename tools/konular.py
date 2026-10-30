@@ -65,9 +65,39 @@ K_WHO_BURN = ("Dünya Sağlık Örgütü (WHO), Burn-out an occupational phenome
 K_MASLACH = ("Maslach, C. ve Leiter, M. P. (2016). Understanding the burnout experience. World Psychiatry, 15(2), 103-111",
              "https://doi.org/10.1002/wps.20311")
 
+K_NIMH_PTSD = ("ABD Ulusal Ruh Sağlığı Enstitüsü (NIMH), Post-Traumatic Stress Disorder",
+               "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd")
+K_NICE_PTSD = ("NICE, Post-traumatic stress disorder (NG116)",
+               "https://www.nice.org.uk/guidance/ng116")
+K_WHO_PTSD = ("Dünya Sağlık Örgütü (WHO), Post-traumatic stress disorder bilgi notu",
+              "https://www.who.int/news-room/fact-sheets/detail/post-traumatic-stress-disorder")
+K_WHO_COCUK = ("Dünya Sağlık Örgütü (WHO), Child maltreatment bilgi notu",
+               "https://www.who.int/news-room/fact-sheets/detail/child-maltreatment")
+K_FELITTI = ("Felitti, V. J. ve ark. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults. American Journal of Preventive Medicine, 14(4), 245-258",
+             "https://doi.org/10.1016/S0749-3797(98)00017-8")
+K_NIMH_OCD = ("ABD Ulusal Ruh Sağlığı Enstitüsü (NIMH), Obsessive-Compulsive Disorder",
+              "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd")
+K_NICE_OCD = ("NICE, Obsessive-compulsive disorder and body dysmorphic disorder (CG31)",
+              "https://www.nice.org.uk/guidance/cg31")
+K_NIMH_BPD = ("ABD Ulusal Ruh Sağlığı Enstitüsü (NIMH), Borderline Personality Disorder",
+              "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder")
+K_NICE_BPD = ("NICE, Borderline personality disorder: recognition and management (CG78)",
+              "https://www.nice.org.uk/guidance/cg78")
+K_CLARKIN = ("Clarkin, J. F. ve ark. (2007). Evaluating three treatments for borderline personality disorder: a multiwave study. American Journal of Psychiatry, 164(6), 922-928",
+             "https://doi.org/10.1176/ajp.2007.164.6.922")
+K_NHS_KISILIK = ("NHS (İngiltere Ulusal Sağlık Servisi), Personality disorder",
+                 "https://www.nhs.uk/mental-health/conditions/personality-disorder/")
+K_KERNBERG = ("Kernberg, O. F. (1975). Borderline Conditions and Pathological Narcissism", "")
+K_KOHUT = ("Kohut, H. (1971). The Analysis of the Self", "")
+K_APA_OFKE = ("Amerikan Psikoloji Derneği (APA), Controlling anger before it controls you",
+              "https://www.apa.org/topics/anger/control")
+K_NHS_OFKE = ("NHS (İngiltere Ulusal Sağlık Servisi), Get help with anger",
+              "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anger/")
+
 GRUPLAR = [
     ("duygudurum", "Depresyon ve duygudurum"),
     ("kaygi", "Kaygı ve anksiyete"),
+    ("travma", "Travma ve kişilik"),
 ]
 
 ACIL = ('<p class="acil-not"><strong>Kendinize zarar verme ya da yaşamınıza son verme '
@@ -1163,5 +1193,390 @@ KONULAR = [
   ],
   kaynaklar=[K_WHO_BURN, K_MASLACH, K_NIMH_STRES, K_SHEDLER],
   ilgili=["nisantasi-kronik-stres", "nisantasi-depresyon", "nisantasi-gelecek-kaygisi", "nisantasi-performans-anksiyetesi"],
+ ),
+ dict(
+  slug="nisantasi-cocukluk-travmalari", grup="travma", ad="Çocukluk dönemi travmaları",
+  title="Çocukluk Dönemi Travmaları | Nişantaşı Psikolog Emin Soydan",
+  desc="Nişantaşı'nda çocukluk dönemi travmalarının yetişkinlikteki izleriyle çalışan yüz yüze ve online psikolojik destek. Belirtiler, ilişkiler ve süreç.",
+  h1="Çocukluk Dönemi Travmaları: Yetişkinlikte İzleriyle Çalışmak",
+  giris="Geçmişte kaldığını düşündüğünüz bazı şeyler bugün hâlâ ilişkilerinizde, bedeninizde ve kendinize bakışınızda yankılanıyor olabilir. Çocuklukta yaşananlar değiştirilemez; ama bugün size nasıl dokunduklarını anlamak ve onlarla yeni bir ilişki kurmak mümkündür.",
+  bolumler=[
+   ("Çocukluk travması nedir?", """
+      <p>Çocukluk travması yalnızca tek bir büyük olayla sınırlı değildir. Dünya
+      Sağlık Örgütü'nün tanımladığı fiziksel, duygusal ve cinsel istismar ile
+      ihmalin yanı sıra; evde şiddete tanıklık etmek, bir ebeveynin bağımlılığı ya
+      da ruhsal zorluğu, ani kayıplar ve sürekli öngörülemeyen bir ortamda büyümek
+      de derin izler bırakabilir.</p>
+      <p>Bazen travma "olan" bir şey değil, "olmayan" bir şeydir: görülmemek,
+      duygulara karşılık bulamamak, sürekli yetişkin gibi davranmak zorunda
+      kalmak. Bu tür yaşantılar, adı konmadığı için yıllarca fark edilmeyebilir.</p>"""),
+   ("Yetişkinlikte nasıl görünür?", """
+      <ul>
+        <li>Yakın ilişkilerde güvenmekte zorlanmak ya da terk edilme korkusu</li>
+        <li>Kendini değersiz, kusurlu ya da "fazla" hissetmek</li>
+        <li>Duyguları düzenlemekte zorlanmak; ani öfke ya da hissizlik</li>
+        <li>Sürekli tetikte olmak, rahatlayamamak</li>
+        <li>Sınır koymakta ya da "hayır" demekte zorlanmak</li>
+        <li>Açıklanamayan bedensel şikâyetler</li>
+        <li>Tekrar eden, benzer acıları yaşatan ilişki örüntüleri</li>
+      </ul>
+      <p>Çocukluktaki olumsuz yaşantıların yetişkinlikteki ruhsal ve bedensel
+      sağlıkla ilişkisini gösteren geniş araştırmalar vardır (Felitti ve ark.,
+      1998). Bu bir kader değildir; ama izlerin ciddiye alınması gerektiğini
+      gösterir.</p>"""),
+   ("Psikodinamik bakış: Geçmişin bugünde tekrarı", """
+      <p>Psikodinamik yaklaşımın temel gözlemlerinden biri, çözülmemiş geçmişin
+      bugünde tekrarlanma eğilimidir. Çocukken kurulan ilişki kalıpları, yetişkin
+      ilişkilerine ve hatta terapist ile danışan arasındaki ilişkiye taşınır.
+      Aktarım Odaklı çalışma, bu tekrarı seans odasında "şimdi ve burada" görmeyi ve
+      anlamayı sağlar.</p>
+      <p>Winnicott'un "kucaklayıcı çevre" dediği güvenli zemin, çocuklukta eksik
+      kalmışsa, terapi odası bu zemini yeniden deneyimlemek için bir alan olabilir.
+      Amaç geçmişi değiştirmek değil, onun bugün üzerindeki hükmünü
+      gevşetmektir.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>Geçmişte yaşananlar bugünkü ilişkilerinizi, kendinize bakışınızı ya da
+      gündelik işleyişinizi etkiliyorsa, ya da bunları ilk kez konuşmak
+      istiyorsanız destek almak iyi gelebilir. Kendi hızınızda ilerleriz;
+      anlatmaya hazır olmadığınız bir şeyi anlatmak zorunda değilsiniz.</p>
+      """ + ACIL),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu zorluğun ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Çocukken yaşadıklarımı hatırlamıyorum, yine de etkilenmiş olabilir miyim?",
+    "Evet. Erken dönem yaşantılar her zaman net anılar olarak hatırlanmaz; ama ilişkilerde, duygularda ve bedende iz bırakabilir. Psikoterapide hatırlamaya zorlamadan, bugün yaşadıklarınızdan yola çıkarız."),
+   ("Her şeyi en baştan anlatmak zorunda mıyım?",
+    "Hayır. Neyi, ne zaman ve ne kadar anlatacağınıza siz karar verirsiniz. Güven duygusu oluştukça konuşmak kolaylaşır."),
+   ("Çocuklarla çalışıyor musunuz?",
+    "Hayır. 14 yaş ve üzeri gençlerle ve yetişkinlerle bireysel olarak çalışıyorum. Bu sayfa, çocukluk yaşantılarının yetişkinlikteki izleriyle çalışmayı anlatıyor."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_WHO_COCUK, K_FELITTI, K_NICE_PTSD, K_SHEDLER],
+  ilgili=["nisantasi-travma-sonrasi-stres", "nisantasi-borderline-kisilik", "nisantasi-iliski-problemleri", "nisantasi-kimlik-ve-kendilik"],
+ ),
+ dict(
+  slug="nisantasi-travma-sonrasi-stres", grup="travma", ad="Travma sonrası stres (TSSB)", tema_karti="Travma ve TSSB",
+  title="Travma Sonrası Stres Bozukluğu (TSSB) | Nişantaşı Psikolog",
+  desc="Nişantaşı'nda travma sonrası stres bozukluğu (TSSB) için yüz yüze ve online psikolojik destek. Belirtiler, psikodinamik çerçeve ve EMDR'nin yeri.",
+  h1="Travma Sonrası Stres Bozukluğu (TSSB): Nişantaşı'nda Psikolojik Destek",
+  giris="Bir kaza, saldırı, deprem, ani bir kayıp ya da tanık olunan bir şiddet... Olay geçmiş olsa da beden ve zihin onu hâlâ yaşıyor olabilir. Travmanın ardından yaşanan bu zorluk bir zayıflık değil, dayanılması güç bir deneyime verilen anlaşılır bir tepkidir.",
+  bolumler=[
+   ("TSSB nedir?", """
+      <p>Travma sonrası stres bozukluğu (TSSB), ölüm tehdidi, ciddi yaralanma ya da
+      cinsel şiddet gibi sarsıcı bir olayı yaşamak ya da ona tanık olmak sonrasında
+      gelişebilen bir tablodur. Travmatik bir olay yaşayan herkes TSSB geliştirmez;
+      ilk haftalardaki yoğun tepkiler çoğu zaman zamanla hafifler. NIMH ve Dünya
+      Sağlık Örgütü'nün tarif ettiği gibi belirtiler uzun süre devam ettiğinde ve
+      hayatı belirgin biçimde etkilediğinde TSSB'den söz edilir.</p>"""),
+   ("Nasıl hissettirir?", """
+      <ul>
+        <li><strong>Yeniden yaşama:</strong> istemsiz anılar, kâbuslar, olayı şu an
+        oluyormuş gibi hissettiren canlanmalar</li>
+        <li><strong>Kaçınma:</strong> olayı hatırlatan yerlerden, insanlardan,
+        konuşmalardan uzak durmak</li>
+        <li><strong>Sürekli tetikte olmak:</strong> irkilme, uyku sorunları, dikkat
+        dağınıklığı, öfke patlamaları</li>
+        <li><strong>Düşünce ve duygularda değişim:</strong> suçluluk, utanç,
+        hissizlik, dünyanın güvensiz bir yer olduğu inancı</li>
+      </ul>"""),
+   ("Psikodinamik çerçeve ve EMDR'nin yeri", """
+      <p>Çalışmamın çerçevesi psikodinamik psikoterapidir. Travmanın yalnızca
+      olayın kendisinde değil, kişinin hayat hikâyesinde, ilişkilerinde ve kendine
+      bakışında bıraktığı izlere bakarız. Olayın neden bu kadar sarsıcı olduğu,
+      geçmişteki hangi yaraya dokunduğu da çalışmanın bir parçasıdır.</p>
+      <p>EMDR eğitimim var ve travma çalışmalarında, vakanın uygun olduğu
+      durumlarda ve danışan talebiyle bu yöntemi süreç içinde kullanabiliyorum.
+      NICE'ın TSSB rehberi, travmaya odaklı bilişsel davranışçı terapi ile EMDR'yi
+      önerilen psikolojik yaklaşımlar arasında sayar. EMDR'nin uygun olup olmadığına
+      ilk görüşmelerde birlikte karar veririz; ana çerçeve her durumda psikodinamik
+      kalır.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>Olayın üzerinden bir ay geçmesine rağmen belirtiler sürüyorsa, uykunuz,
+      işiniz ve ilişkileriniz etkileniyorsa ya da olayı hatırlatan her şeyden
+      kaçınmaya başladıysanız destek almak için iyi bir zamandır. Travma çok yeniyse
+      de konuşmak ve güvenli bir alana sahip olmak iyi gelebilir.</p>
+      """ + ACIL),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu zorluğun ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Travmatik bir olay yaşayan herkes TSSB geliştirir mi?",
+    "Hayır. Travmatik bir olayın ardından yoğun tepkiler çok yaygındır ve çoğu zaman zamanla hafifler. Belirtiler uzun süre devam edip hayatı belirgin biçimde etkilediğinde TSSB'den söz edilir."),
+   ("EMDR nedir, bana uygun mu?",
+    "EMDR, travmatik anılarla çalışmak için geliştirilmiş bir yöntemdir. Vakanın uygun olduğu durumlarda ve sizin talebinizle süreç içinde kullanılabilir. Uygun olup olmadığına ilk görüşmelerde birlikte karar veririz; çalışmanın çerçevesi psikodinamik psikoterapidir."),
+   ("Yaşadığımı ayrıntılı anlatmak zorunda mıyım?",
+    "Hayır. Neyi ne zaman anlatacağınıza siz karar verirsiniz. Önce güvenli bir zemin kurmak, travmayla çalışmanın en önemli parçasıdır."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_NIMH_PTSD, K_WHO_PTSD, K_NICE_PTSD, K_DSM],
+  ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-panik-atak", "nisantasi-yas-ve-kayip", "nisantasi-depresyon"],
+ ),
+ dict(
+  slug="nisantasi-obsesif-kompulsif-bozukluk", grup="travma", ad="Obsesif kompulsif bozukluk (OKB)",
+  title="Obsesif Kompulsif Bozukluk (OKB) | Nişantaşı Psikolog",
+  desc="Nişantaşı'nda obsesif kompulsif bozukluk (OKB) için yüz yüze ve online psikolojik destek. Takıntılı düşünceler, zorlantılar ve psikoterapi süreci.",
+  h1="Obsesif Kompulsif Bozukluk (OKB): Nişantaşı'nda Psikolojik Destek",
+  giris="Kapıyı kilitlediğinizi bildiğiniz hâlde dönüp yeniden bakmak, istemediğiniz bir düşüncenin zihninizde durmadan dönmesi, bir şeyi \"tam doğru\" olana kadar tekrarlamak... OKB, insanın kendi zihniyle yorucu bir pazarlığa girmesidir. Bu pazarlıktan çıkmanın yolları var.",
+  bolumler=[
+   ("OKB nedir?", """
+      <p>Obsesif kompulsif bozukluk iki parçadan oluşur. <strong>Obsesyonlar</strong>,
+      istenmeyen, rahatsız edici ve tekrar tekrar zihne gelen düşünce, imge ya da
+      dürtülerdir. <strong>Kompulsiyonlar</strong> ise bu düşüncelerin yarattığı
+      sıkıntıyı yatıştırmak için yapılan tekrarlayıcı davranışlar ya da zihinsel
+      eylemlerdir. NIMH'in tanımladığı biçimiyle bunlar günde saatler alabilir ve
+      hayatı belirgin biçimde kısıtlayabilir.</p>"""),
+   ("Nasıl görünür?", """
+      <ul>
+        <li>Mikrop ve bulaşma korkusu, aşırı yıkama ve temizlik</li>
+        <li>Kapıyı, ocağı, elektriği tekrar tekrar kontrol etmek</li>
+        <li>Simetri, düzen ve "tam doğru" olma ihtiyacı</li>
+        <li>Birine zarar vereceğine dair istenmeyen, korkutucu düşünceler</li>
+        <li>Dini ya da ahlaki konularda içten içe sürekli şüphe</li>
+        <li>Saymak, dua etmek, kafada cümle tekrarlamak gibi zihinsel ritüeller</li>
+      </ul>
+      <p>OKB yaşayan kişiler çoğu zaman düşüncelerinin mantıksız olduğunu bilir;
+      bu yüzden yoğun bir utanç yaşar ve uzun süre kimseye anlatmaz. İstenmeyen bir
+      düşüncenin aklınıza gelmesi, onu istediğiniz ya da yapacağınız anlamına
+      gelmez.</p>"""),
+   ("Psikoterapide neler yapılabilir?", """
+      <p>NICE rehberleri, OKB'de maruz bırakma ve tepki önlemeyi içeren bilişsel
+      davranışçı terapiyi önerilen temel yaklaşım olarak sayar; durumun şiddetine
+      göre ilaç desteği de gündeme gelebilir. Bunu açıkça söylemek isterim: Belirtiler
+      yoğunsa bu yöntemle çalışan bir meslektaşa ya da psikiyatriste
+      yönlendirmem, sizin için doğru olan olabilir.</p>
+      <p>Psikodinamik çalışma ise bu yaklaşımların yanında ya da sonrasında, OKB'nin
+      kişinin hayatında taşıdığı anlamla ilgilenir: Sürekli kontrol ihtiyacının
+      ardındaki kaygı, kabul edilemeyen duygularla, özellikle öfke ve suçlulukla
+      ilişki, kusursuzluk baskısı. Hangi yolun ya da hangi birleşimin size uygun
+      olduğuna ilk görüşmelerde birlikte karar veririz.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>Düşünceler ve ritüeller gününüzden önemli bir zaman alıyorsa, işinizi,
+      ilişkilerinizi ya da uykunuzu etkiliyorsa, ya da yakınlarınızı da
+      ritüellerinize dahil etmek zorunda kalıyorsanız destek almak için iyi bir
+      zamandır.</p>"""),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu zorluğun ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Titiz ya da düzenli olmak OKB anlamına mı gelir?",
+    "Hayır. Düzenli ya da titiz olmak bir kişilik özelliği olabilir. OKB'de ise düşünceler istenmeyen ve rahatsız edicidir, ritüeller sıkıntıyı yatıştırmak için yapılır, çok zaman alır ve hayatı belirgin biçimde kısıtlar."),
+   ("Aklıma gelen korkunç düşünceler gerçekten bir şey yapacağım anlamına mı gelir?",
+    "Hayır. OKB'deki istenmeyen düşünceler, kişinin değerlerine ve isteklerine ters düştüğü için bu kadar rahatsız edicidir. Bir düşüncenin aklınıza gelmesi, onu yapacağınız anlamına gelmez."),
+   ("OKB'de hangi yaklaşım öneriliyor?",
+    "Uluslararası rehberler, maruz bırakma ve tepki önlemeyi içeren bilişsel davranışçı terapiyi temel yaklaşım olarak önerir; gerekirse ilaç desteği de eklenir. İlk görüşmelerde size en uygun yolu birlikte değerlendirir, gerekirse sizi bu yöntemle çalışan bir meslektaşa yönlendiririm."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_NIMH_OCD, K_NICE_OCD, K_DSM, K_SHEDLER],
+  ilgili=["nisantasi-anksiyete", "nisantasi-saglik-anksiyetesi", "nisantasi-yaygin-anksiyete", "nisantasi-ofke-kontrolu"],
+ ),
+ dict(
+  slug="nisantasi-borderline-kisilik", grup="travma", ad="Borderline (sınırda) kişilik", tema_karti="Borderline kişilik",
+  title="Borderline (Sınırda) Kişilik Bozukluğu | Nişantaşı Psikolog",
+  desc="Nişantaşı'nda borderline (sınırda) kişilik örüntüleri için yüz yüze ve online psikolojik destek. Duygusal dalgalanmalar, ilişkiler ve Aktarım Odaklı Terapi.",
+  h1="Borderline (Sınırda) Kişilik Bozukluğu: Nişantaşı'nda Psikolojik Destek",
+  giris="Duyguların bir anda zirveye çıkıp dibe vurduğu, sevilen birine hem çok yakın olmak isteyip hem de ondan kaçtığınız, kim olduğunuzun sabah başka akşam başka hissettirdiği bir iç dünya... Borderline deneyimi çoğu zaman çok yoğun ve çok yalnız yaşanır. Anlaşılmayı ve ciddiye alınmayı hak eder.",
+  bolumler=[
+   ("Borderline kişilik nedir?", """
+      <p>Borderline (sınırda) kişilik örüntüsü; duygularda, ilişkilerde ve benlik
+      algısında süregen bir dalgalanmayla tanımlanır. NIMH ve DSM-5-TR'nin
+      tarif ettiği biçimiyle sık görülen işaretler şunlardır:</p>
+      <ul>
+        <li>Terk edilme korkusu ve bunu önlemek için yoğun çaba</li>
+        <li>İdealleştirme ile değersizleştirme arasında gidip gelen ilişkiler</li>
+        <li>Belirsiz ya da sık değişen bir kimlik ve benlik algısı</li>
+        <li>Ani ve yoğun duygu değişimleri</li>
+        <li>Kronik boşluk hissi</li>
+        <li>Yoğun öfke ve onu kontrol etmekte zorlanmak</li>
+        <li>Dürtüsel davranışlar ya da kendine zarar verme</li>
+      </ul>
+      <p>"Kişilik bozukluğu" ifadesi kulağa ağır gelebilir. Oysa bu, kişinin kim
+      olduğunun değil, acı veren ve değişebilen örüntülerin adıdır. Borderline
+      örüntüler sıklıkla erken dönem zorlu yaşantılarla birlikte görülür.</p>"""),
+   ("Aktarım Odaklı Terapi (TFP)", """
+      <p>Çalışmamın kuramsal zeminlerinden biri, Otto Kernberg ve ekibinin
+      geliştirdiği Aktarım Odaklı Terapi'dir (TFP). Bu yaklaşım özellikle borderline
+      örüntüler için geliştirilmiştir. Temel fikri şudur: Kişinin iç dünyasındaki
+      bölünmüş ilişki biçimleri ("tamamen iyi" ve "tamamen kötü" ötekiler), terapist
+      ile kurulan ilişkide "şimdi ve burada" ortaya çıkar. Bu ilişkiyi güvenli bir
+      çerçevede birlikte anlamak, bölünmüş parçaların zamanla bütünleşmesine yardım
+      eder.</p>
+      <p>Borderline kişilik için TFP'yi diğer yapılandırılmış yaklaşımlarla
+      karşılaştıran kontrollü bir araştırma, TFP'nin anlamlı kazanımlar
+      sağlayabildiğini göstermiştir (Clarkin ve ark., 2007). NICE rehberleri de bu
+      alanda yapılandırılmış ve süreklilik gösteren psikoterapiyi önerir.</p>"""),
+   ("Çerçevenin önemi", """
+      <p>Borderline örüntülerle çalışırken net ve tutarlı bir çerçeve çok önemlidir:
+      düzenli seans saatleri, açık konuşulmuş kurallar, kriz anlarında ne
+      yapılacağına dair baştan kurulmuş bir anlaşma. Bu çerçeve kısıtlama değil,
+      fırtınalı duyguların içinde tutunulacak sağlam bir zemindir.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>İlişkileriniz sürekli fırtınalı geçiyorsa, duygularınız sizi
+      savuruyorsa, boşluk hissi dayanılmaz hâle geldiyse ya da kendinize zarar
+      veriyorsanız destek almak için iyi bir zamandır.</p>
+      """ + ACIL),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu zorluğun ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Borderline kişilik değişebilir mi?",
+    "Evet. Borderline örüntülerin zamanla ve özellikle yapılandırılmış, sürekli bir psikoterapiyle belirgin biçimde değişebildiği bilinmektedir. İlerleyiş kişiden kişiye değişir ve sabır gerektirir."),
+   ("Aktarım Odaklı Terapi nedir?",
+    "Aktarım Odaklı Terapi, borderline örüntüler için geliştirilmiş psikodinamik bir yaklaşımdır. Terapist ile danışan arasındaki ilişkide ortaya çıkan duyguları ve beklentileri birlikte anlamayı ve böylece iç dünyadaki bölünmüşlüğü bütünleştirmeyi amaçlar."),
+   ("Kriz anlarında size ulaşabilir miyim?",
+    "Kriz anlarında ne yapılacağı, çerçevenin bir parçası olarak ilk görüşmelerde açıkça konuşulur. Acil bir risk durumunda ise beklemeden 112'yi aramanız ya da en yakın acil servise başvurmanız gerekir."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_NIMH_BPD, K_NICE_BPD, K_CLARKIN, K_DSM],
+  ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-iliski-problemleri", "nisantasi-kimlik-ve-kendilik", "nisantasi-ofke-kontrolu"],
+ ),
+ dict(
+  slug="nisantasi-narsisistik-kisilik", grup="travma", ad="Narsisistik kişilik",
+  title="Narsisistik Kişilik Bozukluğu | Nişantaşı Psikolog Emin Soydan",
+  desc="Nişantaşı'nda narsisistik kişilik örüntüleri ve narsisistik ilişkilerden etkilenenler için yüz yüze ve online psikolojik destek.",
+  h1="Narsisistik Kişilik Bozukluğu: Nişantaşı'nda Psikolojik Destek",
+  giris="\"Narsist\" kelimesi bugün çok kolay kullanılıyor; ama bu örüntünün içinde yaşamak, ya da onun gölgesinde bir ilişkide kalmak, dışarıdan göründüğünden çok daha acı vericidir. Bu sayfa hem kendinde bu örüntüleri fark edenler hem de narsisistik bir ilişkiden etkilenenler için.",
+  bolumler=[
+   ("Narsisistik kişilik nedir?", """
+      <p>DSM-5-TR'nin tarif ettiği biçimiyle narsisistik kişilik örüntüsü;
+      büyüklenmecilik, sürekli hayranlık ihtiyacı ve başkalarının duygularını
+      anlamakta zorlanma ile tanımlanır. Ancak bu dışarıdan görünen yüzdür.
+      İçeride çoğu zaman çok kırılgan bir değer duygusu vardır: Eleştiri, yenilgi
+      ya da görmezden gelinmek dayanılmaz bir utanç ve öfke uyandırabilir.</p>
+      <p>Her özgüvenli ya da bencil davranış narsisistik kişilik bozukluğu değildir.
+      Bu ifade, uzun süreli, katı ve hem kişiye hem çevresine acı veren bir örüntü
+      için kullanılır.</p>"""),
+   ("Kendinde fark edenler için", """
+      <p>Bu örüntüyle yaşayan insanlar genellikle terapiye "narsisizm" yüzünden
+      değil; bir ilişkinin bitmesi, işte yaşanan bir yenilgi, tükenmişlik ya da
+      açıklanamayan bir <a href="/nisantasi-depresyon">boşluk ve çöküntü</a> ile
+      gelirler. Başarılar bile kalıcı bir doyum vermez; yakınlık ise hem istenen
+      hem de tehdit edici bir şeydir.</p>
+      <p>Psikanalitik kuramda bu örüntüye iki önemli bakış vardır. Kohut, erken
+      dönemde görülme ve onaylanma ihtiyacının yeterince karşılanmamasının yarattığı
+      kırılganlığa dikkat çeker. Kernberg ise büyüklenmeciliğin, değersizlik ve
+      öfke duygularına karşı kurulmuş bir korunak olduğunu vurgular. Seanslarda bu
+      korunağı yıkmaya değil, ardındaki kırılganlığı birlikte taşımaya
+      çalışırız.</p>"""),
+   ("Narsisistik bir ilişkiden etkilenenler için", """
+      <p>Narsisistik özellikleri belirgin bir partner, ebeveyn ya da yöneticiyle
+      ilişki; sürekli değersizleştirilme, suçlanma, gerçekliğinin sorgulanması ve
+      "yeterince iyi olamama" hissi bırakabilir. Bu ilişkilerden çıktıktan sonra
+      bile insan uzun süre kendine güvenmekte zorlanabilir.</p>
+      <p>Bireysel çalışmada karşı tarafı "teşhis etmek" yerine, bu ilişkinin sizde
+      bıraktığı izlere ve sizi bu ilişkide tutan dinamiklere odaklanırız. Amaç,
+      kendi sesinizi ve sınırlarınızı yeniden duyabilmektir.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>İlişkileriniz tekrar tekrar aynı biçimde bitiyorsa, eleştiriye ya da
+      yenilgiye dayanmakta çok zorlanıyorsanız, ya da bir ilişkide sürekli
+      küçültüldüğünüzü hissediyorsanız destek almak için iyi bir zamandır.</p>
+      """ + ACIL),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu zorluğun ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Partnerim ya da ebeveynim narsist olabilir mi? Onu teşhis edebilir misiniz?",
+    "Görmediğim birini teşhis etmem doğru olmaz. Bireysel çalışmada, bu ilişkinin sizde bıraktığı izlere ve sizin neye ihtiyaç duyduğunuza odaklanırız."),
+   ("Narsisistik kişilik değişebilir mi?",
+    "Kişi bu örüntüyü fark edip üzerinde çalışmak istediğinde psikoterapi anlamlı değişimler sağlayabilir. Bu süreç zaman ve sabır gerektirir."),
+   ("Çift terapisi yapıyor musunuz?",
+    "Hayır. Yalnızca bireysel çalışıyorum. İlişkiyle ilgili zorlukları bireysel görüşmelerde ele alırız."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_DSM, K_NHS_KISILIK, K_KERNBERG, K_KOHUT],
+  ilgili=["nisantasi-iliski-problemleri", "nisantasi-borderline-kisilik", "nisantasi-kimlik-ve-kendilik", "nisantasi-depresyon"],
+ ),
+ dict(
+  slug="nisantasi-ofke-kontrolu", grup="travma", ad="Öfke kontrolü", tema_karti="Öfke ve suçluluk",
+  title="Öfke Kontrol Sorunları | Nişantaşı Psikolog Emin Soydan",
+  desc="Nişantaşı'nda öfke kontrol sorunları ve öfke patlamaları için yüz yüze ve online psikolojik destek. Öfkenin ardındaki duygular, suçluluk ve süreç.",
+  h1="Öfke Kontrolü: Nişantaşı'nda Psikolojik Destek",
+  giris="Bir anda parlayıp sonra pişman olmak, sevdiklerinize söylemek istemediğiniz şeyleri söylemek, ya da tersine öfkenizi hep yutup içten içe kaynamak... Öfke kötü bir duygu değildir; sorun, onunla nasıl bir ilişki kurduğumuzdadır.",
+  bolumler=[
+   ("Öfke ne zaman sorun olur?", """
+      <p>Öfke, sınırlarımızın çiğnendiğini ya da haksızlığa uğradığımızı haber veren
+      doğal ve gerekli bir duygudur. Amerikan Psikoloji Derneği'nin de vurguladığı
+      gibi sorun öfkenin kendisi değil, kontrol edilemeyen ya da yıkıcı hâle
+      gelmesidir. "Öfke kontrol bozukluğu" olarak aranan bu tablo, DSM-5-TR'de en
+      uç biçimiyle tekrarlayan öfke patlamalarıyla tanımlanır.</p>"""),
+   ("Nasıl görünür?", """
+      <ul>
+        <li>Küçük şeylere karşı orantısız, ani öfke patlamaları</li>
+        <li>Bağırmak, eşyalara zarar vermek, kapıları çarpmak</li>
+        <li>Sonrasında yoğun pişmanlık ve suçluluk</li>
+        <li>İlişkilerde, işte ya da trafikte tekrar eden çatışmalar</li>
+        <li>Öfkeyi hiç gösterememek, yutmak ve içten içe kaynamak</li>
+        <li>Bedende gerginlik, baş ağrıları, uykusuzluk</li>
+      </ul>
+      <p>Öfkenin iki yüzü vardır: dışa patlayan ve içe gömülen. İçe gömülen öfke
+      çoğu zaman suçluluk, <a href="/nisantasi-depresyon">çökkünlük</a> ya da
+      bedensel şikâyetler olarak geri döner.</p>"""),
+   ("Psikodinamik bakış: Öfkenin altında ne var?", """
+      <p>Öfke çoğu zaman tek başına bir duygu değil, başka duyguların üstünü örten
+      bir katmandır: incinmişlik, utanç, çaresizlik, görülmemek ya da korku.
+      Psikodinamik çalışmada öfkenin hangi anlarda, kime karşı ve hangi sözcüklerle
+      ortaya çıktığına bakarak altındaki duyguya ulaşmaya çalışırız.</p>
+      <p>Öfke ile suçluluk da sıklıkla birbirine bağlıdır. Öfkesini ifade
+      edemeyen biri onu kendisine çevirebilir; öfkesini patlatan biri ise
+      ardından gelen suçluluğun altında ezilebilir. Bu döngüyü anlamak, öfkeyle daha
+      sağlıklı bir ilişki kurmanın yolunu açar.</p>"""),
+   ("Ne zaman destek almalı?", """
+      <p>Öfkeniz ilişkilerinize, işinize ya da sağlığınıza zarar veriyorsa,
+      sevdikleriniz sizden çekinmeye başladıysa ya da öfkenizi hiç ifade
+      edemediğiniz için içten içe tükeniyorsanız destek almak için iyi bir
+      zamandır.</p>
+      <p class="acil-not"><strong>Kendinize ya da başkalarına zarar verme riski
+      varsa, ya da şiddete maruz kalıyorsanız beklemeyin:</strong> 112'yi
+      arayın.</p>"""),
+   ("Psikoterapide süreç nasıl ilerler?", """
+      <p>İlk görüşmelerde sizi buraya getiren şeyi, bu zorluğun ne zaman ve nasıl
+      başladığını, hayatınızda neleri etkilediğini konuşuruz. Görüşmeler 50 dakika
+      sürer ve genellikle haftada bir yapılır.</p>
+      <p>İlaç gerekip gerekmediği psikiyatri hekiminin değerlendirmesiyle
+      belirlenir; gerekli gördüğüm durumlarda bir psikiyatriste yönlendirir, süreci
+      birlikte yürütürüz.</p>"""),
+  ],
+  sss=[
+   ("Öfkemi tamamen yok etmem mi gerekiyor?",
+    "Hayır. Öfke doğal ve gerekli bir duygudur. Amaç onu yok etmek değil, anlamak ve zarar vermeden ifade edebilmektir."),
+   ("Öfke ile suçluluk neden birlikte geliyor?",
+    "Öfke patlamaları çoğu zaman ardından pişmanlık ve suçluluk getirir; öfkeyi hiç ifade edememek ise onun suçluluk ya da çökkünlük olarak kişinin kendisine dönmesine yol açabilir. Psikoterapide bu döngüyü birlikte anlamaya çalışırız."),
+   ("Partnerim öfkemden şikâyetçi, birlikte gelebilir miyiz?",
+    "Çift terapisi yapmıyorum; görüşmeler bireysel olarak yürütülür. Öfkenizin ilişkilerinizdeki yerini bireysel görüşmelerde ele alırız."),
+   ("Online görüşebilir miyiz?",
+    "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
+  ],
+  kaynaklar=[K_APA_OFKE, K_NHS_OFKE, K_DSM, K_SHEDLER],
+  ilgili=["nisantasi-borderline-kisilik", "nisantasi-iliski-problemleri", "nisantasi-kronik-stres", "nisantasi-depresyon"],
  ),
 ]
