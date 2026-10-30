@@ -199,6 +199,25 @@ bolum = re.sub(r'<article class="service( bagli)?">(.*?)</article>', kart, bolum
 ana.write_text(s[:bas_i] + bolum + s[son_i:], encoding="utf-8")
 print("ana sayfa kartları:", ", ".join(f"{k} -> /{v}" for k, v in eslesme.items()))
 
+# Hizmet sayfalarındaki "Hangi konularda çalışıyorum" listesi: maddeler ana sayfa
+# kartlarıyla aynı adı taşır, aynı eşleşmeyle bağlanır; karşılığı olmayan düz kalır.
+def madde(m):
+    ad = duz(m.group(1))
+    slug = eslesme.get(ad)
+    return f'<li><a href="/{slug}">{ad}</a></li>' if slug else f"<li>{ad}</li>"
+
+
+for ad in ["psikolog-macka-nisantasi-besiktas", "psikolog-kadikoy-suadiye",
+           "psikolog-umraniye-cekmekoy-sancaktepe", "online-terapi"]:
+    yol = KOK / f"{ad}.html"
+    s = yol.read_text(encoding="utf-8")
+    yeni = re.sub(r'(<ul class="konu-liste">)(.*?)(</ul>)',
+                  lambda m: m.group(1) + re.sub(r"<li>(.*?)</li>", madde, m.group(2), flags=re.S) + m.group(3),
+                  s, flags=re.S)
+    if yeni != s:
+        yol.write_text(yeni, encoding="utf-8")
+print("hizmet sayfası konu listeleri bağlandı")
+
 # Sitemap
 sm = KOK / "sitemap.xml"
 t = sm.read_text(encoding="utf-8")
