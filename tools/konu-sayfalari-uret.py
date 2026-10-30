@@ -146,7 +146,7 @@ for kod, ad in GRUPLAR:
     gruplar += f'\n      <h2>{ad}</h2>\n      <ul class="konu-liste">' + "".join(
         f'<li><a href="/{k["slug"]}">{k["ad"]}</a></li>' for k in sayfalar) + "</ul>\n"
 title = "Çalışma Alanları | Nişantaşı Psikolog Emin Soydan"
-desc = "Depresyon, kaygı ve daha fazlası: Nişantaşı, Kadıköy ve Ümraniye'de yüz yüze, ayrıca online yürüttüğüm bireysel psikodinamik psikoterapi çalışma alanları."
+desc = "Depresyon, kaygı ve daha fazlası: Nişantaşı, Kadıköy ve Ümraniye'de yüz yüze, ayrıca online yürüttüğüm bireysel psikodinamik terapi çalışma alanları."
 main = f'''<main id="icerik">
   <div class="wrap narrow">
 

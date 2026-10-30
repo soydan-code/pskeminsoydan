@@ -135,7 +135,7 @@ KONULAR = [
  dict(
   slug="nisantasi-depresyon", grup="duygudurum", ad="Depresyon", tema_karti="Depresif duygudurum",
   title="Depresyon Psikoloğu Nişantaşı | Psikolog Emin Soydan",
-  desc="Nişantaşı'nda depresyon için yüz yüze ve online psikolojik destek. Belirtiler, depresyonun kaynakları ve psikodinamik psikoterapi sürecine dair bir rehber.",
+  desc="Nişantaşı'nda depresyon için yüz yüze ve online psikolojik destek. Belirtiler, depresyonun kaynakları ve psikodinamik terapi sürecine dair bir rehber.",
   h1="Nişantaşı'nda Depresyon İçin Psikolojik Destek",
   giris="Sabahları yataktan kalkmak bir dağa tırmanmak gibi gelebilir; eskiden sevdiğiniz şeyler rengini yitirmiş olabilir. Depresyon çoğu zaman sessiz yaşanır ve kişi bunu kendi zayıflığı sanır. Nişantaşı'ndaki görüşme odasında bu ağırlığı birlikte anlamaya ve taşımaya alan açıyorum.",
   bolumler=[
@@ -305,7 +305,7 @@ KONULAR = [
  dict(
   slug="nisantasi-yaygin-anksiyete", grup="kaygi", ad="Yaygın anksiyete",
   title="Yaygın Anksiyete Bozukluğu | Nişantaşı Psikolog Emin Soydan",
-  desc="Yaygın anksiyete bozukluğu için Nişantaşı'nda yüz yüze ve online psikolojik destek. Sürekli endişenin işaretleri, ardındaki dinamikler ve psikoterapi süreci.",
+  desc="Yaygın anksiyete bozukluğu için Nişantaşı'nda yüz yüze ve online psikolojik destek. Sürekli endişenin işaretleri, ardındaki dinamikler ve terapi süreci.",
   h1="Yaygın Anksiyete Bozukluğu: Nişantaşı'nda Psikolojik Destek",
   giris="Her şey yolundayken bile içinizde bir şeylerin ters gideceğine dair bir his varsa, zihniniz bir endişeden ötekine atlıyor ve bir türlü dinlenemiyorsa yalnız değilsiniz. Bu sürekli tetikte olma hâline yaygın anksiyete adı verilir.",
   bolumler=[
@@ -380,7 +380,7 @@ KONULAR = [
  dict(
   slug="nisantasi-panik-atak", grup="kaygi", ad="Panik atak",
   title="Panik Atak ve Panik Bozukluk | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda panik atak ve panik bozukluk için yüz yüze ve online psikolojik destek. Atak anında neler olur, neden tekrarlar ve psikoterapi süreci.",
+  desc="Nişantaşı'nda panik atak ve panik bozukluk için yüz yüze ve online psikolojik destek. Atak anında neler olur, neden tekrarlar ve terapi süreci.",
   h1="Panik Atak ve Panik Bozukluk: Nişantaşı'nda Psikolojik Destek",
   giris="Birden kalbiniz çarpmaya, nefesiniz daralmaya başlar; ölecekmiş ya da aklınızı kaybedecekmiş gibi hissedersiniz. Birkaç dakika sonra geçer ama geride bir korku bırakır: Ya yine olursa? Panik atak yaşayan pek çok insan bu korkuyla hayatını giderek daraltır. Bu daralmayı birlikte genişletmeye çalışıyoruz.",
   bolumler=[
@@ -449,7 +449,7 @@ KONULAR = [
  dict(
   slug="nisantasi-sosyal-fobi", grup="kaygi", ad="Sosyal fobi",
   title="Sosyal Fobi ve Sosyal Kaygı | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda sosyal fobi (sosyal kaygı) için yüz yüze ve online psikolojik destek. Başkalarının bakışından duyulan korku, kaçınma ve psikoterapi süreci.",
+  desc="Nişantaşı'nda sosyal fobi (sosyal kaygı) için yüz yüze ve online psikolojik destek. Başkalarının bakışından duyulan korku, kaçınma ve terapi süreci.",
   h1="Sosyal Fobi (Sosyal Kaygı): Nişantaşı'nda Psikolojik Destek",
   giris="Bir toplantıda söz almak, yeni insanlarla tanışmak ya da bir kafede tek başına oturmak... Kimileri için sıradan olan bu anlar, sizin için günler öncesinden başlayan bir sıkıntıya dönüşebilir. Sosyal kaygı, utangaçlıktan çok daha fazlasıdır ve yalnız taşınmak zorunda değildir.",
   bolumler=[
@@ -513,7 +513,7 @@ KONULAR = [
  dict(
   slug="nisantasi-agorafobi", grup="kaygi", ad="Agorafobi",
   title="Agorafobi | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda agorafobi için yüz yüze ve online psikolojik destek. Kaçışın zor göründüğü yerlerden duyulan korku, kaçınma ve psikoterapi süreci.",
+  desc="Nişantaşı'nda agorafobi için yüz yüze ve online psikolojik destek. Kaçışın zor göründüğü yerlerden duyulan korku, kaçınma ve terapi süreci.",
   h1="Agorafobi: Nişantaşı'nda Psikolojik Destek",
   giris="Metroya binmek, kalabalık bir alışveriş merkezinde dolaşmak ya da evden tek başına çıkmak giderek zorlaşıyorsa, dünyanız yavaş yavaş küçülüyor olabilir. Agorafobi, bu daralmanın adıdır. Gelmekte zorlandığınız dönemlerde online görüşmeyle başlamak da mümkün.",
   bolumler=[
@@ -575,7 +575,7 @@ KONULAR = [
  dict(
   slug="nisantasi-ozgul-fobiler", grup="kaygi", ad="Özgül fobiler",
   title="Özgül Fobiler | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda özgül fobiler için yüz yüze ve online psikolojik destek. Yükseklik, uçak, hayvan, iğne gibi belirli korkular ve psikoterapi süreci.",
+  desc="Nişantaşı'nda özgül fobiler için yüz yüze ve online psikolojik destek. Yükseklik, uçak, hayvan, iğne gibi belirli korkular ve terapi süreci.",
   h1="Özgül Fobiler: Nişantaşı'nda Psikolojik Destek",
   giris="Uçağa binmek, asansöre girmek, bir köpeğin yanından geçmek ya da kan aldırmak... Bir şeyin gerçek tehlikesiyle orantısız, ama kontrol edilemeyen bir korkusu varsa, bu korku hayatınızda düşündüğünüzden fazla yer kaplıyor olabilir.",
   bolumler=[
@@ -635,7 +635,7 @@ KONULAR = [
  dict(
   slug="nisantasi-saglik-anksiyetesi", grup="kaygi", ad="Sağlık anksiyetesi",
   title="Sağlık Anksiyetesi (Hastalık Kaygısı) | Nişantaşı Psikolog",
-  desc="Nişantaşı'nda sağlık anksiyetesi için yüz yüze ve online psikolojik destek. Ciddi bir hastalığa yakalanma korkusu, sürekli kontrol ve psikoterapi süreci.",
+  desc="Nişantaşı'nda sağlık anksiyetesi için yüz yüze ve online psikolojik destek. Ciddi bir hastalığa yakalanma korkusu, sürekli kontrol ve terapi süreci.",
   h1="Sağlık Anksiyetesi: Nişantaşı'nda Psikolojik Destek",
   giris="Küçük bir ağrı, bir ben, geçmeyen bir öksürük... ve zihin hemen en kötü ihtimale gider. İnternette saatlerce belirti araştırmak, tahlil sonuçları temiz çıksa bile rahatlayamamak çok yorucudur. Sağlık anksiyetesi gerçek bir sıkıntıdır ve ciddiye alınmayı hak eder.",
   bolumler=[
@@ -823,7 +823,7 @@ KONULAR = [
  dict(
   slug="nisantasi-gelecek-kaygisi", grup="kaygi", ad="Gelecek kaygısı",
   title="Gelecek Kaygısı | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda gelecek kaygısı için yüz yüze ve online psikolojik destek. Belirsizlik, karar verememe, ekonomik ve kariyer endişeleri ve psikoterapi süreci.",
+  desc="Nişantaşı'nda gelecek kaygısı için yüz yüze ve online psikolojik destek. Belirsizlik, karar verememe, ekonomik ve kariyer endişeleri ve terapi süreci.",
   h1="Gelecek Kaygısı: Nişantaşı'nda Psikolojik Destek",
   giris="İşim ne olacak, bu ülkede kalmalı mıyım, doğru kararı mı verdim? Belirsizliğin arttığı dönemlerde gelecek, merak edilen bir ufuk olmaktan çıkıp ağır bir yüke dönüşebilir. Bu yükü konuşmak, onu taşınabilir kılmanın ilk adımıdır.",
   bolumler=[
@@ -888,7 +888,7 @@ KONULAR = [
  dict(
   slug="nisantasi-kronik-stres", grup="kaygi", ad="Kronik stres",
   title="Kronik Stres | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda kronik stres için yüz yüze ve online psikolojik destek. Uzun süren stresin bedende ve zihinde bıraktığı izler ve psikoterapi süreci.",
+  desc="Nişantaşı'nda kronik stres için yüz yüze ve online psikolojik destek. Uzun süren stresin bedende ve zihinde bıraktığı izler ve terapi süreci.",
   h1="Kronik Stres: Nişantaşı'nda Psikolojik Destek",
   giris="Yoğun bir dönemin geçip gideceğini düşünürsünüz; ama aylar geçer, yük hafiflemez. Bir süre sonra stres bir tepki olmaktan çıkar ve yaşamın kendisine dönüşür. Kronik stres sessizce birikir; fark edildiğinde çoğu zaman beden ve ilişkiler çoktan yorulmuştur.",
   bolumler=[
@@ -950,7 +950,7 @@ KONULAR = [
  dict(
   slug="nisantasi-mevsimsel-depresyon", grup="duygudurum", ad="Mevsimsel depresyon",
   title="Mevsimsel Depresyon | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda mevsimsel depresyon (kış depresyonu) için yüz yüze ve online psikolojik destek. Belirtiler, mevsimlerle gelen çöküntü ve psikoterapi süreci.",
+  desc="Nişantaşı'nda mevsimsel depresyon (kış depresyonu) için yüz yüze ve online psikolojik destek. Belirtiler, mevsimlerle gelen çöküntü ve terapi süreci.",
   h1="Mevsimsel Depresyon: Nişantaşı'nda Psikolojik Destek",
   giris="Günler kısalınca enerjiniz de kısalıyorsa, her kış aynı ağırlık geri geliyor ve bahar gelince sessizce çekiliyorsa, bu yalnızca havanın kasvetli olmasıyla açıklanamayabilir. Mevsimsel depresyon, takvimle birlikte dönen bir çöküntüdür.",
   bolumler=[
@@ -1084,7 +1084,7 @@ KONULAR = [
  dict(
   slug="nisantasi-yas-ve-kayip", grup="duygudurum", ad="Yas ve kayıp", tema_karti="Yas ve kayıp",
   title="Yas ve Kayıp Süreci | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda yas ve kayıp sürecinde yüz yüze ve online psikolojik destek. Ölüm, ayrılık ve diğer kayıplar, uzayan yas ve psikoterapide yasın yeri.",
+  desc="Nişantaşı'nda yas ve kayıp sürecinde yüz yüze ve online psikolojik destek. Ölüm, ayrılık ve diğer kayıplar, uzayan yas ve terapide yasın yeri.",
   h1="Yas ve Kayıp Süreci: Nişantaşı'nda Psikolojik Destek",
   giris="Bir yakını kaybetmek, bir ilişkinin bitmesi, bir hayalin, bir yerin ya da bir dönemin geride kalması... Kayıp, hayatın kaçınılmaz bir parçası; ama yasın nasıl yaşanacağını kimse öğretmez. Yasınız için bir alan açmak, onu taşımanın ilk adımıdır.",
   bolumler=[
@@ -1155,7 +1155,7 @@ KONULAR = [
  dict(
   slug="nisantasi-tukenmislik-sendromu", grup="duygudurum", ad="Tükenmişlik sendromu",
   title="Tükenmişlik Sendromu (Burnout) | Nişantaşı Psikolog",
-  desc="Nişantaşı'nda tükenmişlik sendromu (burnout) için yüz yüze ve online psikolojik destek. İş kaynaklı tükenmenin işaretleri, nedenleri ve psikoterapi süreci.",
+  desc="Nişantaşı'nda tükenmişlik sendromu (burnout) için yüz yüze ve online psikolojik destek. İş kaynaklı tükenmenin işaretleri, nedenleri ve terapi süreci.",
   h1="Tükenmişlik Sendromu: Nişantaşı'nda Psikolojik Destek",
   giris="Bir zamanlar tutkuyla yaptığınız işe artık zorla gidiyorsanız, hafta sonları bile dinlenemiyor ve her şeye karşı bir uzaklık hissediyorsanız, yalnızca yorgun olmayabilirsiniz. Tükenmişlik, uzun süre fazlasını vermenin sessiz faturasıdır.",
   bolumler=[
@@ -1354,7 +1354,7 @@ KONULAR = [
  dict(
   slug="nisantasi-obsesif-kompulsif-bozukluk", grup="travma", ad="Obsesif kompulsif bozukluk (OKB)",
   title="Obsesif Kompulsif Bozukluk (OKB) | Nişantaşı Psikolog",
-  desc="Nişantaşı'nda obsesif kompulsif bozukluk (OKB) için yüz yüze ve online psikolojik destek. Takıntılı düşünceler, zorlantılar ve psikoterapi süreci.",
+  desc="Nişantaşı'nda obsesif kompulsif bozukluk (OKB) için yüz yüze ve online psikolojik destek. Takıntılı düşünceler, zorlantılar ve terapi süreci.",
   h1="Obsesif Kompulsif Bozukluk (OKB): Nişantaşı'nda Psikolojik Destek",
   giris="Kapıyı kilitlediğinizi bildiğiniz hâlde dönüp yeniden bakmak, istemediğiniz bir düşüncenin zihninizde durmadan dönmesi, bir şeyi \"tam doğru\" olana kadar tekrarlamak... OKB, insanın kendi zihniyle yorucu bir pazarlığa girmesidir. Bu pazarlıktan çıkmanın yolları var.",
   bolumler=[
@@ -1996,7 +1996,7 @@ KONULAR = [
  dict(
   slug="nisantasi-tikanircasina-yeme", grup="kimlik", ad="Tıkanırcasına yeme",
   title="Tıkanırcasına Yeme Bozukluğu | Nişantaşı Psikolog Emin Soydan",
-  desc="Nişantaşı'nda tıkanırcasına yeme bozukluğu için yüz yüze ve online psikolojik destek. Yeme ataklarının ardındaki duygular, utanç ve psikoterapi süreci.",
+  desc="Nişantaşı'nda tıkanırcasına yeme bozukluğu için yüz yüze ve online psikolojik destek. Yeme ataklarının ardındaki duygular, utanç ve terapi süreci.",
   h1="Tıkanırcasına Yeme Bozukluğu: Nişantaşı'nda Psikolojik Destek",
   giris="Kısa bir sürede, durduramadığınızı hissettiğiniz bir şekilde çok fazla yemek, ardından gelen utanç ve yalnızlık... Tıkanırcasına yeme çoğu zaman gizli yaşanır ve \"irade eksikliği\" sanılır. Oysa bu, ciddiye alınmayı hak eden bir zorluktur.",
   bolumler=[
