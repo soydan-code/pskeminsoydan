@@ -13,7 +13,7 @@ servis eder.
 - `.vercelignore` — yayımlanmayacak dosyalar. Kök dizindeki diğer her dosya herkese açık yayımlanır; yeni not ya da araç dosyası eklerken buraya da yazın.
 - Hizmet sayfaları (22.10.2026): `seans-ucretleri.html`, `psikolog-macka-nisantasi-besiktas.html`,
   `psikolog-kadikoy-suadiye.html`, `online-terapi.html`, `psikolog-umraniye-cekmekoy-sancaktepe.html`
-  (23.10.2026; 29.10.2026'dan beri açık adresiyle). Her birinde başlığın hemen altında ve
+  (23.10.2026; 29.10.2026'dan beri açık adresiyle), `hakkimda.html` (01.11.2026). Her birinde başlığın hemen altında ve
   sayfa sonunda `.cta-satir` (Hemen Ara + WhatsApp) var; telefonda "Hemen Ara" ilk ekranda
   kalmalı. Unvan yalnızca "Psikolog"; "Uzman/Klinik Psikolog" yazılmaz.
 - Konu sayfaları (`/nisantasi-*`) ve `/calisma-alanlari` **elle düzenlenmez**:
@@ -218,6 +218,10 @@ uygulayın" türü vaatler, garanti edilen sonuçlar ve pazarlama dili bu sitede
 almaz.
 
 ## Uydurulmayacak bilgiler
+
+Eğitim bilgileri site sahibinden geldi (01.11.2026), tek kaynak hakkimda.html.
+Çift çalışması yapılmaz; Anka deneyiminde çift terapisi yazılmaz. Kasım 2026'da
+başlayacak AOT eğitimi başlamadan yazılmaz.
 
 Eğitim kurumları, sertifika adları, üyelikler, seans ücreti, seans süresi,
 görüşme sıklığı, telefon ve adres — bunlar yalnızca site sahibinden geldiğinde
