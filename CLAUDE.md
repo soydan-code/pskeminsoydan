@@ -29,6 +29,15 @@ servis eder.
 - Hizmet ve konu sayfalarında `.cta-satir` H1'in hemen altında, girişten önce
   durur: telefonda çerez şeridi açıkken bile "Hemen Ara" görünür kalmalı.
 
+## Asistanla çalışma biçimi
+
+Her görevin başında, token tasarrufunu gözeten model ve çaba önerisi tek
+satırla yazılır (ör. tek dosyalık metin düzeltmesi: Haiku/Sonnet, düşük çaba;
+çok dosyalı mekanik iş: Sonnet, orta; ölçüm ya da karar gerektiren iş: Opus,
+orta; hassas içerik ve kapsamlı denetim: Opus, yüksek). Test kapsamı işe göre
+daraltılır: tek sayfalık değişiklikte yalnız o sayfa, ortak dosya (CSS,
+şablon, üretici) değişince tüm site test edilir. Raporlar kısa tutulur.
+
 ## Renk paleti
 
 Renkler sitenin kendi fotoğraflarından (Boğaz, gün batımı, Kız Kulesi)
