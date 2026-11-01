@@ -104,7 +104,7 @@ for k in KONULAR:
       <h1>{k['h1']}</h1>
       {cta('Hızlı iletişim')}
       <p class="page-intro">{k['giris']}</p>
-      <p class="yazar">Yazan: <a href="/#hakkimda">Psikolog Emin Soydan</a> &middot; Son güncelleme: <time datetime="{guncel(k)}">{tarih_yazi(guncel(k))}</time></p>
+      <p class="yazar">Yazan: <a href="/hakkimda">Psikolog Emin Soydan</a> &middot; Son güncelleme: <time datetime="{guncel(k)}">{tarih_yazi(guncel(k))}</time></p>
     </header>
 
     <article class="policy">{bolumler}{LOKASYON}
