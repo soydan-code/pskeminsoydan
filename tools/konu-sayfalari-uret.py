@@ -230,7 +230,9 @@ print("hizmet sayfası konu listeleri bağlandı")
 # Sitemap
 sm = KOK / "sitemap.xml"
 t = sm.read_text(encoding="utf-8")
-for slug, oncelik, tarih in [("calisma-alanlari", "0.7", GUNCELLEME)] + [(k["slug"], "0.7", guncel(k)) for k in KONULAR]:
+# Elle yazılan /hakkimda da burada durur ki sitemap yeniden yazılırken kaybolmasın;
+# sayfa değişince tarihini güncelleyin.
+for slug, oncelik, tarih in [("calisma-alanlari", "0.7", GUNCELLEME), ("hakkimda", "0.8", "2026-11-01")] + [(k["slug"], "0.7", guncel(k)) for k in KONULAR]:
     loc = f"<loc>{SITE}/{slug}</loc>"
     if loc in t:
         t = re.sub(re.escape(loc) + r"\s*<lastmod>[^<]*", f"{loc}\n    <lastmod>{tarih}", t)

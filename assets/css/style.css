@@ -915,6 +915,8 @@ summary::-webkit-details-marker { display: none; }
 }
 .page-head p.eyebrow { margin-bottom: .7em; }
 .page-intro { color: var(--muted); }
+/* /hakkimda: başlık bölümündeki portre */
+.page-portre { margin: 6px 0 22px; border-radius: var(--radius); }
 
 .policy h2 {
   font-size: clamp(1.25rem, 2.4vw, 1.5rem);
