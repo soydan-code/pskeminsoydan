@@ -124,5 +124,5 @@ dönüşüm görünmez.
   açar. Doğrudan gelen kutunuza düşmesini isterseniz Formspree benzeri bir
   servise bağlanabilir.
 - Açık ve koyu tema ziyaretçinin sistem tercihine göre otomatik çalışır.
-- Sayfadaki sayılar (7+ yıl, 5.000+ seans, 3,5 yıl formasyon, 500+ saat
+- Sayfadaki sayılar (7+ yıl, 5.000+ seans, 3,5 yıl formasyon, 600+ saat
   süpervizyon) metne sabit yazıldı; zamanla güncellenmesi gerekir.
