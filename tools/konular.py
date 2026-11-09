@@ -215,7 +215,7 @@ KONULAR = [
     "Birçok kişi için online görüşme, yüz yüze görüşmeyle aynı süre ve sıklıkta sürdürülebilir. Evden çıkmanın zorlaştığı dönemlerde sürekliliği korumaya da yardım eder."),
   ],
   kaynaklar=[K_WHO_DEP, K_NIMH_DEP, K_NICE_DEP, K_SHEDLER],
-  ilgili=["nisantasi-dogum-sonrasi-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu", "nisantasi-mevsimsel-depresyon"],
+  ilgili=["nisantasi-mevsimsel-depresyon", "nisantasi-dogum-sonrasi-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu", "nisantasi-tikanircasina-yeme"],
  ),
  dict(
   slug="nisantasi-anksiyete", yayin="2026-10-29", grup="kaygi", ad="Anksiyete ve kaygı", tema_karti="Kaygı ve panik",
@@ -302,7 +302,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır. Dışarı çıkmanın zorlaştığı dönemlerde sürekliliği korumaya da yardım eder."),
   ],
   kaynaklar=[K_WHO_ANX, K_NIMH_ANX, K_NICE_ANX, K_SHEDLER],
-  ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-sosyal-fobi", "nisantasi-depresyon"],
+  ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-sosyal-fobi", "nisantasi-gelecek-kaygisi", "nisantasi-sosyal-medya-bagimliligi"],
  ),
  dict(
   slug="nisantasi-yaygin-anksiyete", yayin="2026-10-29", grup="kaygi", ad="Yaygın anksiyete",
@@ -377,7 +377,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NIMH_GAD, K_DSM, K_NICE_ANX, K_SHEDLER],
-  ilgili=["nisantasi-obsesif-kompulsif-bozukluk", "nisantasi-panik-atak", "nisantasi-saglik-anksiyetesi", "nisantasi-gelecek-kaygisi"],
+  ilgili=["nisantasi-gelecek-kaygisi", "nisantasi-panik-atak", "nisantasi-saglik-anksiyetesi", "nisantasi-kronik-stres", "nisantasi-obsesif-kompulsif-bozukluk"],
  ),
  dict(
   slug="nisantasi-panik-atak", yayin="2026-10-30", grup="kaygi", ad="Panik atak",
@@ -446,7 +446,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NIMH_PANIK, K_DSM, K_NICE_ANX, K_MILROD],
-  ilgili=["nisantasi-agorafobi", "nisantasi-anksiyete", "nisantasi-saglik-anksiyetesi", "nisantasi-yaygin-anksiyete"],
+  ilgili=["nisantasi-anksiyete", "nisantasi-agorafobi", "nisantasi-saglik-anksiyetesi", "nisantasi-ozgul-fobiler", "nisantasi-obsesif-kompulsif-bozukluk"],
  ),
  dict(
   slug="nisantasi-sosyal-fobi", yayin="2026-10-30", grup="kaygi", ad="Sosyal fobi",
@@ -510,7 +510,7 @@ KONULAR = [
     "Sosyal kaygı çoğu zaman uzun yıllar sürebilir ve kaçınma arttıkça yerleşir. Erken destek almak, hayatın daralmasını önlemeye yardım eder."),
   ],
   kaynaklar=[K_NIMH_SOSYAL, K_NICE_SOSYAL, K_DSM, K_LEICH],
-  ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-sosyal-medya-bagimliligi", "nisantasi-agorafobi", "nisantasi-kimlik-ve-kendilik"],
+  ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-anksiyete", "nisantasi-agorafobi", "nisantasi-sinav-kaygisi", "nisantasi-sosyal-medya-bagimliligi"],
  ),
  dict(
   slug="nisantasi-agorafobi", yayin="2026-10-30", grup="kaygi", ad="Agorafobi",
@@ -572,7 +572,7 @@ KONULAR = [
     "Agorafobi uzun sürebilir ve kaçınma arttıkça yerleşir. Psikoterapi, korkunun anlamını anlamaya ve hayatın sınırlarını yeniden genişletmeye yardım edebilir; ilerleyiş kişiden kişiye değişir."),
   ],
   kaynaklar=[K_DSM, K_NIMH_ANX, K_NICE_ANX, K_SHEDLER],
-  ilgili=["nisantasi-panik-atak", "nisantasi-anksiyete", "nisantasi-ozgul-fobiler", "nisantasi-sosyal-fobi"],
+  ilgili=["nisantasi-panik-atak", "nisantasi-sosyal-fobi", "nisantasi-ozgul-fobiler", "nisantasi-yaygin-anksiyete", "nisantasi-travma-sonrasi-stres"],
  ),
  dict(
   slug="nisantasi-ozgul-fobiler", yayin="2026-10-30", grup="kaygi", ad="Özgül fobiler",
@@ -632,7 +632,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_DSM, K_NIMH_ANX, K_WHO_ANX, K_SHEDLER],
-  ilgili=["nisantasi-agorafobi", "nisantasi-panik-atak", "nisantasi-saglik-anksiyetesi", "nisantasi-anksiyete"],
+  ilgili=["nisantasi-agorafobi", "nisantasi-anksiyete", "nisantasi-panik-atak", "nisantasi-saglik-anksiyetesi", "nisantasi-obsesif-kompulsif-bozukluk"],
  ),
  dict(
   slug="nisantasi-saglik-anksiyetesi", yayin="2026-10-30", grup="kaygi", ad="Sağlık anksiyetesi",
@@ -693,7 +693,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NHS_SAGLIK, K_DSM, K_NIMH_ANX, K_SHEDLER],
-  ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-obsesif-kompulsif-bozukluk", "nisantasi-ozgul-fobiler"],
+  ilgili=["nisantasi-obsesif-kompulsif-bozukluk", "nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-anksiyete", "nisantasi-ozgul-fobiler"],
  ),
  dict(
   slug="nisantasi-sinav-kaygisi", yayin="2026-10-30", grup="kaygi", ad="Sınav kaygısı",
@@ -754,7 +754,7 @@ KONULAR = [
     "Evet. Sınav kaygısı yalnızca öğrencilere özgü değildir; uzmanlık, yeterlilik ya da dil sınavlarına hazırlanan yetişkinlerle de çalışıyorum."),
   ],
   kaynaklar=[K_WHO_ERGEN, K_NIMH_ANX, K_NIMH_STRES, K_SHEDLER],
-  ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-gelecek-kaygisi", "nisantasi-ergenlik-donemi", "nisantasi-anksiyete"],
+  ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-ergenlik-donemi", "nisantasi-sosyal-fobi", "nisantasi-gelecek-kaygisi", "nisantasi-sosyal-medya-bagimliligi"],
  ),
  dict(
   slug="nisantasi-performans-anksiyetesi", yayin="2026-10-30", grup="kaygi", ad="Performans anksiyetesi",
@@ -820,7 +820,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_DSM, K_NIMH_SOSYAL, K_NICE_SOSYAL, K_LEICH],
-  ilgili=["nisantasi-sosyal-fobi", "nisantasi-sinav-kaygisi", "nisantasi-anksiyete", "nisantasi-kimlik-ve-kendilik"],
+  ilgili=["nisantasi-sosyal-fobi", "nisantasi-sinav-kaygisi", "nisantasi-tukenmislik-sendromu", "nisantasi-cinsel-islev-problemleri", "nisantasi-yaygin-anksiyete"],
  ),
  dict(
   slug="nisantasi-gelecek-kaygisi", yayin="2026-10-30", grup="kaygi", ad="Gelecek kaygısı",
@@ -885,7 +885,7 @@ KONULAR = [
     "Bir miktar kaygı harekete geçirici olabilir. Sorun, kaygının yönlendirici olmaktan çıkıp felç edici hâle gelmesidir. Psikoterapide bu dengeyi yeniden kurmaya çalışırız."),
   ],
   kaynaklar=[K_NIMH_GAD, K_WHO_ANX, K_NICE_ANX, K_SHEDLER],
-  ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-kronik-stres", "nisantasi-sinav-kaygisi", "nisantasi-tukenmislik-sendromu"],
+  ilgili=["nisantasi-yaygin-anksiyete", "nisantasi-kronik-stres", "nisantasi-anksiyete", "nisantasi-sinav-kaygisi", "nisantasi-tukenmislik-sendromu"],
  ),
  dict(
   slug="nisantasi-kronik-stres", yayin="2026-10-30", grup="kaygi", ad="Kronik stres",
@@ -947,7 +947,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_WHO_STRES, K_NIMH_STRES, K_NIMH_ANX, K_SHEDLER],
-  ilgili=["nisantasi-tukenmislik-sendromu", "nisantasi-gelecek-kaygisi", "nisantasi-tikanircasina-yeme", "nisantasi-depresyon"],
+  ilgili=["nisantasi-tukenmislik-sendromu", "nisantasi-yaygin-anksiyete", "nisantasi-gelecek-kaygisi", "nisantasi-anksiyete", "nisantasi-tikanircasina-yeme"],
  ),
  dict(
   slug="nisantasi-mevsimsel-depresyon", yayin="2026-10-30", grup="duygudurum", ad="Mevsimsel depresyon",
@@ -1013,7 +1013,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NIMH_SAD, K_NHS_SAD, K_DSM, K_NICE_DEP],
-  ilgili=["nisantasi-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu", "nisantasi-dogum-sonrasi-depresyon"],
+  ilgili=["nisantasi-depresyon", "nisantasi-kronik-stres", "nisantasi-dogum-sonrasi-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu"],
  ),
  dict(
   slug="nisantasi-dogum-sonrasi-depresyon", yayin="2026-10-30", grup="duygudurum", ad="Doğum sonrası depresyon",
@@ -1081,7 +1081,7 @@ KONULAR = [
     "Evet, psikoterapi emzirme dönemiyle uyumludur. İlaç gerekip gerekmediği ise psikiyatri hekiminin bu döneme özel değerlendirmesiyle belirlenir."),
   ],
   kaynaklar=[K_NIMH_PERI, K_NICE_PERI, K_NHS_PND, K_DSM],
-  ilgili=["nisantasi-depresyon", "nisantasi-anksiyete", "nisantasi-kimlik-ve-kendilik", "nisantasi-iliski-problemleri"],
+  ilgili=["nisantasi-depresyon", "nisantasi-iliski-problemleri", "nisantasi-mevsimsel-depresyon", "nisantasi-yas-ve-kayip", "nisantasi-tukenmislik-sendromu"],
  ),
  dict(
   slug="nisantasi-yas-ve-kayip", yayin="2026-10-30", grup="duygudurum", ad="Yas ve kayıp", tema_karti="Yas ve kayıp",
@@ -1152,7 +1152,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NHS_YAS, K_DSM, K_FREUD, K_SHEDLER],
-  ilgili=["nisantasi-depresyon", "nisantasi-travma-sonrasi-stres", "nisantasi-mevsimsel-depresyon", "nisantasi-iliski-problemleri"],
+  ilgili=["nisantasi-depresyon", "nisantasi-travma-sonrasi-stres", "nisantasi-iliski-problemleri", "nisantasi-mevsimsel-depresyon", "nisantasi-dogum-sonrasi-depresyon"],
  ),
  dict(
   slug="nisantasi-tukenmislik-sendromu", yayin="2026-10-30", grup="duygudurum", ad="Tükenmişlik sendromu",
@@ -1221,7 +1221,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır ve yoğun tempoda sürekliliği korumaya yardım eder."),
   ],
   kaynaklar=[K_WHO_BURN, K_MASLACH, K_NIMH_STRES, K_SHEDLER],
-  ilgili=["nisantasi-kronik-stres", "nisantasi-depresyon", "nisantasi-gelecek-kaygisi", "nisantasi-performans-anksiyetesi"],
+  ilgili=["nisantasi-kronik-stres", "nisantasi-depresyon", "nisantasi-performans-anksiyetesi", "nisantasi-mevsimsel-depresyon", "nisantasi-dogum-sonrasi-depresyon"],
  ),
  dict(
   slug="nisantasi-cocukluk-travmalari", yayin="2026-10-30", grup="travma", ad="Çocukluk dönemi travmaları",
@@ -1288,7 +1288,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_WHO_COCUK, K_FELITTI, K_NICE_PTSD, K_SHEDLER],
-  ilgili=["nisantasi-travma-sonrasi-stres", "nisantasi-borderline-kisilik", "nisantasi-iliski-problemleri", "nisantasi-kimlik-ve-kendilik"],
+  ilgili=["nisantasi-travma-sonrasi-stres", "nisantasi-borderline-kisilik", "nisantasi-narsisistik-kisilik", "nisantasi-ofke-kontrolu", "nisantasi-cinsel-islev-problemleri"],
  ),
  dict(
   slug="nisantasi-travma-sonrasi-stres", yayin="2026-10-30", grup="travma", ad="Travma sonrası stres (TSSB)", tema_karti="Travma ve TSSB",
@@ -1351,7 +1351,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NIMH_PTSD, K_WHO_PTSD, K_NICE_PTSD, K_DSM],
-  ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-panik-atak", "nisantasi-yas-ve-kayip", "nisantasi-depresyon"],
+  ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-yas-ve-kayip", "nisantasi-borderline-kisilik", "nisantasi-ofke-kontrolu", "nisantasi-agorafobi"],
  ),
  dict(
   slug="nisantasi-obsesif-kompulsif-bozukluk", yayin="2026-10-30", grup="travma", ad="Obsesif kompulsif bozukluk (OKB)",
@@ -1415,7 +1415,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NIMH_OCD, K_NICE_OCD, K_DSM, K_SHEDLER],
-  ilgili=["nisantasi-anksiyete", "nisantasi-saglik-anksiyetesi", "nisantasi-yaygin-anksiyete", "nisantasi-ofke-kontrolu"],
+  ilgili=["nisantasi-saglik-anksiyetesi", "nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-ozgul-fobiler", "nisantasi-travma-sonrasi-stres"],
  ),
  dict(
   slug="nisantasi-borderline-kisilik", yayin="2026-10-30", grup="travma", ad="Borderline (sınırda) kişilik", tema_karti="Borderline kişilik",
@@ -1481,7 +1481,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NIMH_BPD, K_NICE_BPD, K_CLARKIN, K_DSM],
-  ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-iliski-problemleri", "nisantasi-kimlik-ve-kendilik", "nisantasi-ofke-kontrolu"],
+  ilgili=["nisantasi-cocukluk-travmalari", "nisantasi-narsisistik-kisilik", "nisantasi-iliski-problemleri", "nisantasi-ofke-kontrolu", "nisantasi-kimlik-ve-kendilik"],
  ),
  dict(
   slug="nisantasi-narsisistik-kisilik", yayin="2026-10-30", grup="travma", ad="Narsisistik kişilik",
@@ -1543,7 +1543,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_DSM, K_NHS_KISILIK, K_KERNBERG, K_KOHUT],
-  ilgili=["nisantasi-iliski-problemleri", "nisantasi-borderline-kisilik", "nisantasi-kimlik-ve-kendilik", "nisantasi-depresyon"],
+  ilgili=["nisantasi-borderline-kisilik", "nisantasi-iliski-problemleri", "nisantasi-kimlik-ve-kendilik", "nisantasi-cocukluk-travmalari", "nisantasi-ofke-kontrolu"],
  ),
  dict(
   slug="nisantasi-ofke-kontrolu", yayin="2026-10-30", grup="travma", ad="Öfke kontrolü", tema_karti="Öfke ve suçluluk",
@@ -1606,7 +1606,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_APA_OFKE, K_NHS_OFKE, K_DSM, K_SHEDLER],
-  ilgili=["nisantasi-borderline-kisilik", "nisantasi-iliski-problemleri", "nisantasi-kronik-stres", "nisantasi-depresyon"],
+  ilgili=["nisantasi-borderline-kisilik", "nisantasi-kronik-stres", "nisantasi-cocukluk-travmalari", "nisantasi-travma-sonrasi-stres", "nisantasi-narsisistik-kisilik"],
  ),
  dict(
   slug="nisantasi-kimlik-ve-kendilik", yayin="2026-10-30", grup="kimlik", ad="Kimlik ve kendilik", tema_karti="Kimlik ve kendilik",
@@ -1667,7 +1667,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_WINNICOTT, K_ERIKSON, K_NHS_OZSAYGI, K_SHEDLER],
-  ilgili=["nisantasi-iliski-problemleri", "nisantasi-borderline-kisilik", "nisantasi-narsisistik-kisilik", "nisantasi-tikanircasina-yeme"],
+  ilgili=["nisantasi-iliski-problemleri", "nisantasi-narsisistik-kisilik", "nisantasi-ergenlik-donemi", "nisantasi-cinsel-kimlik-ve-yonelim", "nisantasi-tikanircasina-yeme"],
  ),
  dict(
   slug="nisantasi-ergenlik-donemi", yayin="2026-10-30", grup="kimlik", ad="Ergenlik dönemi", tema_karti="Ergenlik dönemi",
@@ -1736,7 +1736,7 @@ KONULAR = [
     "Pek çok genç için online görüşme rahat bir seçenektir. Evde konuşulanların duyulmayacağı bir alan olması önemlidir; bunu birlikte planlarız."),
   ],
   kaynaklar=[K_WHO_ERGEN, K_NIMH_GENC, K_ERIKSON, K_SHEDLER],
-  ilgili=["nisantasi-sinav-kaygisi", "nisantasi-kimlik-ve-kendilik", "nisantasi-sosyal-medya-bagimliligi", "nisantasi-cinsel-kimlik-ve-yonelim"],
+  ilgili=["nisantasi-cinsel-kimlik-ve-yonelim", "nisantasi-sosyal-medya-bagimliligi", "nisantasi-sinav-kaygisi", "nisantasi-kimlik-ve-kendilik", "nisantasi-tikanircasina-yeme"],
  ),
  dict(
   slug="nisantasi-cinsel-kimlik-ve-yonelim", yayin="2026-10-30", grup="kimlik", ad="Cinsel kimlik ve yönelim", tema_karti="Cinsel kimlik ve yönelim",
@@ -1799,7 +1799,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_WHO_ICD_CINS, K_APA_LGBT, K_DSM, K_WINNICOTT],
-  ilgili=["nisantasi-kimlik-ve-kendilik", "nisantasi-ergenlik-donemi", "nisantasi-iliski-problemleri", "nisantasi-cinsel-islev-problemleri"],
+  ilgili=["nisantasi-ergenlik-donemi", "nisantasi-kimlik-ve-kendilik", "nisantasi-cinsel-islev-problemleri", "nisantasi-iliski-problemleri", "nisantasi-kronik-stres"],
  ),
  dict(
   slug="nisantasi-cinsel-islev-problemleri", yayin="2026-10-30", grup="kimlik", ad="Cinsel işlev problemleri", tema_karti="Cinsel işlev problemleri",
@@ -1866,7 +1866,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_DSM, K_WHO_CINSEL, K_NIMH_ANX, K_SHEDLER],
-  ilgili=["nisantasi-performans-anksiyetesi", "nisantasi-iliski-problemleri", "nisantasi-cinsel-kimlik-ve-yonelim", "nisantasi-anksiyete"],
+  ilgili=["nisantasi-iliski-problemleri", "nisantasi-cinsel-kimlik-ve-yonelim", "nisantasi-performans-anksiyetesi", "nisantasi-cocukluk-travmalari", "nisantasi-depresyon"],
  ),
  dict(
   slug="nisantasi-iliski-problemleri", yayin="2026-10-30", grup="kimlik", ad="İlişki problemleri", tema_karti="İlişkiler ve bağlanma",
@@ -1929,7 +1929,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_BOWLBY, K_HAZAN, K_SHEDLER, K_NHS_OZSAYGI],
-  ilgili=["nisantasi-kimlik-ve-kendilik", "nisantasi-borderline-kisilik", "nisantasi-narsisistik-kisilik", "nisantasi-yas-ve-kayip"],
+  ilgili=["nisantasi-borderline-kisilik", "nisantasi-narsisistik-kisilik", "nisantasi-kimlik-ve-kendilik", "nisantasi-cinsel-islev-problemleri", "nisantasi-cinsel-kimlik-ve-yonelim"],
  ),
  dict(
   slug="nisantasi-sosyal-medya-bagimliligi", yayin="2026-10-30", grup="kimlik", ad="Sosyal medya bağımlılığı",
@@ -1993,7 +1993,7 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_HHS_SOSYAL, K_ANDREASSEN, K_WHO_ERGEN, K_SHEDLER],
-  ilgili=["nisantasi-ergenlik-donemi", "nisantasi-kimlik-ve-kendilik", "nisantasi-depresyon", "nisantasi-anksiyete"],
+  ilgili=["nisantasi-ergenlik-donemi", "nisantasi-kimlik-ve-kendilik", "nisantasi-depresyon", "nisantasi-sosyal-fobi", "nisantasi-sinav-kaygisi"],
  ),
  dict(
   slug="nisantasi-tikanircasina-yeme", yayin="2026-10-30", grup="kimlik", ad="Tıkanırcasına yeme",
@@ -2057,6 +2057,6 @@ KONULAR = [
     "Evet. Online görüşmeler yüz yüze görüşmelerle aynı süre ve sıklıkta yapılır."),
   ],
   kaynaklar=[K_NIMH_YEME, K_NICE_YEME, K_NHS_YEME, K_DSM],
-  ilgili=["nisantasi-depresyon", "nisantasi-kronik-stres", "nisantasi-kimlik-ve-kendilik", "nisantasi-anksiyete"],
+  ilgili=["nisantasi-depresyon", "nisantasi-kronik-stres", "nisantasi-kimlik-ve-kendilik", "nisantasi-ergenlik-donemi", "nisantasi-anksiyete"],
  ),
 ]
