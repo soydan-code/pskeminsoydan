@@ -177,14 +177,13 @@
      Google Ads'in "dönüşüm" diye sayabileceği tek şey buradan gider:
      ziyaretçinin gerçekten iletişime geçme hareketi. Tek bir olay adı
      (generate_lead) kullanılır, hangi yoldan gelindiği method parametresinde
-     durur; Ads tarafında tek bir dönüşüm eylemi tanımlamak bunun için yeter.
+     durur; Ads tarafında tek bir dönüşüm eylemi tanımlamak bunun için yeter. */
 
-     Onay yoksa hiçbir şey gönderilmez. Şart burada bir kere kontrol edilir. */
+  /* Onay yoksa da olay gönderilir. Consent Mode gelişmiş kurulumda izinler
+     'denied' iken Google'a yalnızca çerezsiz, kimliksiz bir sinyal gider;
+     çerez yazılmaz. Çerez şeridi ve consent default bloğu değişmez. */
   var olcumBildir = function (yontem) {
-    if (onayOku() !== 'kabul') return;
     gtagCagir('event', 'generate_lead', { method: yontem });
-    // Site sahibi telefonla aramayı öncelikli dönüşüm saymak istiyor; Ads'te
-    // ayrı bir birincil dönüşüm olarak içe aktarılabilsin diye ayrıca gider.
     if (yontem === 'telefon') gtagCagir('event', 'telefon_arama');
   };
 

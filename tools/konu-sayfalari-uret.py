@@ -29,6 +29,10 @@ def guncel(k):
 
 
 sablon = (KOK / "psikolog-kadikoy-suadiye.html").read_text(encoding="utf-8")
+# Şablon sayfanın WhatsApp hazır mesajı kendi sayfa adını taşır; üretilen
+# sayfalarda sitenin genel mesajı kalsın.
+WA_GENEL = "Merhaba%2C%20Metapsikoloji%20sitesinden%20ula%C5%9F%C4%B1yorum.%20Emin%20Bey%20ile%20ileti%C5%9Fime%20ge%C3%A7ebilir%20miyim%3F"
+sablon = re.sub(r'(https://wa\.me/905436339213\?text=)[^"]*', lambda m: m.group(1) + WA_GENEL, sablon)
 bas = sablon[:sablon.index('<main id="icerik">')]
 son = sablon[sablon.index("</main>") + len("</main>"):]
 cta_m = re.search(r'<div class="cta-satir".*?</div>', sablon, re.S).group(0)
