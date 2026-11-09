@@ -129,6 +129,14 @@ GRUPLAR = [
     ("kimlik", "Kimlik, ilişki ve beden"),
 ]
 
+# /calisma-alanlari'nda her grup başlığının altında, listeden önce gelen paragraf
+GRUP_ACIKLAMA = {
+    "duygudurum": "Uzun süren isteksizlik, anlam kaybı, yas ya da tükenmişlik; bazen bir kayıptan, bazen adı konamayan bir ağırlıktan doğar. Bu başlıktaki çalışmalarda, duygudurumdaki değişimin ardındaki kayıpları, beklentileri ve ilişkileri birlikte anlamaya çalışırız.",
+    "kaygi": "Kaygı bazen bir sınavda ya da kalabalıkta, bazen bedende bir çarpıntı olarak, bazen de nedeni belirsiz bir tedirginlik olarak gelir. Belirtiyi tek başına ele almak yerine, kaygının sizin için neye işaret ettiğini ve hangi durumlarda yoğunlaştığını birlikte keşfederiz.",
+    "travma": "Geçmişte yaşananların izleri, ilişkilerde tekrar eden örüntüler, yoğun öfke ya da durdurulamayan düşünceler bu başlıkta yer alır. Aktarım Odaklı Terapi (TFP) ilkelerinden ve uygun durumlarda EMDR'den yararlanarak, bu izlerin bugünkü yaşamınızda nasıl sürdüğünü birlikte ele alırız.",
+    "kimlik": "Kim olduğunuza, ilişkilerinize, cinselliğinize ve bedeninizle kurduğunuz bağa dair sorular bu başlıkta. Yargısız bir alanda, bu soruların sizin için taşıdığı anlamı birlikte konuşuruz.",
+}
+
 ACIL = ('<p class="acil-not"><strong>Kendinize zarar verme ya da yaşamınıza son verme '
         'düşünceleriniz varsa beklemeyin:</strong> 112\'yi arayın ya da en yakın acil '
         'servise başvurun.</p>')

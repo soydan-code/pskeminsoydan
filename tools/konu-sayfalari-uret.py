@@ -11,7 +11,7 @@ import html, json, pathlib, re, sys
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
-from konular import KONULAR, GRUPLAR, GUNCELLEME  # noqa: E402
+from konular import KONULAR, GRUPLAR, GRUP_ACIKLAMA, GUNCELLEME  # noqa: E402
 
 SITE = "https://www.metapsikoloji.tr"
 AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz",
@@ -156,7 +156,7 @@ for kod, ad in GRUPLAR:
     sayfalar = [k for k in KONULAR if k["grup"] == kod]
     if not sayfalar:
         continue
-    gruplar += f'\n      <h2>{ad}</h2>\n      <ul class="konu-liste">' + "".join(
+    gruplar += f'\n      <h2>{ad}</h2>\n      <p>{GRUP_ACIKLAMA[kod]}</p>\n      <ul class="konu-liste">' + "".join(
         f'<li><a href="/{k["slug"]}">{k["ad"]}</a></li>' for k in sayfalar) + "</ul>\n"
 title = "Çalışma Alanları | Nişantaşı Psikolog Emin Soydan"
 desc = "Depresyon, kaygı ve daha fazlası: Nişantaşı, Kadıköy ve Ümraniye'de yüz yüze, ayrıca online yürüttüğüm bireysel psikodinamik terapi çalışma alanları."
