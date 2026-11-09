@@ -133,7 +133,9 @@ bozulmamalıdır:
 Onay yoksa etiket yüklenir ama **çerez yazmaz**, yalnızca çerezsiz sinyal
 gönderir. Ziyaretçi şeritte kabul edince `main.js` içindeki `etiketiYukle`
 izni `granted` yapar; reddedince izin `denied` kalır ve Google çerezleri
-silinir. Dönüşüm olayları (`olcumBildir`) yalnızca onay varsa gider.
+silinir. Dönüşüm olayları (`olcumBildir`) onaydan bağımsız gönderilir; Consent Mode
+gelişmiş kurulumda izinler denied iken çerezsiz, kimliksiz sinyal gider, çerez
+yazılmaz. Onay şartı geri eklenmez.
 
 Şerit `main.js` tarafından oluşturulur, HTML'de durmaz; böylece üç sayfada tek
 bir metin vardır. Alt bilgideki "Çerez tercihleri" düğmesi de aynı yerden
@@ -156,8 +158,8 @@ istediği için (25.09.2026) telefon tıklamasında `generate_lead`'e ek olarak
 `generate_lead` **ikincil** dönüşüm olmalı; ikisi birden birincil olursa
 telefon tıklaması iki kez sayılır.
 
-Olaylar yalnızca onay verilmişse gönderilir; şart `olcumBildir` içinde tek
-yerde durur, kopyalamayın.
+Olaylar onaydan bağımsız gönderilir; gönderim `olcumBildir` içinde tek yerde
+durur, kopyalamayın.
 
 Ölçümle ilgili bir değişiklik yapıldığında `gizlilik-politikasi.html`
 içindeki çerez listesi ve açıklamalar da güncellenmeli. O sayfa sitenin
