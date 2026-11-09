@@ -1081,6 +1081,14 @@ body.cerez-acik .yuzen-wa { display: none; }
   padding: 14px 0; border-bottom: 1px solid var(--border);
 }
 .ucret-liste strong { font-family: var(--font-heading); font-size: 1.2rem; white-space: nowrap; }
+/* Ücret sayfası: üstü çizili önceki ücret, yeni ücret ve oran etiketi; dar ekranda alt satıra iner */
+.ucret-fiyat { display: flex; align-items: baseline; flex-wrap: wrap; justify-content: flex-end; gap: 4px 10px; }
+.ucret-fiyat s { color: var(--muted); white-space: nowrap; }
+.ucret-etiket {
+  font-size: .8rem; font-weight: 600; white-space: nowrap;
+  padding: 2px 10px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+}
 @media (max-width: 560px) {
   .cta-satir .btn { flex: 1 1 100%; }
 }
