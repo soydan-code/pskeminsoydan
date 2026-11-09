@@ -234,7 +234,9 @@ başlayacak AOT eğitimi başlamadan yazılmaz.
 
 Eğitim kurumları, sertifika adları, üyelikler, seans ücreti, seans süresi,
 görüşme sıklığı, telefon ve adres — bunlar yalnızca site sahibinden geldiğinde
-yazılır. Ücretler site sahibinden geldi (22.10.2026): yüz yüze 6.000 TL,
-online 4.000 TL (30.10.2026); değişirse `seans-ucretleri.html` ve ana sayfadaki SSS birlikte
-güncellenmeli. `/seans-ucretleri` bilinçli olarak `noindex, follow` ve sitemap dışındadır
-(30.10.2026, site sahibinin isteği); iç bağlantılar kalır. Gelene kadar `.todo` sınıfıyla işaretli yer tutucu olarak kalır.
+yazılır. Ücretler site sahibinden (09.11.2026): 31 Aralık 2026'ya kadar yüz yüze
+4.000 TL (önceki 6.000), online 2.000 TL (önceki 4.000). Ücret sayfası 09.11.2026'dan
+beri index ve sitemap'te. Eski ve yeni ücret yalnız ücret sayfasında gösterilir.
+"İndirim", "kampanya", "promosyon", "ücretsiz" yazılmaz. Ücret değişirse
+`seans-ucretleri.html`, ana sayfa SSS, üç görüşme yeri sayfası ve online sayfanın SSS'si
+ile FAQPage şemaları birlikte güncellenir. Gelene kadar `.todo` sınıfıyla işaretli yer tutucu olarak kalır.
