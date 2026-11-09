@@ -121,7 +121,10 @@
       </div>
 
       <figure class="hero-media">
-        <img src="assets/img/portre.jpg" alt="Psikolog Emin Soydan" width="880" height="1100" fetchpriority="high">
+        <picture>
+          <source type="image/webp" srcset="assets/img/portre-480.webp 480w, assets/img/portre-880.webp 880w" sizes="(max-width: 900px) min(320px, calc(100vw - 32px)), (max-width: 1100px) 40vw, 454px">
+          <img src="assets/img/portre.jpg" alt="Psikolog Emin Soydan" width="880" height="1100" fetchpriority="high">
+        </picture>
         <figcaption>Psikolog Emin Soydan</figcaption>
       </figure>
     </div>
