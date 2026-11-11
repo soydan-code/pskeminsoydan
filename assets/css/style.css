@@ -946,6 +946,23 @@ summary::-webkit-details-marker { display: none; }
    hâlde masaüstünde tek başına ortada kalıyor. */
 .hero-ikincil { display: flex; justify-content: flex-start; margin-bottom: 30px; }
 
+/* Telefonda ana sayfa ilk ekranı: portre küçük ve ortalı, metnin üstünde; "Hemen Ara"
+   başlığın hemen altında görünür. Sıra yalnız görsel (CSS order), HTML sırası aynı. */
+@media (max-width: 560px) {
+  .hero { padding: 20px 0 44px; }
+  .hero-inner { gap: 16px; }
+  .hero-media { max-width: none; }
+  .hero-media img { width: auto; height: 190px; margin-inline: auto; }
+  .hero-media figcaption { margin-top: 8px; }
+  .hero-copy { display: flex; flex-direction: column; }
+  .hero-copy .eyebrow { order: 1; }
+  .hero-copy h1 { order: 2; }
+  .hero-copy .hero-actions { order: 3; }
+  .hero-copy .lead-serif { order: 4; margin-top: 14px; }
+  .hero-copy .hero-ikincil { order: 5; }
+  .hero-copy .hero-meta { order: 6; }
+}
+
 .metin-bag {
   padding: 10px 24px;
   border: 1px solid var(--border);
