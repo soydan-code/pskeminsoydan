@@ -10,6 +10,9 @@ Kaynaklar yalnız köklü kurumlar ve hakemli yayınlar.
 # Ortak içerik tarihi. Her konunun yayin alanı ilk yayın günüdür (git geçmişinden);
 # sayfadaki "Son güncelleme" ve dateModified ikisinden geç olanıdır.
 GUNCELLEME = "2026-10-29"
+# Konu sayfalarının ortak son güncelleme tarihi (görünen tarih, dateModified ve sitemap lastmod):
+# tüm konu sayfalarına psikodinamik terapi bağlantısı eklendiği gün.
+KONU_GUNCELLEME = "2026-11-23"
 
 K_WHO_DEP = ("Dünya Sağlık Örgütü (WHO), Depressive disorder (depression) bilgi notu",
              "https://www.who.int/news-room/fact-sheets/detail/depression")

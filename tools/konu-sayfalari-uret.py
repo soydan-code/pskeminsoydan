@@ -11,7 +11,7 @@ import html, json, pathlib, re, sys
 
 KOK = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(KOK / "tools"))
-from konular import KONULAR, GRUPLAR, GRUP_ACIKLAMA, GUNCELLEME  # noqa: E402
+from konular import KONULAR, GRUPLAR, GRUP_ACIKLAMA, GUNCELLEME, KONU_GUNCELLEME  # noqa: E402
 
 SITE = "https://www.metapsikoloji.tr"
 AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz",
@@ -25,7 +25,7 @@ def tarih_yazi(tarih):
 
 def guncel(k):
     """Sayfanın son güncelleme tarihi: ilk yayından önce olamaz."""
-    return max(k["yayin"], GUNCELLEME)
+    return max(k["yayin"], KONU_GUNCELLEME)
 
 
 sablon = (KOK / "psikolog-kadikoy-suadiye.html").read_text(encoding="utf-8")
@@ -66,7 +66,6 @@ def son_hazirla(graf):
 
 
 PSIKODINAMIK_ADRES = "/psikodinamik-terapi-nedir"
-BAGLANTI_TARIHI = "2026-11-23"   # cümle eklenen 28 konu sayfasının sitemap lastmod'u
 PSIKODINAMIK_CUMLE = ('\n      <p>Yaklaşımın kendisini <a href="/psikodinamik-terapi-nedir">psikodinamik terapi '
                       'sayfasında</a> anlattım.</p>')
 YAZAR = {"@type": "Person", "@id": f"{SITE}/#kisi", "name": "Emin Soydan", "jobTitle": "Psikolog", "url": f"{SITE}/"}
@@ -248,7 +247,7 @@ sm = KOK / "sitemap.xml"
 t = sm.read_text(encoding="utf-8")
 # Elle yazılan /hakkimda da burada durur ki sitemap yeniden yazılırken kaybolmasın;
 # sayfa değişince tarihini güncelleyin.
-for slug, oncelik, tarih in [("calisma-alanlari", "0.7", GUNCELLEME), ("hakkimda", "0.8", "2026-11-09"), ("seans-ucretleri", "0.8", "2026-11-09"), ("online-psikolog-nasil-secilir", "0.7", "2026-11-09"), ("psikodinamik-terapi-nedir", "0.7", "2026-11-23")] + [(k["slug"], "0.7", guncel(k) if k["slug"] == "nisantasi-depresyon" else BAGLANTI_TARIHI) for k in KONULAR]:
+for slug, oncelik, tarih in [("calisma-alanlari", "0.7", GUNCELLEME), ("hakkimda", "0.8", "2026-11-09"), ("seans-ucretleri", "0.8", "2026-11-09"), ("online-psikolog-nasil-secilir", "0.7", "2026-11-09"), ("psikodinamik-terapi-nedir", "0.7", "2026-11-23")] + [(k["slug"], "0.7", guncel(k)) for k in KONULAR]:
     loc = f"<loc>{SITE}/{slug}</loc>"
     if loc in t:
         t = re.sub(re.escape(loc) + r"\s*<lastmod>[^<]*", f"{loc}\n    <lastmod>{tarih}", t)
