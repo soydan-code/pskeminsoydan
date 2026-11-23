@@ -65,6 +65,10 @@ def son_hazirla(graf):
     return re.sub(r'<script type="application/ld\+json">.*?</script>', lambda _: blok, son, count=1, flags=re.S)
 
 
+PSIKODINAMIK_ADRES = "/psikodinamik-terapi-nedir"
+BAGLANTI_TARIHI = "2026-11-23"   # cümle eklenen 28 konu sayfasının sitemap lastmod'u
+PSIKODINAMIK_CUMLE = ('\n      <p>Yaklaşımın kendisini <a href="/psikodinamik-terapi-nedir">psikodinamik terapi '
+                      'sayfasında</a> anlattım.</p>')
 YAZAR = {"@type": "Person", "@id": f"{SITE}/#kisi", "name": "Emin Soydan", "jobTitle": "Psikolog", "url": f"{SITE}/"}
 mevcut = {k["slug"]: k for k in KONULAR}
 
@@ -83,6 +87,14 @@ LOKASYON = """
 for k in KONULAR:
     url = f"{SITE}/{k['slug']}"
     bolumler = "".join(f"\n      <h2>{b}</h2>{icerik}\n" for b, icerik in k["bolumler"])
+    # Her konuda "Psikoterapide süreç nasıl ilerler?" bölümünün sonuna yaklaşım sayfasına
+    # tek cümlelik bağlantı; konunun kendi metni zaten bu bağlantıyı taşıyorsa eklenmez.
+    if PSIKODINAMIK_ADRES not in bolumler:
+        bas_i = bolumler.index("<h2>Psikoterapide süreç nasıl ilerler?</h2>")
+        son_i = bolumler.find("\n      <h2>", bas_i + 1)
+        son_i = len(bolumler) if son_i == -1 else son_i
+        bolumler = (bolumler[:son_i].rstrip("\n") + PSIKODINAMIK_CUMLE + "\n" + bolumler[son_i:].lstrip("\n")
+                    if son_i < len(bolumler) else bolumler.rstrip("\n") + PSIKODINAMIK_CUMLE + "\n")
     # Henüz yayımlanmamış konu sayfasına giden metin içi bağlantı düz yazıya döner;
     # o sayfa üretildiğinde bağlantı kendiliğinden açılır.
     bolumler = re.sub(r'<a href="/(nisantasi-[a-z0-9-]+)">(.*?)</a>',
@@ -236,7 +248,7 @@ sm = KOK / "sitemap.xml"
 t = sm.read_text(encoding="utf-8")
 # Elle yazılan /hakkimda da burada durur ki sitemap yeniden yazılırken kaybolmasın;
 # sayfa değişince tarihini güncelleyin.
-for slug, oncelik, tarih in [("calisma-alanlari", "0.7", GUNCELLEME), ("hakkimda", "0.8", "2026-11-09"), ("seans-ucretleri", "0.8", "2026-11-09"), ("online-psikolog-nasil-secilir", "0.7", "2026-11-09"), ("psikodinamik-terapi-nedir", "0.7", "2026-11-23")] + [(k["slug"], "0.7", guncel(k)) for k in KONULAR]:
+for slug, oncelik, tarih in [("calisma-alanlari", "0.7", GUNCELLEME), ("hakkimda", "0.8", "2026-11-09"), ("seans-ucretleri", "0.8", "2026-11-09"), ("online-psikolog-nasil-secilir", "0.7", "2026-11-09"), ("psikodinamik-terapi-nedir", "0.7", "2026-11-23")] + [(k["slug"], "0.7", guncel(k) if k["slug"] == "nisantasi-depresyon" else BAGLANTI_TARIHI) for k in KONULAR]:
     loc = f"<loc>{SITE}/{slug}</loc>"
     if loc in t:
         t = re.sub(re.escape(loc) + r"\s*<lastmod>[^<]*", f"{loc}\n    <lastmod>{tarih}", t)
