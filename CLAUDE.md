@@ -18,6 +18,7 @@ servis eder.
   kalmalı. Unvan yalnızca "Psikolog"; "Uzman/Klinik Psikolog" yazılmaz.
 - `online-psikolog-nasil-secilir.html` — Bilgi sayfası (09.11.2026), elle yazıldı; metin site sahibinin
   onayıyla; online-terapi.html'den bağlantı 16.11.2026 sonrası eklenecek.
+- `psikodinamik-terapi-nedir.html` — Bilgi sayfası (23.11.2026), elle yazıldı; metin site sahibinin onayıyla.
 - Konu sayfaları (`/nisantasi-*`) ve `/calisma-alanlari` **elle düzenlenmez**:
   içerik `tools/konular.py`'de durur, sayfalar `python3 tools/konu-sayfalari-uret.py`
   ile üretilir (görünen SSS ile FAQPage şeması aynı veriden çıkar, sitemap de
