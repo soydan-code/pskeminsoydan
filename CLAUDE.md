@@ -126,22 +126,27 @@ motorları için görsel alt metni tek başına zayıf bir sinyal.
 
 Google etiketi (GA4, `G-00PCBRRYYT`) **Consent Mode "gelişmiş" kurulumla**
 çalışır (25.09.2026'da site sahibinin isteğiyle; Google Ads'in etiket testinin
-geçmesi için gerekiyordu). Üç HTML dosyasının `<head>` bölümünde sıra şudur ve
-bozulmamalıdır:
+geçmesi için gerekiyordu). Her sayfanın `<head>` bölümünde (43 HTML; konu
+sayfalarında şablon olan `psikolog-kadikoy-suadiye.html`'den gelir, yeniden
+üretimde kalmalı) sıra şudur ve bozulmamalıdır:
 
 1. `gtag('consent', 'default', {... hepsi 'denied'})`
 2. `localStorage` içinde kabul varsa `consent update → granted`
-3. `gtag('js', ...)` ve `gtag('config', 'G-00PCBRRYYT')`
+3. `gtag('js', ...)`, `gtag('config', 'G-00PCBRRYYT')` ve hemen altında
+   `gtag('config', 'AW-11025962940')` (Google Ads)
 4. `gtag.js` betiği (`async`)
 
-Onay yoksa etiket yüklenir ama **çerez yazmaz**, yalnızca çerezsiz sinyal
-gönderir. Ziyaretçi şeritte kabul edince `main.js` içindeki `etiketiYukle`
-izni `granted` yapar; reddedince izin `denied` kalır ve Google çerezleri
-silinir. Dönüşüm olayları (`olcumBildir`) onaydan bağımsız gönderilir; Consent Mode
-gelişmiş kurulumda izinler denied iken çerezsiz, kimliksiz sinyal gider, çerez
-yazılmaz. Onay şartı geri eklenmez.
+İkinci bir `gtag.js` yüklenmez ve yeni `dataLayer` tanımı açılmaz: tek betik
+`id=G-00PCBRRYYT`'dir, `AW-` hesabı yalnız yukarıdaki config satırıyla eklenir.
 
-Şerit `main.js` tarafından oluşturulur, HTML'de durmaz; böylece üç sayfada tek
+**Çerez onayı olay göndermeyi engellemez.** Onay yoksa ya da reddedilmişse
+izinler `denied` kalır; Google'a yalnızca çerezsiz, kimliksiz sinyal gider,
+çerez yazılmaz. Ziyaretçi şeritte kabul edince `main.js` içindeki `etiketiYukle`
+izni `granted` yapar; reddedince izin `denied` kalır ve Google çerezleri
+silinir. Çerez şeridi ve consent default bloğu değiştirilmez. Dönüşüm olayları
+(`olcumBildir`) onaydan bağımsız gönderilir; onay şartı geri eklenmez.
+
+Şerit `main.js` tarafından oluşturulur, HTML'de durmaz; böylece her sayfada tek
 bir metin vardır. Alt bilgideki "Çerez tercihleri" düğmesi de aynı yerden
 eklenir, kararı değiştirmek için bu düğme kullanılır.
 
@@ -149,12 +154,12 @@ Karar `localStorage` içinde `cerez-onayi-v2` anahtarıyla saklanır. Metin ya d
 kapsam değişirse anahtarın sonundaki sürümü artırın; eski onaylar geçersiz olur
 ve şerit herkese yeniden sorar.
 
-Dönüşüm olayı tek tanedir: `generate_lead`. WhatsApp, telefon, e-posta ve
-form, hepsi bu adla gider, aralarındaki fark `method` parametresindedir
-(`whatsapp`, `telefon`, `eposta`, `form`). Google Ads tarafında tek bir
-dönüşüm eylemi tanımlamak bu yüzden yetiyor. Yeni bir iletişim yolu
-eklenirse olayı da `main.js` içindeki tıklama dinleyicisine ekleyin,
-ayrı bir olay adı uydurmayın.
+**GA4 olayı.** Telefon (`tel:`), WhatsApp (`wa.me`) ve e-posta (`mailto:`)
+bağlantı tıklamaları ile iletişim formu gönderimi `olcumBildir` üzerinden
+`generate_lead` adıyla gider; aralarındaki fark `method` parametresindedir
+(`telefon`, `whatsapp`, `eposta`, `form`). Yeni bir iletişim yolu eklenirse
+olayı `main.js` içindeki tıklama dinleyicisine ekleyin, ayrı bir olay adı
+uydurmayın. Gönderim `olcumBildir` içinde tek yerde durur, kopyalamayın.
 
 Tek istisna telefon: site sahibi telefonla aramayı öncelikli dönüşüm saymak
 istediği için (25.09.2026) telefon tıklamasında `generate_lead`'e ek olarak
@@ -162,13 +167,22 @@ istediği için (25.09.2026) telefon tıklamasında `generate_lead`'e ek olarak
 `generate_lead` **ikincil** dönüşüm olmalı; ikisi birden birincil olursa
 telefon tıklaması iki kez sayılır.
 
-Olaylar onaydan bağımsız gönderilir; gönderim `olcumBildir` içinde tek yerde
-durur, kopyalamayın.
+**Google Ads dönüşümü.** `olcumBildir` içinde yalnız **telefon ve WhatsApp**
+tıklamasında ayrıca
+`gtag('event', 'conversion', {send_to: 'AW-11025962940/Kp00COur374dELyvy4kp',
+value: 0, currency: 'TRY'})` gider. E-posta ve form dönüşüm göndermez; sayfa
+görüntülemede dönüşüm gönderilmez. Bu olay ve `AW-` config satırı **kalıntı
+değildir**; silinmez ve değiştirilmez. Dönüşüm kimliği/etiketi (`send_to`)
+Google Ads hesabında tanımlıdır; kod değişikliği öncesi site sahibine sorulur.
+
+`main.js` sürümü (`?v=`) değiştirilirse tüm sayfalarda birlikte artırılır
+(şu an 21).
 
 Ölçümle ilgili bir değişiklik yapıldığında `gizlilik-politikasi.html`
 içindeki çerez listesi ve açıklamalar da güncellenmeli. O sayfa sitenin
 gerçekte ne yaptığını anlatır; ikisinin ayrışması hem yanlış beyan olur hem de
-KVKK açısından sorun yaratır.
+KVKK açısından sorun yaratır. Sayfa Google Ads ölçümünü zaten anar; ölçüm
+davranışı değişirse metin site sahibine sorularak gözden geçirilir.
 
 ## İletişim kısayolları
 
