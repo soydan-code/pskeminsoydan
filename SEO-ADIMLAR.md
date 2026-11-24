@@ -50,6 +50,9 @@ eskisine düşer. Yalnızca `216.198.79.1` kalmalı.
 
 ## 0. ACİL: metapsikoloji.tr (www'suz hâli) hiç açılmıyor
 
+> Tarihçe (21.09.2026): aşağıdaki canonical, sitemap ve Open Graph anlatımı o günkü
+> durumdur. Bugün hepsi `https://www.metapsikoloji.tr/` adresine göre yazılı.
+
 21.09.2026 tarihinde DNS kayıtları kontrol edildi. Durum:
 
 | Adres | Nereye gidiyor |
@@ -127,7 +130,7 @@ ondan sonra 1. bölümdeki yönlendirmeleri devreye alın.
 
 ---
 
-## 1. metapsikoloji.com.tr adresini metapsikoloji.tr'ye yönlendirin
+## 1. metapsikoloji.com.tr adresini www.metapsikoloji.tr'ye yönlendirin
 
 **En yüksek etkili adım bu.** `metapsikoloji.com.tr` şu anda Google'da
 "Nişantaşı Psikolog | Metapsikoloji" başlığıyla **zaten çıkıyor**. Yeni site
@@ -145,7 +148,7 @@ gelen herkes yeni siteye düşer. Amaç zaten bu, ama başlamadan önce:
 - Eski sitede tutmak istediğiniz yazı, görsel ya da sayfa varsa kopyasını alın.
 - **Google Ads reklamlarınızın hangi adrese gittiğini kontrol edin.** Eski adrese
   gidiyorlarsa yönlendirme çalışır ama her tıklama fazladan bir sıçrama yapar;
-  reklamların iniş adresini doğrudan `metapsikoloji.tr` yapmak daha iyidir.
+  reklamların iniş adresini doğrudan `www.metapsikoloji.tr` yapmak daha iyidir.
 - Eski alan adını **iptal etmeyin, elinizde tutun**. Süresi dolarsa yönlendirme
   de biter ve aktardığınız değer kaybolur. En az birkaç yıl yenilenmeli.
 
@@ -183,14 +186,14 @@ Alan adı projeye eklendikten sonra yönlendirmeyi açın:
 
 1. Domains listesinde `metapsikoloji.com.tr` satırının sağındaki **Edit**
    (ya da üç nokta) düğmesine basın
-2. **Redirect to** seçeneğini işaretleyip hedef olarak `metapsikoloji.tr`
+2. **Redirect to** seçeneğini işaretleyip hedef olarak `www.metapsikoloji.tr`
    seçin, tür olarak **308 (Permanent)**
 3. Aynı işlemi `www.metapsikoloji.com.tr` için de tekrarlayın
 4. Vercel her iki satırın altında birer DNS kaydı gösterir. Bunları eski alan
    adının DNS panelinde açmanız gerekir (aşağıda ayrıntılı)
 5. DNS yayılması genelde birkaç saat, bazen 24 saat sürer
 
-> **Önemli:** "Redirect to" seçeneği yalnızca hedef alan adı (`metapsikoloji.tr`)
+> **Önemli:** "Redirect to" seçeneği yalnızca hedef alan adı (`www.metapsikoloji.tr`)
 > **aynı projeye** bağlıysa listede görünür. Görünmüyorsa önce onun bağlı
 > olduğunu doğrulayın.
 
@@ -261,7 +264,7 @@ Eski site bir paylaşımlı hostingde (cPanel gibi) duruyorsa, kök dizindeki
 ```apache
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^(www\.)?metapsikoloji\.com\.tr$ [NC]
-RewriteRule ^ https://metapsikoloji.tr/ [R=301,L]
+RewriteRule ^ https://www.metapsikoloji.tr/ [R=301,L]
 ```
 
 Bu kural **her sayfayı** yeni sitenin ana sayfasına gönderir. Yeni site tek
@@ -284,10 +287,10 @@ Kurduktan sonra <https://httpstatus.io> adresine `http://metapsikoloji.com.tr`
 yazın. Görmeniz gereken zincir:
 
 ```
-301 (ya da 308)  ->  https://metapsikoloji.tr/   200
+301 (ya da 308)  ->  https://www.metapsikoloji.tr/   200
 ```
 
-Tarayıcıda denerseniz adres çubuğunun `metapsikoloji.tr` olarak değişmesi
+Tarayıcıda denerseniz adres çubuğunun `www.metapsikoloji.tr` olarak değişmesi
 gerekir. Eski adres kalıyorsa maskeli yönlendirme kurulmuştur, düzeltilmeli.
 
 ### Yönlendirmeden sonra: Adres değişikliği bildirimi
@@ -387,7 +390,7 @@ Son tarama 23.09.2026, 11:30.
 
 `@.metapsikoloji.tr` kayıtları silinmiş (artık NXDOMAIN), yani 0-A'daki tuzak
 fark edilip temizlenmiş. Ama kök için yeni kayıt henüz açılmamış: kök hâlâ
-yalnızca SOA döndürüyor. **Bu iş bitmedi.**
+yalnızca SOA döndürüyor. **Bu iş bitmedi.** (24.09.2026'da giderildi: kök A kaydı açıldı.)
 
 `metapsikoloji.com.tr` yönlendirmesi İHS üzerinden kuruldu. DNS tarafı doğru
 görünüyor. Yönlendirmenin **türü** buradan doğrulanamıyor (ağ kısıtı); 301
@@ -422,7 +425,7 @@ tanımlamak gerekmez.
 1. <https://search.google.com/search-console> → "Mülk ekle" → **Alan adı** türü
 2. İstenen TXT kaydını alan adı DNS ayarlarına ekleyin
 3. Doğrulandıktan sonra **Site haritaları** → `sitemap.xml` gönderin
-4. Üstteki arama kutusuna `https://metapsikoloji.tr/` yazıp
+4. Üstteki arama kutusuna `https://www.metapsikoloji.tr/` yazıp
    **"Dizine eklenmesini iste"** deyin
 
 Bu son adım olmadan yeni bir sitenin taranması haftalar alabilir.
