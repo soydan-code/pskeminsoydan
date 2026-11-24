@@ -1303,7 +1303,7 @@ KONULAR = [
   ilgili=["nisantasi-travma-sonrasi-stres", "nisantasi-borderline-kisilik", "nisantasi-narsisistik-kisilik", "nisantasi-ofke-kontrolu", "nisantasi-cinsel-islev-problemleri"],
  ),
  dict(
-  slug="nisantasi-travma-sonrasi-stres", yayin="2026-10-30", grup="travma", ad="Travma sonrası stres (TSSB)", tema_karti="Travma ve TSSB",
+  slug="nisantasi-travma-sonrasi-stres", yayin="2026-10-30", guncelleme="2026-11-24", grup="travma", ad="Travma sonrası stres (TSSB)", tema_karti="Travma ve TSSB",
   title="Travma Sonrası Stres Bozukluğu (TSSB) | Nişantaşı Psikolog",
   desc="Nişantaşı'nda travma sonrası stres bozukluğu (TSSB) için yüz yüze ve online psikolojik destek. Belirtiler, psikodinamik çerçeve ve EMDR'nin yeri.",
   h1="Travma Sonrası Stres Bozukluğu (TSSB): Nişantaşı'nda Psikolojik Destek",
@@ -1337,7 +1337,9 @@ KONULAR = [
       NICE'ın TSSB rehberi, travmaya odaklı bilişsel davranışçı terapi ile EMDR'yi
       önerilen psikolojik yaklaşımlar arasında sayar. EMDR'nin uygun olup olmadığına
       ilk görüşmelerde birlikte karar veririz; ana çerçeve her durumda psikodinamik
-      kalır.</p>"""),
+      kalır.</p>
+    <p>EMDR'nin ne olduğunu ve araştırmaların ne söylediğini
+      <a href="/emdr-nedir">ayrı bir sayfada</a> anlattım.</p>"""),
    ("Ne zaman destek almalı?", """
       <p>Olayın üzerinden bir ay geçmesine rağmen belirtiler sürüyorsa, uykunuz,
       işiniz ve ilişkileriniz etkileniyorsa ya da olayı hatırlatan her şeyden
