@@ -21,6 +21,7 @@ servis eder.
 - `psikodinamik-terapi-nedir.html` — Bilgi sayfası (23.11.2026), elle yazıldı; metin site sahibinin onayıyla.
 - `aktarim-odakli-terapi-nedir.html` — Bilgi sayfası (24.11.2026), elle yazıldı; metin site sahibinin onayıyla.
 - `emdr-nedir.html` — Bilgi sayfası (24.11.2026), elle yazıldı; metin site sahibinin onayıyla.
+- `psikolog-psikiyatrist-farki.html` — Bilgi sayfası (24.11.2026), elle yazıldı; metin site sahibinin onayıyla. Kaynaklar bölümü yok (araştırma iddiası içermiyor).
 - Konu sayfaları (`/nisantasi-*`) ve `/calisma-alanlari` **elle düzenlenmez**:
   içerik `tools/konular.py`'de durur, sayfalar `python3 tools/konu-sayfalari-uret.py`
   ile üretilir (görünen SSS ile FAQPage şeması aynı veriden çıkar, sitemap de
@@ -127,7 +128,7 @@ motorları için görsel alt metni tek başına zayıf bir sinyal.
 
 Google etiketi (GA4, `G-00PCBRRYYT`) **Consent Mode "gelişmiş" kurulumla**
 çalışır (25.09.2026'da site sahibinin isteğiyle; Google Ads'in etiket testinin
-geçmesi için gerekiyordu). Her sayfanın `<head>` bölümünde (43 HTML; konu
+geçmesi için gerekiyordu). Her sayfanın `<head>` bölümünde (45 HTML; konu
 sayfalarında şablon olan `psikolog-kadikoy-suadiye.html`'den gelir, yeniden
 üretimde kalmalı) sıra şudur ve bozulmamalıdır:
 
