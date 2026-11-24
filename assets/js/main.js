@@ -185,6 +185,12 @@
   var olcumBildir = function (yontem) {
     gtagCagir('event', 'generate_lead', { method: yontem });
     if (yontem === 'telefon') gtagCagir('event', 'telefon_arama');
+    // Google Ads tıklama dönüşümü: yalnız telefon ve WhatsApp (e-posta ve form hariç)
+    if (yontem === 'telefon' || yontem === 'whatsapp') {
+      try {
+        gtagCagir('event', 'conversion', { send_to: 'AW-11025962940/Kp00COur374dELyvy4kp', value: 0.0, currency: 'TRY' });
+      } catch (e) { /* ölçüm hatası sayfayı bozmasın */ }
+    }
   };
 
   document.addEventListener('click', function (e) {
