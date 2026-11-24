@@ -25,7 +25,7 @@ def tarih_yazi(tarih):
 
 def guncel(k):
     """Sayfanın son güncelleme tarihi: ilk yayından önce olamaz."""
-    return max(k["yayin"], KONU_GUNCELLEME)
+    return max(k["yayin"], k.get("guncelleme", KONU_GUNCELLEME))
 
 
 sablon = (KOK / "psikolog-kadikoy-suadiye.html").read_text(encoding="utf-8")

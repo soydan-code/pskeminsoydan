@@ -1430,7 +1430,7 @@ KONULAR = [
   ilgili=["nisantasi-saglik-anksiyetesi", "nisantasi-yaygin-anksiyete", "nisantasi-panik-atak", "nisantasi-ozgul-fobiler", "nisantasi-travma-sonrasi-stres"],
  ),
  dict(
-  slug="nisantasi-borderline-kisilik", yayin="2026-10-30", grup="travma", ad="Borderline (sınırda) kişilik", tema_karti="Borderline kişilik",
+  slug="nisantasi-borderline-kisilik", yayin="2026-10-30", guncelleme="2026-11-24", grup="travma", ad="Borderline (sınırda) kişilik", tema_karti="Borderline kişilik",
   title="Borderline (Sınırda) Kişilik Bozukluğu | Nişantaşı Psikolog",
   desc="Nişantaşı'nda borderline (sınırda) kişilik örüntüleri için yüz yüze ve online psikolojik destek. Duygusal dalgalanmalar, ilişkiler ve Aktarım Odaklı Terapi.",
   h1="Borderline (Sınırda) Kişilik Bozukluğu: Nişantaşı'nda Psikolojik Destek",
@@ -1463,7 +1463,9 @@ KONULAR = [
       <p>Borderline kişilik için TFP'yi diğer yapılandırılmış yaklaşımlarla
       karşılaştıran kontrollü bir araştırma, TFP'nin anlamlı kazanımlar
       sağlayabildiğini göstermiştir (Clarkin ve ark., 2007). NICE rehberleri de bu
-      alanda yapılandırılmış ve süreklilik gösteren psikoterapiyi önerir.</p>"""),
+      alanda yapılandırılmış ve süreklilik gösteren psikoterapiyi önerir.</p>
+      <p>Aktarım Odaklı Terapi'nin ne olduğunu ve araştırmaların ne söylediğini
+      <a href="/aktarim-odakli-terapi-nedir">ayrı bir sayfada</a> anlattım.</p>"""),
    ("Çerçevenin önemi", """
       <p>Borderline örüntülerle çalışırken net ve tutarlı bir çerçeve çok önemlidir:
       düzenli seans saatleri, açık konuşulmuş kurallar, kriz anlarında ne
