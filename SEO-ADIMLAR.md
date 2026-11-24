@@ -444,8 +444,18 @@ Anahtar dosyası sitede hazır: `/e3017c05809369738e58a7ad7ff55537.txt`
 Site yayına alındıktan sonra şu adresi bir kez tarayıcıda açmak yeterli:
 
 ```
-https://api.indexnow.org/indexnow?url=https://metapsikoloji.tr/&key=e3017c05809369738e58a7ad7ff55537
+https://api.indexnow.org/indexnow?url=https://www.metapsikoloji.tr/&key=e3017c05809369738e58a7ad7ff55537
 ```
+
+Birden çok adresi tek istekte göndermek için:
+
+```
+curl -X POST https://api.indexnow.org/indexnow \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -d '{"host":"www.metapsikoloji.tr","key":"e3017c05809369738e58a7ad7ff55537","keyLocation":"https://www.metapsikoloji.tr/e3017c05809369738e58a7ad7ff55537.txt","urlList":["https://www.metapsikoloji.tr/","https://www.metapsikoloji.tr/emdr-nedir"]}'
+```
+
+Uyarı: `host` alanı düz alan adı olmalı (markdown bağlantısı ya da `https://` öneki yazılmaz) ve anahtar dosyasının adresiyle aynı olmalı; anahtar yalnız www'lu adreste durduğu için www'suz adresle yapılan istek doğrulamada hata verir.
 
 `200` ya da `202` yanıtı başarılı demektir. İçerik değiştikçe tekrar açılabilir.
 Google IndexNow kullanmaz, onun için 2. adım gerekir.
