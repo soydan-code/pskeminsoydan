@@ -22,7 +22,7 @@ servis eder.
 - `aktarim-odakli-terapi-nedir.html` — Bilgi sayfası (24.11.2026), elle yazıldı; metin site sahibinin onayıyla.
 - `emdr-nedir.html` — Bilgi sayfası (24.11.2026), elle yazıldı; metin site sahibinin onayıyla.
 - `psikolog-psikiyatrist-farki.html` — Bilgi sayfası (24.11.2026), elle yazıldı; metin site sahibinin onayıyla. Kaynaklar bölümü yok (araştırma iddiası içermiyor).
-- `online-terapi-etkili-mi.html` — Bilgi sayfası (25.11.2026), elle yazıldı; metin site sahibinin onayıyla. Kaynaklar: Aafjes-van Doorn 2024, Berryhill 2019, Giovanetti 2022, Kelber 2025, Norwood 2018 (PubMed/Crossref özetleriyle doğrulandı). Sayfaya bağlantı /online-terapi ve /online-psikolog-nasil-secilir sayfalarından sonra eklenecek.
+- `online-terapi-etkili-mi.html` — Bilgi sayfası (24.11.2026), elle yazıldı; metin site sahibinin onayıyla. Kaynaklar: Aafjes-van Doorn 2024, Berryhill 2019, Giovanetti 2022, Kelber 2025, Norwood 2018 (PubMed/Crossref özetleriyle doğrulandı). Sayfaya bağlantı /online-terapi ve /online-psikolog-nasil-secilir sayfalarından eklendi.
 - Konu sayfaları (`/nisantasi-*`) ve `/calisma-alanlari` **elle düzenlenmez**:
   içerik `tools/konular.py`'de durur, sayfalar `python3 tools/konu-sayfalari-uret.py`
   ile üretilir (görünen SSS ile FAQPage şeması aynı veriden çıkar, sitemap de
